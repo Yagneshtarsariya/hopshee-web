@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ALL_CSS_FILE/style.css">
+
+    <!-- font awsome librey link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- singal line chart link  -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src='jquery.min.js'></script>
+
+    <script src="./ALL_JAVA_SCRIPT_FILE/script.js"></script>
+    <script src="./ALL_JAVA_SCRIPT_FILE/coulmnchart.js"></script>
+    <script src="ALL_JAVA_SCRIPT_FILE/api.js"></script>
+
+    <!-- singal line chart link finsh  -->
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- nav bar code start  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+        <div class="container-fluid align-items-center">
+            <!-- nav bar logo image code strat  -->
+            <a class="navbar-brand" href="#">Hopshee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav bar logo image code complete -->
+            <!-- nav bar page menu code start -->
+            <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Deshbord</a>
+                    </li>
+                    <!-- nev bar drop down menu text1 code start -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_Doctor.html">All-Doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Add_Doctor.html">Add-doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Edit_Doctor.html">Edit-doctor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Patient</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>                            </li>
+                        </ul>
+                    </li>
+                    <!-- nev bar drop down menu text1 code finsh-->
+                    <!-- nev bar drop down menu text3 code start -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor
+                            Sidual</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="#">Add-Docotr-Sidual</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- nev bar drop down menu text3 code finsh -->
+                </ul>
+                <!-- nav bar page menu code finsh  -->
+                <!-- nav bar code icon  -->
+                <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
+                    <a href="#" class="text-white  nav-icon iconClass"><i class="fa-regular fa-bell"
+                            style="font-size: 20px;"></i></a>
+                    <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a>
+
+                    <div class="dropdown ">
+                        <button class="dropdown-toggle btn btn-default" id="menu1" data-bs-toggle="dropdown">
+                            <img src="./image/profile.png" alt="" height="30px" class="rounded-pill"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu bg-primary" role="menu" aria-labelledby="menu1">
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">PROFILE</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">SETTING</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <!-- nav bar icon code finsh  -->
+            </div>
+        </div>
+    </nav>
+
+    <body>
+        <div class="first_part_body ">
+            <div class="deshbord_normal">
+                <h1> Deshbord </h1>
+            </div>
+            <div class="bg-white">
+                <div class="bg-primary mt-4 text-white text-center p-5">
+                    <h2>Add Doctor Details</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam cupiditate non, <br>dolorem
+                        distinctio illum, voluptatum ab adipisci odio quos velit iusto dolor similique esse aut iure
+                        corrupti reiciendis rem doloribus!</p>
+                </div>
+                <div style="border: 1px solid rgb(212, 202, 202)" class="mt-5 container">
+                    <div class="p-3 mx-4 mt-4">
+                        <h4>Basic Information</h4>
+                    </div>
+                    <!-- <div class="m-2 mx-5">
+                        <div class="my-3">
+                            <label for="" class="my-1"> NAME : </label>
+                            <br>
+                            <input type="text" name="" id="" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DATE OF BIRTH : </label>
+                            <br>
+                            <input type="date" name="" id="" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> GENDER : </label>
+                            <br>
+                            <select type="" name="gender" id="" style="width: 100%; height: 40PX;">
+                                <option value="MALE"> MALE </option>
+                                <option value="FEMALE"> FEMALE </option>
+                                <option value="OTHER"> OTHER </option>
+                            </select>
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> PROFILE IMAGE : </label>
+                            <br>
+                            <input type="file" name="" id=""
+                                style="width: 100%; height: 40PX; border: 1px  solid rgb(114, 114, 114); padding: 4px;">
+                        </div>
+
+                        <div class="my-3">
+                            <label for="" class="my-1"> SPECIALITY : </label>
+                            <br>
+                            <input type="text" name="" id=""
+                                style="width: 100%; height: 40PX; border: 1px  solid rgb(114, 114, 114); padding: 4px;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> BRIF : </label>
+                            <br>
+                            <input type="text" name="" id=""
+                                style="width: 100%; height: 40PX; border: 1px  solid rgb(114, 114, 114); padding: 4px;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> WEBSITE URL : </label>
+                            <br>
+                            <input type="text" name="" id=""
+                                style="width: 100%; height: 40PX; border: 1px  solid rgb(114, 114, 114); padding: 4px;">
+                        </div>
+                        <div>
+                            <input type="button" value="SAVE" class="bg-primary text-white py-1 px-3"
+                                style="border: 0.1px rgb(190, 190, 190) solid;">
+                            <input type="button" value="CANCAL" style="border: none;" class="px-3 py-1  ">
+                        </div>
+                    </div>
+                        </div>
+                    <div style="border: 1px solid rgb(212, 202, 202)" class="mt-5 container">
+                    <div class="p-3 mx-4 mt-4">
+                        <h4>Doctor Account Info</h4>
+                    </div>
+                    <div class="m-2 mx-5">
+                        <div class="my-3">
+                            <label for="" class="my-1"> E-MAIL : </label>
+                            <br>
+                            <input type="email" name="" id="" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> MO-PHONE : </label>
+                            <br>
+                            <input type="number" name="" id="" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> PASSWORD : </label>
+                            <br>
+                            <input type="password" name="" id="" autofocus="OF"
+                                style="width: 100%; height: 40PX; border: 1px  solid rgb(114, 114, 114); padding: 4px;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> CONFORM PASSWORD : </label>
+                            <br>
+                            <input type="password" name="" id=""
+                                style="width: 100%; height: 40PX; border: 1px  solid rgb(114, 114, 114); padding: 4px;">
+                        </div>
+                        <div>
+                            <input type="button" value="SAVE" class="bg-primary text-white py-1 px-3"
+                                style="border: 0.1px rgb(190, 190, 190) solid;">
+                            <input type="button" value="CANCAL" style="border: none;" class="px-3 py-1  ">
+                        </div>
+                    </div>
+                    </div>
+                 <div style="border: 1px solid rgb(212, 202, 202)" class="mt-5 container">
+                    <div class="p-3 mx-4 mt-4">
+                        <h4>Doctor Social Media Info</h4>
+                    </div>
+                    <div class="m-2 mx-5">
+                        <div class="my-3">
+                            <label for="" class="my-1"> FACE-BOOK URL : </label>
+                            <br>
+                            <input type="url" name="" id="" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> TWITTER URL : </label>
+                            <br>
+                            <input type="url" name="" id=""
+                                style="width: 100%; height: 40PX; border: 1px  solid rgb(114, 114, 114); padding: 4px;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> Google Plus URL : </label>
+                            <br>
+                            <input type="url" name="" id=""
+                                style="width: 100%; height: 40PX; border: 1px  solid rgb(114, 114, 114); padding: 4px;">
+                        </div>
+                        <div>
+                            <input type="button" value="SAVE" class="bg-primary text-white py-1 px-3"
+                                style="border: 0.1px rgb(190, 190, 190) solid;">
+                            <input type="button" value="CANCAL" style="border: none;" class="px-3 py-1  ">
+                        </div>
+                    </div>
+                    </div> -->
+                    <div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> NAME : </label>
+                            <br>
+                            <input type="text" name="" id="dr_name" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> EMAIL ID : </label>
+                            <br>
+                            <input type="email" name="" id="email_id" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> PHONE NO : </label>
+                            <br>
+                            <input type="number" name="" id="phoen_no" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> PASSWORD : </label>
+                            <br>
+                            <input type="text" name="" id="password" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> GENDER( M / F ) : </label>
+                            <br>
+                            <input type="text" name="" id="gender" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DATE OF BIRTH : </label>
+                            <br>
+                            <input type="date" name="" id="date_of_birth" style="width: 100%; height: 40PX;">
+                        </div>
+                            <div class="my-3">
+                                <label for="" class="my-1"> DR IMAGE : </label>
+                                <br>
+                                <input type="file" name="" id="dr_image"
+                                    style="padding-top: 3px; padding-left: 5px; width: 100%; height: 40PX; border: 1px solid #767676; border-radius: 2px;">
+                            </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> SPECIALITY : </label>
+                            <br>
+                            <input type="text" name="" id="speciality" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DISCRIPTON : </label>
+                            <br>
+                            <input type="text" name="" id="discription" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DOCTOR CERTIFICAT NUMBER : </label>
+                            <br>
+                            <input type="text" name="" id="dr_certificte_number" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DR CERTIFICATE IMAGE : </label>
+                            <br>
+                            <input type="file" name="" id="dr_certi_image"
+                                style="padding-top: 3px; padding-left: 5px; width: 100%; height: 40PX; border: 1px solid #767676; border-radius: 2px;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DR TIME FROM : </label>
+                            <br>
+                            <input type="time" name="" id="dr_time_from" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DR TIME TO : </label>
+                            <br>
+                            <input type="time" name="" id="dr_time_to" style="width: 100%; height: 40PX;">
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DR SALARY AMOUNT : </label>
+                            <br>
+                            <input type="text" name="" id="dr_salary" style="width: 100%; height: 40PX;">
+                        </div>
+                    </div>
+                    <div width="100%">
+                        <button style="width: 100%; margin-bottom: 18px; margin-top: 10px;" id="btnadd"> ADD DOCTOR
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+    </body>
+    <!-- bootstrap java script link  -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btnadd').click(function () { 
+                alert('i am click ')
+                // Create a new FormData object
+                var formData = new FormData();
+
+                // Append form data to the FormData object
+                formData.append('doctor_name', $('#dr_name').val());
+                formData.append('email_id', $('#email_id').val());
+                formData.append('phone_no', $('#phoen_no').val());
+                formData.append('password', $('#password').val());
+                formData.append('gender', $('#gender').val());
+                formData.append('date_of_birth', $('#date_of_birth').val());
+                formData.append('image_url', $('#dr_image')[0].files[0]); // Use [0] to get the actual file
+                formData.append('speciality', $('#speciality').val());
+                formData.append('brief_desc', $('#discription').val());
+                formData.append('doctor_certi_no', $('#dr_certificte_number').val()); 
+                formData.append('doctor_time_from', $('#dr_time_from').val());
+                formData.append('doctor_time_to', $('#dr_time_to').val());
+                formData.append('salary_amount', $('#dr_salary').val());
+                formData.append('is_active',0);
+                formData.append('admin_id',getCookie('admin_id'));
+
+                // URL of the API endpoint
+                var apiUrl = doctors;
+
+                // Make a POST request to the API with the FormData
+                $.ajax({
+                    url: apiUrl,
+                    type: 'POST',
+                    data: formData,
+                    processData: false,  // Prevent jQuery from processing the data
+                    contentType: false,  // Prevent jQuery from setting the content type
+                    success: function (response) {
+                        // Handle a successful response from the API
+                        console.log('API response:', response);
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle errors
+                        console.error('API request failed:', status, error);
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- bootstrap java script link  complete -->
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Dynamic Pagination and Updates from API with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="ALL_JAVA_SCRIPT_FILE/api.js"></script>
+</head>
+<body>
+    <ul id="recordList"></ul>
+
+    <script>
+        $(document).ready(function() {
+            var apiUrl = doctors;
+            var recordsPerPage = 3; // Number of records to display per page
+            var currentPage = 1; // Current page
+            var records = []; // Array to store records
+
+            function fetchRecords() {
+                $.ajax({
+                    url: apiUrl,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        if (Array.isArray(data)) {
+                            records = data; // Store the entire list of records from the API
+                            displayRecords(currentPage);
+                        } else {
+                            console.error('API Response is not an array:', data);
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.error('API Request Failed:', errorThrown);
+                    }
+                });
+            }
+
+            function displayRecords(page) {
+                var list = $('#recordList');
+                list.empty();
+
+                var startIndex = (page - 1) * recordsPerPage;
+                var endIndex = startIndex + recordsPerPage;
+                var pageRecords = records.slice(startIndex, endIndex);
+
+                $.each(pageRecords, function(index, item) {
+                    list.append('<li>' + item.name + '</li>');
+                });
+            }
+
+            // Load the initial set of records
+            fetchRecords();
+
+            // Handle pagination buttons
+            $('#prevPage').on('click', function() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    displayRecords(currentPage);
+                }
+            });
+
+            $('#nextPage').on('click', function() {
+                var totalPages = Math.ceil(records.length / recordsPerPage);
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    displayRecords(currentPage);
+                }
+            });
+
+            // Periodically check for new records (adjust the interval as needed)
+            var updateInterval = 5000; // 5 seconds
+            setInterval(fetchRecords, updateInterval);
+        });
+    </script>
+</body>
+</html>

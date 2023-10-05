@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ALL_CSS_FILE/style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="ALL_JAVA_SCRIPT_FILE/api.js"></script>
+    <title>Document</title>
+</head> 
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+        <div class="container-fluid align-items-center">
+            <!-- nav bar logo image code strat  -->
+            <a class="navbar-brand" href="#">Hopshee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav bar logo image code complete -->
+            <!-- nav bar page menu code start -->
+            <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Deshbord</a>
+                    </li>
+                    <!-- nev bar drop down menu text1 code start -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_Doctor.html">All-Doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Add_Doctor.html">Add-doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Edit_Doctor.html">Edit-doctor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Patient</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>                            </li>
+                        </ul>
+                    </li>
+                    <!-- nev bar drop down menu text1 code finsh-->
+                    <!-- nev bar drop down menu text3 code start -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor
+                            Sidual</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="#">Add-Docotr-Sidual</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- nev bar drop down menu text3 code finsh -->
+                </ul>
+                <!-- nav bar page menu code finsh  -->
+                <!-- nav bar code icon  -->
+                <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
+                    <a href="#" class="text-white  nav-icon iconClass"><i class="fa-regular fa-bell"
+                            style="font-size: 20px;"></i></a>
+                    <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a>
+
+                    <div class="dropdown ">
+                        <button class="dropdown-toggle btn btn-default" id="menu1" data-bs-toggle="dropdown">
+                            <img src="./image/profile.png" alt="" height="30px" class="rounded-pill"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu bg-primary" role="menu" aria-labelledby="menu1">
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">PROFILE</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">SETTING</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <!-- nav bar icon code finsh  -->
+            </div>
+        </div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+        <div class="container-fluid align-items-center">
+            <a class="navbar-brand" href="#">Hopshee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Deshbord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Patients_Deshbord.html">Patients Deshbord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Doctor_deshbord.html">Doctor Deshbord</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_Doctor.html">All-Doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Doctor_deshbord.html">Doctor-Profile</a></li>
+                            <li><a class="dropdown-item text-white" href="Add_Doctor.html">Add-doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Edit_Doctor.html">Edit-doctor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Patient</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>
+                            <li><a class="dropdown-item text-white" href="Patients_Deshbord.html">Patient-Profile</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex col-md-2 justify-content-around align-items-center">
+                    <a href="#" class="text-white  nav-icon iconClass"><i class="fa-regular fa-bell"
+                            style="font-size: 20px;"></i></a>
+                    <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a>
+
+                    <div class="dropdown ">
+                        <button class="dropdown-toggle btn btn-default" id="menu1" data-bs-toggle="dropdown">
+                            <img src="./image/profile.png" alt="" height="30px" class="rounded-pill"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu bg-primary" role="menu" aria-labelledby="menu1">
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">PROFILE</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">SETTING</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <div class="first_part_body">
+        <div class="deshbord_normal">
+            <h1> All Patient </h1>
+        </div>
+        <div class="container">
+            <div class="row" id="patient-list">
+            </div>
+        </div>
+    </div>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="jquery.min.js"></script>
+    <script>
+        function pageredirect(doctor_id){
+            window.location.href = "Patients_Deshbord.html?patient_id=" + encodeURIComponent(doctor_id);
+        }
+        $(document).ready(function () {
+            const apiurl = patients;
+            $.ajax({
+                url: apiurl,
+                method: 'GET',
+                dataType: 'json',
+                success: function (response) {
+                    let patientsHtml = '';
+                    let patientCount = 0;
+                    response.data.forEach(function (patientData) {
+                        const age = calculateAge(patientData.date_of_birth);
+                        const img_url = `${host}/${patientData.image_url}`;
+
+                        let gen = "";
+                        if (patientData.gender == 'M') {
+                            gen = 'MALE'
+                        } else {
+                            gen = 'FEMALE'
+                        }
+
+                        const patientCard = `
+                    <div class="col-lg px-0 F_R_maindiv mt-5">
+                        <div class="bg-primary px-3 pt-3 pb-5 text-center">
+                            <img src="${img_url}" alt="" height="150px" width="150px" class="rounded-circle">
+                            <h4 class="text-white mt-1">Name : ${patientData.patient_name}</h4>
+                        </div>
+                        <div class="d-flex justify-content-evenly P_D_card12_miandiv">
+                            <div class="bg-white shadow P_D_Allcard">
+                                <h5 class="mt-3">${gen}</h5>
+                                <p>Gender</p>
+                            </div>
+                            <div class="bg-white shadow P_D_Allcard">
+                                <h5 class="mt-3">Age:${age}</h5>
+                                <p>Years old</p>
+                            </div>
+                        </div>
+                        <div class="text-center" style="margin-top: 150px;">
+                            <button onclick="pageredirect(${patientData.patient_id})" style="width: 85%; height: 40px;" class="bg-primary text-white border"> View All </button>
+                        </div>
+                    </div>
+                `;
+                        patientsHtml += patientCard;
+                        patientCount++; 
+
+
+                        if (patientCount === 3) {
+                            $('#patient-list').append('<div class="row">' + patientsHtml + '</div>');
+                            patientsHtml = '';
+                            patientCount = 0;
+                        }
+                    });
+
+
+                    if (patientCount > 0) {
+                        $('#patient-list').append('<div class="row">' + patientsHtml + '</div>');
+                    }
+                },
+                error: function (error) {
+                    console.error('Error:', error);
+                }
+            });
+
+
+            function calculateAge(date_of_birth) {
+                const dob = new Date(date_of_birth);
+                const currentDate = new Date();
+                const ageInMilliseconds = currentDate - dob;
+                const ageInYears = ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000); // 365.25 days per year
+                return Math.floor(ageInYears);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

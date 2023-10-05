@@ -1,0 +1,195 @@
+body {
+    font-family: ui-rounded;
+}
+
+.first_part_body {
+    padding: 20px 40px;
+    background-color: #f8f9fa;
+}
+
+.deshbord_normal {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.counter {
+    background-color: white;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-position 1s;
+    /* padding:0 0 0 20px; */
+    /* width:180px; */
+}
+
+/* .counter:hover{
+    background-position: -100% 0;
+    background-color: skyblue;
+} */
+.dr_detail {
+    position: absolute;
+    top: 110px;
+    width: 80%;
+    right: 10%;
+}
+
+.dr_detail1 {
+    position: absolute;
+    top: 270px;
+    width: 80%;
+    right: 10%;
+}
+
+.doctor_menu_button {
+    position: absolute;
+    top: 428px;
+    width: 80%;
+    right: 10%;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border: #f8f9fa;
+    border-radius: 5px;
+}
+
+.myheight_dr {
+    background-color: white;
+    height: 500px;
+    padding: 0px !important;
+}
+
+.memargin {
+    margin-top: 2px;
+}
+
+.All_doc_main {
+    height: 500px;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 1%;
+}
+
+
+
+
+@media only screen and (max-width: 397px) {
+
+    /* banner one css and html code  */
+    .dr_detail>div>img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .dr_detail>div>h4 {
+        font-size: 13px;
+        margin: 2px;
+    }
+
+    .dr_detail>div>p {
+        font-size: 10px;
+        margin: 2px;
+    }
+
+    .dr_detail>div>div>i {
+        font-size: 10px;
+    }
+
+    /* banner two css and html code  */
+    .dr_detail1>div>img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .dr_detail1>div>div>i {
+        font-size: 10px;
+    }
+
+    .dr_detail1>div>h4 {
+        font-size: 15px;
+        margin: 2px;
+    }
+
+    .dr_detail1>div>p {
+        font-size: 12px;
+        margin: 2px;
+    }
+
+    /* bannar one postion  */
+    .dr_detail {
+        position: absolute;
+        top: 110px;
+        width: 80%;
+        right: 10%;
+    }
+
+    /* banner two postion */
+    .dr_detail1 {
+        position: absolute;
+        top: 240px;
+        width: 80%;
+        right: 10%;
+    }
+
+    .doctor_menu_button {
+        position: absolute;
+        top: 370px;
+        width: 80%;
+        right: 10%;
+        height: 50px;
+        background-color: blue;
+        color: white;
+        border: #f8f9fa;
+        border-radius: 5px;
+
+    }
+
+    .myheight_dr {
+        height: 440px;
+        margin-top: 10px;
+    }
+
+}
+
+
+
+
+/* patient deshbord css strat hear  */
+
+/* first row main div  */
+.F_R_maindiv {
+    height: 520px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+/* patient detaile card main div */
+.P_D_card12_miandiv {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+}
+
+/* pation detail all cards */
+.P_D_Allcard {
+    height: 94px;
+    width: 35%;
+    text-align: center;
+}
+
+/* patient detaile card main div */
+.P_D_card34_miandiv {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+}
+
+.F_R_maindiv2 {
+    height: 590px;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+}

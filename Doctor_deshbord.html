@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ALL_CSS_FILE/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="./ALL_JAVA_SCRIPT_FILE/script.js"></script>
+    <script src="./ALL_JAVA_SCRIPT_FILE/api.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+        <div class="container-fluid align-items-center">
+            <!-- nav bar logo image code strat  -->
+            <a class="navbar-brand" href="#">Hopshee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav bar logo image code complete -->
+            <!-- nav bar page menu code start -->
+            <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Deshbord</a>
+                    </li>
+                    <!-- nev bar drop down menu text1 code start -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_Doctor.html">All-Doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Add_Doctor.html">Add-doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Edit_Doctor.html">Edit-doctor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Patient</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>
+                    </li>
+                </ul>
+                </li>
+                <!-- nev bar drop down menu text1 code finsh-->
+                <!-- nev bar drop down menu text3 code start -->
+                <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor
+                            Sidual</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="#">Add-Docotr-Sidual</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
+                        </ul>
+                    </li> -->
+                <!-- nev bar drop down menu text3 code finsh -->
+                </ul>
+                <!-- nav bar page menu code finsh  -->
+                <!-- nav bar code icon  -->
+                <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
+                    <a href="#" class="text-white  nav-icon iconClass"><i class="fa-regular fa-bell"
+                            style="font-size: 20px;"></i></a>
+                    <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a>
+
+                    <div class="dropdown ">
+                        <button class="dropdown-toggle btn btn-default" id="menu1" data-bs-toggle="dropdown">
+                            <img src="./image/profile.png" alt="" height="30px" class="rounded-pill"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu bg-primary" role="menu" aria-labelledby="menu1">
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">PROFILE</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">SETTING</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <!-- nav bar icon code finsh  -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row mb-5">
+
+            <div class="col-lg mt-3">
+                <div style="height: 600px;" class="bg-white shadow rounded ">
+                    <div style="height: 290px; background-color: #0d6efd;" class="rounded ">
+                        <img src="image/Dr.jpg" alt=" DR IMAGE" height="250px" width="250px" class="mt-4 mx-4"
+                            style="border: 10px solid white;" id="dimage">
+                    </div>
+                    <div class="mt-2 mx-4">
+                        <div class="d-flex" style="height: 25px;">
+                            <h6>Name :</h5>
+                                <b id="drname" class="mx-2">yagnesh tasraiya</b>
+                        </div>
+                        <div class="d-flex ">
+                            <h6>Speciality : </h5>
+                                <b class="mb-0 mx-2" id="specialization">Hart specailist</b>
+                        </div>
+                        <div class="d-flex">
+                            <h6>Discription:</h5>
+                                <b class="mb-0 mx-2" id="discription">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                    Non
+                                    sint consectetur
+                                    dolore
+                                    voluptatum beatae magnam labore provident, repellendus consequuntur suscipit
+                                    accusantium
+                                    dolores tempora, dignissimos vero deleniti.</b>
+                        </div>
+                        <!-- <div>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div> -->
+                        <div class="d-flex">
+                            <h6 class="m-0">Email Id :</h5>
+                                <b id="emaile" class="mx-2">yagnesh123@gmail.com</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg mt-3">
+                <div class="bg-white shadow px-3 pt-4 " style="height: 600px; ">
+                    <h3> Messages </h3>
+                    <div class="d-flex pt-5 justify-content-center">
+                        <h1 class="mx-2" style="font-size: 50px;"><b>25</b></h1>
+                        <div>
+                            <i class="fa-solid fa-envelope mt-2" style="color: lightgreen; font-size: 30px;"
+                                class=""></i>
+                            <p>New</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex bg-white shadow rounded mx-2 px-3 py-3 mt-5">
+                            <img src="image/Dr.jpg" alt="message image not found" height="70px" width="70px"
+                                class="rounded-circle">
+                            <div class="mt-0 mx-3">
+                                <p class="mb-0"><b>Sunil Joshi</b></p>
+                                <p class="mb-0">Lorem ipsum dolor sit </p>
+                                <d>23/44/3333</d>
+                            </div>
+                        </div>
+                        <div class="d-flex bg-white shadow rounded mx-2 px-3 py-3 mt-2">
+                            <img src="image/Dr.jpg" alt="message image not found" height="70px" width="70px"
+                                class="rounded-circle">
+                            <div class="mt-0 mx-3">
+                                <p class="mb-0"><b>Sunil Joshi</b></p>
+                                <p class="mb-0">Lorem ipsum dolor sit </p>
+                                <d>23/44/3333</d>
+                            </div>
+                        </div>
+                        <div class="d-flex bg-white shadow rounded mx-2 px-3 py-3 mt-2">
+                            <img src="image/Dr.jpg" alt="message image not found" height="70px" width="70px"
+                                class="rounded-circle">
+                            <div class="mt-0 mx-3">
+                                <p class="mb-0"><b>Sunil Joshi</b></p>
+                                <p class="mb-0">Lorem ipsum dolor sit </p>
+                                <d>23/44/3333</d>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg mt-3">
+                <div style="height: 600px;" class="bg-white shadow px-3 pt-4">
+                    <h3>Recent Visits</h3>
+                    <div class="text-center">
+                        <img src="image/Recent_visit.png" alt="image not found" height="170px">
+                    </div>
+
+                    <div class="d-flex bg-white shadow rounded mx-2 px-3 py-3 mt-2">
+                        <img src="image/Dr.jpg" alt="message image not found" height="70px" width="70px"
+                            class="rounded-circle">
+                        <div class="mt-0 mx-3">
+                            <p class="mb-0"><b>Sunil Joshi</b></p>
+                            <p class="mb-0">Lorem ipsum dolor sit </p>
+                            <d>23/44/3333</d>
+                        </div>
+                        <div class="mx-2">
+                            <p class="p-1 border mt-3">25 NOV</p>
+                        </div>
+                    </div>
+                    <div class="d-flex bg-white shadow rounded mx-2 px-3 py-3 mt-2">
+                        <img src="image/Dr.jpg" alt="message image not found" height="70px" width="70px"
+                            class="rounded-circle">
+                        <div class="mt-0 mx-3">
+                            <p class="mb-0"><b>Sunil Joshi</b></p>
+                            <p class="mb-0">Lorem ipsum dolor sit </p>
+                            <d>23/44/3333</d>
+                        </div>
+                        <div class="mx-2">
+                            <p class="p-1 border mt-3">25 NOV</p>
+                        </div>
+                    </div>
+                    <div id="appointmentList"></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Get the doctor_id from the URL query parameter
+            var urlParams = new URLSearchParams(window.location.search);
+            var doctor_id = urlParams.get("doctor_id");
+            // Define the API URL where you can fetch the doctor's data
+            var apiUrl = `${doctors}/${doctor_id}`; // Replace with your actual API endpoint
+            // Make an AJAX request to fetch the doctor's data
+            $.ajax({
+                type: 'GET',
+                data: 'json',
+                url: apiUrl,
+                success: function (response) {
+                    // Assuming the response contains the doctor's data
+                    var doctorData = response.data[0];
+                    const img_url = `${host}/${doctorData.image_url}`;
+                    console.log(img_url)
+                    // Update the HTML elements with the doctor's data
+                    $('#drname').text(doctorData.doctor_name); // Update the navbar brand text
+                    $('#dimage').attr('src', img_url); // Update the doctor's image
+                    $('#specialization').text(doctorData.speciality); // Update the specialization
+                    $('#discription').text(doctorData.brief_desc); // Update the biography
+                    $('#emaile').text(doctorData.email_id); // Update the email
+                    // You can similarly update other parts of your HTML with the retrieved data
+                },
+                error: function (error) {
+                    console.error("Error fetching doctor data:", error);
+                }
+            });
+            // ========================================================================================
+
+            // Function to redirect to the new page with user ID and doctor ID
+            function redirectToAddPage(userId, appoId) {
+                // Construct the URL with user_id and doctor_id as query parameters
+                const redirectURL = `Add_appoinment.html?user_id=${userId}&appo_id=${appoId}`;
+
+                // Redirect to the new page
+                window.location.href = redirectURL;
+            }
+
+            // Call the function to populate the appointment list
+            populateAppointmentList();
+        });
+    </script>
+
+
+</body>
+
+</html>

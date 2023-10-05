@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ALL_CSS_FILE/style.css">
+
+    <!-- font awsome librey link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- singal line chart link  -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="ALL_JAVA_SCRIPT_FILE/cookie.js"></script>
+    <script src="ALL_JAVA_SCRIPT_FILE/api.js"></script>
+
+    <!-- singal line chart link finsh  -->
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- nav bar code start  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+        <div class="container-fluid align-items-center">
+            <!-- nav bar logo image code strat  -->
+            <a class="navbar-brand" href="#">Hopshee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav bar logo image code complete -->
+            <!-- nav bar page menu code start -->
+            <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Deshbord</a>
+                    </li>
+                    <!-- nev bar drop down menu text1 code start -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_Doctor.html">All-Doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Add_Doctor.html">Add-doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Edit_Doctor.html">Edit-doctor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Patient</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>
+                    </li>
+                </ul>
+                </li>
+                <!-- nev bar drop down menu text1 code finsh-->
+                <!-- nev bar drop down menu text3 code start -->
+                <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor
+                            Sidual</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="#">Add-Docotr-Sidual</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
+                        </ul>
+                    </li> -->
+                <!-- nev bar drop down menu text3 code finsh -->
+                </ul>
+                <button style="background-color: transparent; border: transparent; color: white;">Logout</button>
+                <!-- nav bar page menu code finsh  -->
+                <!-- nav bar code icon  -->
+                <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
+                    <a href="#" class="text-white  nav-icon iconClass"><i class="fa-regular fa-bell"
+                            style="font-size: 20px;"></i></a>
+                    <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a>
+
+                    <div class="dropdown ">
+                        <button class="dropdown-toggle btn btn-default" id="menu1" data-bs-toggle="dropdown">
+                            <img src="./image/profile.png" alt="" height="30px" class="rounded-pill"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu bg-primary" role="menu" aria-labelledby="menu1">
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">PROFILE</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">SETTING</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <!-- nav bar icon code finsh  -->
+            </div>
+        </div>
+    </nav>
+    <!-- finsh nav bar code -->
+
+    <!-- ======================================================================================================= -->
+
+    <!-- start body code  -->
+    <div class="first_part_body container-fluid">
+        <div class="deshbord_normal">
+            <h1> Deshbord </h1>
+        </div>
+        <br>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg" style="margin:5px;">
+                    <div class="counter d-flex">
+                        <div>
+                            <i class="fa-solid fa-bed" style="font-size:50px; color:#0d6efd; padding-right:10px;"></i>
+                        </div>
+                        <div>
+                            <div class="d-flex">
+                                <h3 style="color:black;" id="a">200 Beds</h3>
+                                <button style="background: none; border: none;" type="button" class="btn btn-primary"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="fa-regular fa-pen-to-square" style="color: black;"></i>
+                                </button>
+                            </div>
+                            <p style="color:black;">Total Hospital Beds</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Edit hospital Detils</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="">
+                                    <table>
+                                        <tr>
+                                            <td>Number of Bed : </td>
+                                            <td><input type="text" name="" id="beds"></td>
+                                        </tr>
+                                        <br>
+                                        <tr>
+                                            <td>Number of Ambulunce :</td>
+                                            <td><input type="text" name="" id="ambulunce"></td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="saveChangesButton">Save
+                                    changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg" style="margin:5px;">
+                    <div class="counter d-flex">
+                        <div>
+                            <i class="fa-solid fa-user-doctor"
+                                style="font-size:50px; color:#0d6efd; padding-right:10px;"></i>
+                        </div>
+                        <div>
+                            <h3 style="color:black;" id="b">126 Total Staf</h3>
+                            <p style="color:black;">Available Doctors</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg" style="margin:5px;">
+                    <div class="counter d-flex">
+                        <div>
+                            <i class="fa-solid fa-wallet"
+                                style="font-size:50px; color:#0d6efd; padding-right:10px;"></i>
+                        </div>
+                        <div>
+                            <h3 style="color:black;" id="c">3,743 Bills</h3>
+                            <p style="color:black;">Pharmacy Medics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg" style="margin:5px;">
+                    <div class="counter d-flex">
+                        <div>
+                            <i class="fa-solid fa-truck-medical"
+                                style="font-size:50px; color:#0d6efd; padding-right:10px;"></i>
+                        </div>
+                        <div>
+                            <div class="d-flex">
+                                <h3 style="color:black;" id="d">36 Ambula</h3>
+                                <button style="background: none; border: none;" type="button" class="btn btn-primary"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="fa-regular fa-pen-to-square" style="color: black;"></i>
+                                </button>
+                            </div>
+                            <p style="color:black;">All Ambulance Cars</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- ======================================================================================================================= -->
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- chart strat hear  -->
+                <div class="col-sm myheight_dr mx-4">
+                    <div class=" position-relative ">
+                        <div class="bg-primary text-light text-center" style="height:200px;">
+                            <h4 class="pt-4">Patient List</h4>
+                            <p class="pl-4 pr-4">Click on doctor profile to view Patient details</p>
+                        </div>
+                        <div style="position: absolute; width: 80%; top: 100px; left: 10%;" id="patient-list">
+                        </div>
+                        <br>
+                        <button onclick="window.location='./All_patient.html'" class="doctor_menu_button shadow">View
+                            All
+                            Doctor</button>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-7">
+                    <div id="curve_chart" style="height:500px;"></div>
+                </div> -->
+                <!-- Dr Detaile List Code Strat  -->
+                <div class="col-sm myheight_dr">
+                    <div class=" position-relative ">
+                        <div class="bg-primary text-light text-center" style="height:200px;">
+                            <h4 class="pt-4">Doctors List</h4>
+                            <p class="pl-4 pr-4">Click on doctor profile to view dioctors details</p>
+                        </div>
+                        <div style="position: absolute; width: 80%; top: 100px; left: 10%;" id="doctorList">
+                        </div>
+                        <br>
+                        <button onclick="window.location='./All_Doctor.html'" class="doctor_menu_button shadow">View All
+                            Doctor</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Dr Detaile List Code Complete -->
+        </div>
+
+        <!-- ========================================================================================================================= -->
+
+        <br>
+        <!-- <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg col-sm bg-white m-2 p-2 ">
+                    <h3 class="mx-4"> Recent Visits</h3>
+                    <div class="mx-3 p-2 px-3 mt-2 shadow-sm d-flex align-items-center rounded justify-content-between">
+                        <div class="d-flex">
+                            <img src="image/Dr.jpg" alt="" height="50px" width="50px" class="rounded">
+                            <div>
+                                <h5 class="" style="margin-left: 10px; margin-bottom: 1px;">
+                                    <span class="text-primary">Dr :</span> Kushik Variya
+                                </h5>
+                                <p style="margin-left: 10px; margin-bottom: 0px;">
+                                    <small>Blood Ckeck</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="p-1 border mt-3">25 NOV</p>
+                        </div>
+                    </div>
+                    <div class="mx-3 p-2 px-3 mt-2 shadow-sm d-flex align-items-center rounded justify-content-between">
+                        <div class="d-flex">
+                            <img src="image/Dr.jpg" alt="" height="50px" width="50px" class="rounded">
+                            <div>
+                                <h5 class="" style="margin-left: 10px; margin-bottom: 1px;
+                                "><span class="text-primary">Dr :</span> Kushik Variya</h5>
+                                <p style="margin-left: 10px; margin-bottom: 0px;"><small>Blood Ckeck</small></p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="p-1 border mt-3">25 NOV</p>
+                        </div>
+                    </div>
+                    <div class="mx-3 p-2 px-3 mt-2 shadow-sm d-flex align-items-center rounded justify-content-between">
+                        <div class="d-flex">
+                            <img src="image/Dr.jpg" alt="" height="50px" width="50px" class="rounded">
+                            <div>
+                                <h5 class="" style="margin-left: 10px; margin-bottom: 1px;
+                                "><span class="text-primary">Dr :</span> Kushik Variya</h5>
+                                <p style="margin-left: 10px; margin-bottom: 0px;"><small>Blood Ckeck</small></p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="p-1 border mt-3">25 NOV</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-lg  col-sm bg-white m-2 p-4">
+                    <div id="columnchart_material" style="height: 300px;"></div>
+                </div>
+                <div class="col-lg bg-white m-2 p-2">
+                    <h3 class="mx-3">Patient Reviews </h3>
+                     Patient postive review card code start  
+                    <div class="bg-primary mx-3 responsive" style="height: 45%;">
+                        <div class="d-flex p-2 pb-0">
+                            <div class="m-2 p-2 bg-white rounded">
+                                <img src="./image/postive.png" alt="">
+                            </div>
+                            <div>
+                                <h4 class="text-white mt-1"><b>Positive Review</b></h4>
+                                <h6 class="text-white">635 Reviews</h6>
+                                <div class="d-flex">
+                                    <div class="text-white">
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="mx-3 px-3 border rounded text-white">
+                                        0
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mx-3 my-3">
+                            <div class="progress">
+                                <div class="progress-bar bg-primary progress-bar-striped" style="width:40%">40%</div>
+                            </div>
+                        </div>
+                    </div>
+                     Patient postive review card code complate  
+                    Patient nagative review card code start  
+                    <div class="bg-danger mx-3" style="height: 45%;">
+                        <div class="d-flex p-2 pb-0">
+                            <div class="m-2 p-2 bg-white rounded">
+                                <img src="./image/nagative.png" alt="">
+                            </div>
+                            <div>
+                                <h4 class="text-white mt-1"><b>Positive Review</b></h4>
+                                <h6 class="text-white">635 Reviews</h6>
+                                <div class="d-flex">
+                                    <div class="text-white">
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="mx-3 px-3 border rounded text-white">
+                                        0
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mx-3 my-3">
+                            <div class="progress">
+                                <div class="progress-bar bg-danger progress-bar-striped" style="width:70%">70%</div>
+                            </div>
+                        </div>
+                    </div>
+                     Patient nagative review card code complete
+                </div>
+            </div>
+        </div> -->
+    </div>
+    </div>
+    <!-- doctor daetil menu complete heare -->
+    <!-- finsh body code  -->
+    <!-- bootstrap java script link  -->
+    <!-- bootstrap java script link  complete -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(document).ready(function () {
+            const aid = getCookie("admin_id");
+            alert(aid);
+            if (aid != null && aid.length > 0) {
+                alert(aid);
+            } else {
+                // window.location.replace("login.html");
+            }
+            // Replace these with the actual doctor IDs you want to fetch
+            const doctorIds = [29, 40]; // For example, fetching data for doctors with IDs 1 and 2
+
+            // Loop through the doctor IDs and fetch data for each doctor
+            doctorIds.forEach(function (doctorId) {
+
+                // Make an API request to get data for the doctor with the given ID
+                $.ajax({
+                    url: `${doctors}/${doctorId}`, // Replace with your API endpoint
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function (response) {
+                        const doctorData = response.data[0]; // Assuming the response contains doctor data
+                        const img_url = `${host}/${doctorData.image_url}`;
+                        // Create the HTML for the doctor card
+                        const doctorCard = `
+                            <div class="bg-white p-4  d-flex shadow bg-white rounded">
+                                <div style="margin-right:20px;">
+                                    <img src="${img_url}" alt="" height="100px" width="100px" style="border-radius:4px;">
+                                </div>
+                                <div>
+                                    <h4>${doctorData.doctor_name}</h4>
+                                    <p>${doctorData.speciality}</p>
+                                </div>
+                            </div><br>
+                            `;
+                        // Append the doctor card to the "doctorList" div
+                        $('#doctorList').append(doctorCard);
+                    },
+                    error: function (error) {
+                        console.log('Error:', error);
+                    }
+                });
+            });
+            const patientIds = [12, 23];
+            patientIds.forEach(function (patientId) {
+                // Make an API request to get data for the doctor with the given ID
+                $.ajax({
+                    url: `${patients}/${patientId}`, // Replace with your API endpoint
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function (response) {
+                        const list = response.data;
+                        list.s
+                        const patientData = response.data[0]; // Assuming the response contains doctor data
+                        const img_url = `${host}/${patientData.image_url}`;
+                        // Create the HTML for the doctor card
+                        // $('#drname').text(doctorData.doctor_name); 
+                        const patientCrad = `
+                         <div class="bg-white p-4  d-flex shadow bg-white rounded">
+                         <div style="margin-right:20px;">
+                             <img src="${img_url}" alt="" height="100px" width="100px" style="border-radius:4px;">
+                         </div>
+                         <div>
+                            <h4>${patientData.patient_name}</h4>
+                            <p>${patientData.email_id}</p>
+                        </div>
+                        </div><br>
+                        `;
+                        // Append the doctor card to the "doctorList" div
+                        $('#patient-list').append(patientCrad);
+                    },
+                    error: function (error) {
+                        console.log('Error:', error);
+                    }
+                });
+            });
+
+            console.log(getCookie('admin_id'));
+
+            const adminApi = `${admin}/7`;
+            $.ajax({
+                type: 'GET',
+                data: 'json',
+                url: adminApi,
+                success: function (response) {
+
+                    console.log("response")
+                    $('#a').text(response.data[0].no_of_beds); // Update the navbar brand text
+                    $('#b').text(response.data[0].no_of_doctors); // Update the navbar brand text
+                    $('#c').text(response.data[0].no_of_bills); // Update the navbar brand text
+                    $('#d').text(response.data[0].no_of_ambules); // Update the navbar brand text
+
+                },
+                error: function (error) {
+                    console.error("Error fetching doctor data:", error);
+                }
+            });
+            $("#saveChangesButton").click(function () {
+                // Get the updated values from input fields
+                const updatedBeds = $("#beds").val();
+                const updatedAmbulances = $("#ambulunce").val();
+                const adminApi1 = admin;
+
+                // Create an object with the updated data
+                const updateData = {
+                    admin_id: getCookie('admin_id'),
+                    no_of_beds: updatedBeds,
+                    no_of_ambules: updatedAmbulances
+                };
+
+                // Send a POST request to update the data
+                $.ajax({
+                    type: 'patch',
+                    url: adminApi1, // Replace with your server endpoint
+                    data: JSON.stringify(updateData),
+                    contentType: 'application/json',
+                    success: function (response) {
+                        // Handle success, you can display a success message or perform other actions
+                        console.log('Data updated successfully', response);
+                    },
+                    error: function (error) {
+                        // Handle error, display an error message or log the error
+                        console.log('Error updating data:', error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

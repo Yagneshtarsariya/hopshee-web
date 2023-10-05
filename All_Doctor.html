@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ALL_CSS_FILE/style.css">
+
+    <!-- font awsome librey link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="ALL_JAVA_SCRIPT_FILE/api.js"></script>
+
+    <!-- singal line chart link finsh  -->
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- nav bar code start  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+        <div class="container-fluid align-items-center">
+            <!-- nav bar logo image code strat  -->
+            <a class="navbar-brand" href="#">Hopshee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav bar logo image code complete -->
+            <!-- nav bar page menu code start -->
+            <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Deshbord</a>
+                    </li>
+                    <!-- nev bar drop down menu text1 code start -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_Doctor.html">All-Doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Add_Doctor.html">Add-doctor</a></li>
+                            <li><a class="dropdown-item text-white" href="Edit_Doctor.html">Edit-doctor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Patient</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>                            </li>
+                        </ul>
+                    </li>
+                    <!-- nev bar drop down menu text1 code finsh-->
+                    <!-- nev bar drop down menu text3 code start -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor
+                            Sidual</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="#">Add-Docotr-Sidual</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- nev bar drop down menu text3 code finsh -->
+                </ul>
+                <!-- nav bar page menu code finsh  -->
+                <!-- nav bar code icon  -->
+                <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
+                    <a href="#" class="text-white  nav-icon iconClass"><i class="fa-regular fa-bell"
+                            style="font-size: 20px;"></i></a>
+                    <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a>
+
+                    <div class="dropdown ">
+                        <button class="dropdown-toggle btn btn-default" id="menu1" data-bs-toggle="dropdown">
+                            <img src="./image/profile.png" alt="" height="30px" class="rounded-pill"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu bg-primary" role="menu" aria-labelledby="menu1">
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">PROFILE</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">SETTING</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <!-- nav bar icon code finsh  -->
+            </div>
+        </div>
+    </nav>
+    <!-- finsh nav bar code -->
+
+    <!-- <div class="first_part_body">
+        <div class="deshbord_normal">
+            <h1> All Doctors </h1>
+        </div>
+        <div class="row">
+            <div class="col-lg bg-white p-0 shadow All_doc_main " style="margin-top: 3%;">
+                <div class="bg-primary px-4 pt-5" style="height:60%; position: relative;">
+                    <div class="bg-white d-flex align-items-center">
+                        <div>
+                            <img src="./image/Dr.jpg" alt="" height="100px" width="100px" class="rounded m-4">
+                        </div>
+                        <div class="mt-1">
+                            <h4 class="m-1">
+                                Smith Wright
+                            </h4>
+                            <p class="m-1">
+                                Clinical Doctor
+                            </p>
+                            <div class="m-1">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="mt-2">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary progress-bar-striped" style="width:40%">40%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between" style="position: absolute; top: 250px; width: 100%;
+                    left: 0;
+                    padding: 0% 3%;">
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>1202</h5>
+                            <p>Patient</p>
+                        </div>
+                        <div class="bg-white shadow  text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5> 29 yrs </h5>
+                            <p> Doc age</p>
+                        </div>
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>2259</h5>
+                            <p> Points</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 94px;">
+                    <button onclick="window.location='#'" style="width: 85%; height: 40px;"
+                        class="bg-primary text-white border"> View All </button>
+                </div>
+            </div>
+            <div class="col-lg bg-white p-0 shadow" style="height: 500px; margin-top: 3%;
+            margin-left: 2%;
+            margin-right: 1%;">
+                <div class="bg-primary px-4 pt-5" style="height:60%; position: relative;">
+                    <div class="bg-white d-flex align-items-center">
+                        <div>
+                            <img src="./image/Dr.jpg" alt="" height="100px" width="100px" class="rounded m-4">
+                        </div>
+                        <div class="mt-1">
+                            <h4 class="m-1">
+                                Smith Wright
+                            </h4>
+                            <p class="m-1">
+                                Clinical Doctor
+                            </p>
+                            <div class="m-1">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="mt-2">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary progress-bar-striped" style="width:40%">40%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between" style="position: absolute; top: 250px; width: 100%;
+                    left: 0;
+                    padding: 0% 3%;">
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>1202</h5>
+                            <p>Patient</p>
+                        </div>
+                        <div class="bg-white shadow  text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5> 29 yrs </h5>
+                            <p> Doc age</p>
+                        </div>
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>2259</h5>
+                            <p> Points</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 94px;">
+                    <button onclick="window.location='#'" style="width: 85%; height: 40px;"
+                        class="bg-primary text-white border"> View All </button>
+                </div>
+            </div>
+            <div class="col-lg bg-white p-0 shadow" style="height: 500px; margin-top: 3%;
+            margin-left: 2%;
+            margin-right: 1%;">
+                <div class="bg-primary px-4 pt-5" style="height:60%; position: relative;">
+                    <div class="bg-white d-flex align-items-center">
+                        <div>
+                            <img src="./image/Dr.jpg" alt="" height="100px" width="100px" class="rounded m-4">
+                        </div>
+                        <div class="mt-1">
+                            <h4 class="m-1">
+                                Smith Wright
+                            </h4>
+                            <p class="m-1">
+                                Clinical Doctor
+                            </p>
+                            <div class="m-1">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="mt-2">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary progress-bar-striped" style="width:40%">40%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between" style="position: absolute; top: 250px; width: 100%;
+                    left: 0;
+                    padding: 0% 3%;">
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>1202</h5>
+                            <p>Patient</p>
+                        </div>
+                        <div class="bg-white shadow  text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5> 29 yrs </h5>
+                            <p> Doc age</p>
+                        </div>
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>2259</h5>
+                            <p> Points</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 94px;">
+                    <button onclick="window.location='#'" style="width: 85%; height: 40px;"
+                        class="bg-primary text-white border"> View All </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg bg-white p-0 shadow All_doc_main " style="margin-top: 3%;">
+                <div class="bg-primary px-4 pt-5" style="height:60%; position: relative;">
+                    <div class="bg-white d-flex align-items-center">
+                        <div>
+                            <img src="./image/Dr.jpg" alt="" height="100px" width="100px" class="rounded m-4">
+                        </div>
+                        <div class="mt-1">
+                            <h4 class="m-1">
+                                Smith Wright
+                            </h4>
+                            <p class="m-1">
+                                Clinical Doctor
+                            </p>
+                            <div class="m-1">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="mt-2">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary progress-bar-striped" style="width:40%">40%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between" style="position: absolute; top: 250px; width: 100%;
+                    left: 0;
+                    padding: 0% 3%;">
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>1202</h5>
+                            <p>Patient</p>
+                        </div>
+                        <div class="bg-white shadow  text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5> 29 yrs </h5>
+                            <p> Doc age</p>
+                        </div>
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>2259</h5>
+                            <p> Points</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 94px;">
+                    <button onclick="window.location='#'" style="width: 85%; height: 40px;"
+                        class="bg-primary text-white border"> View All </button>
+                </div>
+            </div>
+            <div class="col-lg bg-white p-0 shadow" style="height: 500px; margin-top: 3%;
+            margin-left: 2%;
+            margin-right: 1%;">
+                <div class="bg-primary px-4 pt-5" style="height:60%; position: relative;">
+                    <div class="bg-white d-flex align-items-center">
+                        <div>
+                            <img src="./image/Dr.jpg" alt="" height="100px" width="100px" class="rounded m-4">
+                        </div>
+                        <div class="mt-1">
+                            <h4 class="m-1">
+                                Smith Wright
+                            </h4>
+                            <p class="m-1">
+                                Clinical Doctor
+                            </p>
+                            <div class="m-1">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="mt-2">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary progress-bar-striped" style="width:40%">40%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between" style="position: absolute; top: 250px; width: 100%;
+                    left: 0;
+                    padding: 0% 3%;">
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>1202</h5>
+                            <p>Patient</p>
+                        </div>
+                        <div class="bg-white shadow  text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5> 29 yrs </h5>
+                            <p> Doc age</p>
+                        </div>
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>2259</h5>
+                            <p> Points</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 94px;">
+                    <button onclick="window.location='#'" style="width: 85%; height: 40px;"
+                        class="bg-primary text-white border"> View All </button>
+                </div>
+            </div>
+            <div class="col-lg bg-white p-0 shadow" style="height: 500px; margin-top: 3%;
+                     margin-left: 2%;
+                      margin-right: 1%;">
+                <div class="bg-primary px-4 pt-5" style="height:60%; position: relative;">
+                    <div class="bg-white d-flex align-items-center">
+                        <div>
+                            <img src="./image/Dr.jpg" alt="" height="100px" width="100px" class="rounded m-4">
+                        </div>
+                        <div class="mt-1">
+                            <h4 class="m-1">
+                                Smith Wright
+                            </h4>
+                            <p class="m-1">
+                                Clinical Doctor
+                            </p>
+                             <div class="m-1">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="mt-2">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary progress-bar-striped" style="width:40%">40%
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between" style="position: absolute; top: 250px; width: 100%;
+                    left: 0;
+                    padding: 0% 3%;">
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>1202</h5>
+                            <p>Patient</p>
+                        </div>
+                        <div class="bg-white shadow  text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5> 29 yrs </h5>
+                            <p> Doc age</p>
+                        </div>
+                        <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 30%; ">
+                            <h5>2259</h5>
+                            <p> Points</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 94px;">
+                    <button onclick="window.location='#'" style="width: 85%; height: 40px;"
+                        class="bg-primary text-white border"> View All </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container mt-4">
+        <div class="row" id="doctor-list">
+            <!-- Doctors will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Include jQuery and your custom JavaScript here -->
+    <script src="jquery.min.js"></script>
+    <script>
+        function pageredirect(doctor_id){
+            window.location.href = "Doctor_deshbord.html?doctor_id=" + encodeURIComponent(doctor_id);
+        }
+        function pageredirectedit(doctor_id){
+            window.location.href = "Edit_Doctor.html?doctor_id=" + encodeURIComponent(doctor_id);
+        }
+        $(document).ready(function () {
+            // Make a GET request to your API
+            const apiurl = doctors
+            $.ajax({
+                url: apiurl, // Replace with your API endpoint
+                method: 'GET',
+                dataType: 'json', // Adjust data type if needed
+                success: function (response) {
+                    // Iterate through the list of doctors
+                    response.data.forEach(function (doctorData) {
+                        const age = calculateAge(doctorData.date_of_birth);
+                        const img_url = `${host}/${doctorData.image_url}`;
+
+                        let truncatedDescription = doctorData.brief_desc.substring(0, 25);
+
+                        const descriptionText = doctorData.brief_desc.length > 25
+                            ? truncatedDescription + '...'
+                            : truncatedDescription;
+                        let gen = "";
+                        if (doctorData.gender == 'M') {
+                            gen = 'MALE'
+                        } else {
+                            gen = 'FEMALE'
+                        }
+                        // Create a new doctor card for each doctor
+                        const doctorCard = `
+                            <div class="col-lg bg-white p-0 shadow" style="height: 500px; margin-top: 3%; margin-left: 2%; margin-right: 1%;">
+                                <div class="bg-primary px-4 pt-5" style="height:60%; position: relative;">
+                                    <div class="bg-white d-flex align-items-center">
+                                        <div>
+                                            <img src="${img_url}" alt="" height="100px" width="100px" class="rounded m-4">
+                                         </div>
+                                        <div class="mt-1">
+                                            <h6 class="m-1">${doctorData.doctor_name}</h6>
+                                            <p class="m-1">${doctorData.speciality}</p>  
+                                            <p class="m-1">${descriptionText}</p>
+                                    <!--<div class="m-1">
+                                            <i class="fa-regular fa-star"></i>
+                                            
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="progress"> 
+                                                <div class="progress-bar bg-primary progress-bar-striped" style="width:40%">40%</div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-around   " style="position: absolute; top: 250px; width: 100%; left: 0;padding: 0% 3%;">
+                                    <div class="bg-white shadow text-center pt-4" style="height: 100px; width: 45%; ">
+                                         <h6 class="m-1">Gender</h6>
+                                         <h5 class="m-0">${gen}</h5>
+                                    </div>
+                                    <div class="bg-white shadow  text-center pt-4" style="height: 100px; width: 45%; ">
+                                     <h6 class="m-1">Doc Age</h6>
+                                     <h5 class="m-0">${age} year</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center" style="margin-top: 80px;">
+                                <button onclick="pageredirect(${doctorData.doctor_id})" style="width: 85%; height: 40px;" class="bg-primary text-white border"> View Doctor Details </button>
+                            </div>
+                            <div class="text-center" style="margin-top: 10px;">
+                                <button onclick="pageredirectedit(${doctorData.doctor_id})" style="width: 85%; height: 40px;" class="bg-primary text-white border"> Edit Doctor Details</button>
+                            </div>
+                            </div> `;
+                        // Append the doctor card to the doctor-list container
+                        $('#doctor-list').append(doctorCard);
+                    });
+
+                    // Function to calculate age based on date of birth
+                    function calculateAge(date_of_birth) {
+                        const dob = new Date(date_of_birth);
+                        const currentDate = new Date();
+                        const ageInMilliseconds = currentDate - dob;
+                        const ageInYears = ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000); // 365.25 days per year
+                        return Math.floor(ageInYears);
+                    }
+                },
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            });
+
+        });
+
+    </script>
+    <!-- bootstrap java script link  -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- bootstrap java script link  complete -->
+</body>
+
+</html>
