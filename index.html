@@ -70,7 +70,7 @@
                     </li> -->
                 <!-- nev bar drop down menu text3 code finsh -->
                 </ul>
-                <button style="background-color: transparent; border: transparent; color: white;">Logout</button>
+                <button style="background-color: transparent; border: transparent; color: white;" id="Logout">Logout</button>
                 <!-- nav bar page menu code finsh  -->
                 <!-- nav bar code icon  -->
                 <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
@@ -369,14 +369,12 @@
     <script>
         $(document).ready(function () {
             const aid = getCookie("admin_id");
-            alert(aid);
             if (aid != null && aid.length > 0) {
-                alert(aid);
             } else {
                 // window.location.replace("login.html");
             }
             // Replace these with the actual doctor IDs you want to fetch
-            const doctorIds = [29, 40]; // For example, fetching data for doctors with IDs 1 and 2
+            const doctorIds = [41, 42]; // For example, fetching data for doctors with IDs 1 and 2
 
             // Loop through the doctor IDs and fetch data for each doctor
             doctorIds.forEach(function (doctorId) {
@@ -409,7 +407,7 @@
                     }
                 });
             });
-            const patientIds = [12, 23];
+            const patientIds = [24, 25];
             patientIds.forEach(function (patientId) {
                 // Make an API request to get data for the doctor with the given ID
                 $.ajax({
@@ -443,7 +441,7 @@
                 });
             });
 
-            console.log(getCookie('admin_id'));
+            console.log(getCookie("admin_id"));
 
             const adminApi = `${admin}/7`;
             $.ajax({
@@ -462,6 +460,12 @@
                 error: function (error) {
                     console.error("Error fetching doctor data:", error);
                 }
+            });
+            $("#Logout").click(function () {
+                console.log("Logout");
+                setCookie("admin_id", "", 1);
+                setCookie('employee_id', "", 1);
+                window.location.replace("login.html");
             });
             $("#saveChangesButton").click(function () {
                 // Get the updated values from input fields

@@ -155,9 +155,9 @@
                             if (response.error == 0) {
                                 const admin_id = response.data.admin_id;
                                 console.log(admin_id);
-                                // setCookie("admin_id",admin_id , 7 );
-                                $.cookie('admin_id', admin_id, { expires: 7 });
-                                
+                                setCookie("admin_id",admin_id , 7 );
+                              //  $.cookie('admin_id', admin_id, { expires: 7 });
+                             // console.log(getCookie("admin_id"));
                                 window.location.replace("index.html");
                             } else {
                                 alert('please enter a valid email and password')

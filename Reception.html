@@ -28,11 +28,11 @@
             <!-- nav bar page menu code start -->
             <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link text-white" href="index.html">Deshbord</a>
-                    </li>
+                    </li> -->
                     <!-- nev bar drop down menu text1 code start -->
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown">Doctor</a>
                         <ul class="dropdown-menu bg-primary">
@@ -46,7 +46,7 @@
                             data-bs-toggle="dropdown">Patient</a>
                         <ul class="dropdown-menu bg-primary">
                             <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>                            </li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <!-- nev bar drop down menu text1 code finsh-->
                     <!-- nev bar drop down menu text3 code start -->
@@ -68,13 +68,13 @@
                             style="font-size: 20px;"></i></a>
                     <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a> -->
 
-                    <div class="dropdown ">
+                    <!-- <div class="dropdown ">
                         <button class="dropdown-toggle btn btn-default border rounded-circle align-content-center" id="menu1" data-bs-toggle="dropdown">
                             <span class="caret" ></span>
                         </button>
                         <ul class="dropdown-menu bg-primary" role="menu" aria-labelledby="menu1">
                             <li class="nav-link"><a class="dropdown-item text-white" href="#">Logout</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
                 <!-- nav bar icon code finsh  -->
@@ -100,7 +100,7 @@
         $(document).ready(function () {
             const eid = getCookie('employee_id');
             if (eid != null && eid.length > 0) {
-                alert(eid);
+                // alert(eid);
             } else {
                 // window.location.replace("login.html");
             }

@@ -17,7 +17,7 @@
     <script src='jquery.min.js'></script>
 
     <script src="./ALL_JAVA_SCRIPT_FILE/script.js"></script>
-    <script src="./ALL_JAVA_SCRIPT_FILE/coulmnchart.js"></script>
+    <script src="./ALL_JAVA_SCRIPT_FILE/cookie.js"></script>
     <script src="ALL_JAVA_SCRIPT_FILE/api.js"></script>
 
     <!-- singal line chart link finsh  -->
@@ -313,7 +313,6 @@
     <script>
         $(document).ready(function () {
             $('#btnadd').click(function () { 
-                alert('i am click ')
                 // Create a new FormData object
                 var formData = new FormData();
 
@@ -331,8 +330,8 @@
                 formData.append('doctor_time_from', $('#dr_time_from').val());
                 formData.append('doctor_time_to', $('#dr_time_to').val());
                 formData.append('salary_amount', $('#dr_salary').val());
-                formData.append('is_active',0);
-                formData.append('admin_id',getCookie('admin_id'));
+                formData.append('is_active',1);
+                formData.append('admin_id',getCookie("admin_id"));
 
                 // URL of the API endpoint
                 var apiUrl = doctors;
@@ -347,6 +346,7 @@
                     success: function (response) {
                         // Handle a successful response from the API
                         console.log('API response:', response);
+                        alert("add successfully");
                     },
                     error: function (xhr, status, error) {
                         // Handle errors
