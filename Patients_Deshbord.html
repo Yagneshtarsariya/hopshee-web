@@ -19,7 +19,7 @@
 <script src="ALL_JAVA_SCRIPT_FILE/api.js"></script>
 
 <!-- singal line chart link finsh  -->
- 
+
 <title>Document</title>
 </head>
 
@@ -52,12 +52,13 @@
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown">Patient</a>
                         <ul class="dropdown-menu bg-primary">
-                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>                            </li>
-                        </ul>
+                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>
                     </li>
-                    <!-- nev bar drop down menu text1 code finsh-->
-                    <!-- nev bar drop down menu text3 code start -->
-                    <!-- <li class="nav-item dropdown">
+                </ul>
+                </li>
+                <!-- nev bar drop down menu text1 code finsh-->
+                <!-- nev bar drop down menu text3 code start -->
+                <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown">Doctor
                             Sidual</a>
@@ -66,8 +67,10 @@
                             <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
                         </ul>
                     </li> -->
-                    <!-- nev bar drop down menu text3 code finsh -->
+                <!-- nev bar drop down menu text3 code finsh -->
                 </ul>
+                <button style="background-color: transparent; border: transparent; color: white;"
+                    id="Logout">Logout</button>
                 <!-- nav bar page menu code finsh  -->
                 <!-- nav bar code icon  -->
                 <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
@@ -183,20 +186,20 @@
                     <div>
                         <h3>Patient check detils</h3>
                         <div class="bg-white shadow text-center mt-4" style="height: 70px;">
-                            <h5 style="color: black;" class="pt-3">Blood pressure: <span style="font-size: 85%;" id="bloodpresher">120/89</span><span
-                                    style="font-size: 85%;"> MMHG</span></h5>
+                            <h5 style="color: black;" class="pt-3">Blood pressure: <span style="font-size: 85%;"
+                                    id="bloodpresher">120/89</span><span style="font-size: 85%;"> MMHG</span></h5>
                         </div>
                         <div class="bg-white shadow text-center mt-2" style="height: 70px;">
-                            <h5 style="color: black;" class="pt-3">Heart Rate : <span style="font-size: 85%;" id="HeartRate"> 107</span><span
-                                    style="font-size: 85%;"> per min</span></h5>
+                            <h5 style="color: black;" class="pt-3">Heart Rate : <span style="font-size: 85%;"
+                                    id="HeartRate"> 107</span><span style="font-size: 85%;"> per min</span></h5>
                         </div>
                         <div class="bg-white shadow text-center mt-2" style="height: 70px;">
-                            <h5 style="color: black;" class="pt-3">Glucose Rate : <span style="font-size: 85%;" id="GlucoseRate">97</span><span
-                                    style="font-size: 85%;"> mg/dl</span></h5>
+                            <h5 style="color: black;" class="pt-3">Glucose Rate : <span style="font-size: 85%;"
+                                    id="GlucoseRate">97</span><span style="font-size: 85%;"> mg/dl</span></h5>
                         </div>
                         <div class="bg-white shadow text-center mt-2" style="height: 70px;">
-                            <h5 style="color: black;" class="pt-3">Clolesterol : <span style="font-size: 85%;" id="Clolesterol">124</span><span
-                                    style="font-size: 85%;"> mg/dl</span></h5>
+                            <h5 style="color: black;" class="pt-3">Clolesterol : <span style="font-size: 85%;"
+                                    id="Clolesterol">124</span><span style="font-size: 85%;"> mg/dl</span></h5>
                         </div>
                     </div>
                 </div>
@@ -297,6 +300,12 @@
                     console.error("Error fetching doctor data:", error);
                 }
 
+            });
+            $("#Logout").click(function () {
+                console.log("Logout");
+                setCookie("admin_id", "", 1);
+                setCookie('employee_id', "", 1);
+                window.location.replace("login.html");
             });
         });
         function calculateAge(date_of_birth) {

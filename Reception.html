@@ -16,7 +16,7 @@
     <title>Document</title>
 </head>
 
-<body> 
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
         <div class="container-fluid align-items-center">
             <!-- nav bar logo image code strat  -->
@@ -61,6 +61,8 @@
                     </li> -->
                     <!-- nev bar drop down menu text3 code finsh -->
                 </ul>
+                <button style="background-color: transparent; border: transparent; color: white;"
+                    id="Logout">Logout</button>
                 <!-- nav bar page menu code finsh  -->
                 <!-- nav bar code icon  -->
                 <div class="d-flex col-md-2 justify-content-around align-items-center">
@@ -75,10 +77,10 @@
                         <ul class="dropdown-menu bg-primary" role="menu" aria-labelledby="menu1">
                             <li class="nav-link"><a class="dropdown-item text-white" href="#">Logout</a></li>
                         </ul> -->
-                    </div>
                 </div>
-                <!-- nav bar icon code finsh  -->
             </div>
+            <!-- nav bar icon code finsh  -->
+        </div>
         </div>
     </nav>
     <div class="container bg-white pt-4 pb-4">
@@ -198,6 +200,12 @@
 
             // Call the function to populate the appointment list
             populateAppointmentList();
+            $("#Logout").click(function () {
+                console.log("Logout");
+                setCookie("admin_id", "", 1);
+                setCookie('employee_id', "", 1);
+                window.location.replace("login.html");
+            });
         });
     </script>
 

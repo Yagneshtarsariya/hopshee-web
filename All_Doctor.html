@@ -67,6 +67,7 @@
                     </li> -->
                     <!-- nev bar drop down menu text3 code finsh -->
                 </ul>
+                <button style="background-color: transparent; border: transparent; color: white;" id="Logout">Logout</button>
                 <!-- nav bar page menu code finsh  -->
                 <!-- nav bar code icon  -->
                 <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
@@ -426,6 +427,12 @@
             window.location.href = "Edit_Doctor.html?doctor_id=" + encodeURIComponent(doctor_id);
         }
         $(document).ready(function () {
+            $("#Logout").click(function () {
+                console.log("Logout");
+                setCookie("admin_id", "", 1);
+                setCookie('employee_id', "", 1);
+                window.location.replace("login.html");
+            });
             // Make a GET request to your API
             const apiurl = doctors
             $.ajax({

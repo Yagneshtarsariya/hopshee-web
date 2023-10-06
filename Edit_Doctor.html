@@ -55,12 +55,13 @@
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown">Patient</a>
                         <ul class="dropdown-menu bg-primary">
-                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>                            </li>
-                        </ul>
+                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>
                     </li>
-                    <!-- nev bar drop down menu text1 code finsh-->
-                    <!-- nev bar drop down menu text3 code start -->
-                    <!-- <li class="nav-item dropdown">
+                </ul>
+                </li>
+                <!-- nev bar drop down menu text1 code finsh-->
+                <!-- nev bar drop down menu text3 code start -->
+                <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown">Doctor
                             Sidual</a>
@@ -69,8 +70,10 @@
                             <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
                         </ul>
                     </li> -->
-                    <!-- nev bar drop down menu text3 code finsh -->
+                <!-- nev bar drop down menu text3 code finsh -->
                 </ul>
+                <button style="background-color: transparent; border: transparent; color: white;"
+                    id="Logout">Logout</button>
                 <!-- nav bar page menu code finsh  -->
                 <!-- nav bar code icon  -->
                 <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
@@ -314,15 +317,22 @@
     <!-- bootstrap java script link  complete -->
     <script>
         $(document).ready(function () {
+            $("#Logout").click(function () {
+                console.log("Logout");
+                setCookie("admin_id", "", 1);
+                setCookie('employee_id', "", 1);
+                window.location.replace("login.html");
+            });
             // Extract the doctorId from the URL
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const doctorId = urlParams.get("doctor_id");
- 
+
             // Check if doctorId is valid
             if (doctorId) {
                 // Make an API request to retrieve doctor details and populate the form fields
                 $.ajax({
+
                     url: `${doctors}/${doctorId}`,// Replace with your API endpoint to fetch doctor details  
                     type: "GET",
                     dataType: "json",
@@ -351,42 +361,43 @@
                 // Handle the update button click
                 $("#btnsubmit").click(function () {
 
-                // Gather updated data from the input fields
-                const updatedData = {
-                    doctor_id: doctorId,
-                    doctor_name: $("#dr_name").val(),
-                    email_id: $("#email_id").val(),
-                    phone_no: $("#phoen_no").val(),
-                    gender: $("#gender").val(),
-                    date_of_birth: $("#date_of_birth").val(),
-                    speciality: $("#speciality").val(),
-                    brief_desc: $("#discription").val(),
-                    doctor_certi_no: $("#dr_certificte_number").val(),
-                    doctor_time_from: $("#dr_time_from").val(),
-                    doctor_time_to: $("#dr_time_to").val(),
-                    salary_amount: $("#dr_salary").val(),
-                };
-                // Make an API request to update the doctor's details using PATCH
-                $.ajax({
-                    url: `${doctors}`, // Replace with your API endpoint for updating doctor details
-                    type: "PATCH", // Use PATCH method
-                    data: JSON.stringify(updatedData),
-                    contentType: "application/json",
-                    success: function (response) {
-                        console.log(response)
-                        console.log("Doctor details updated successfully.");
-                        // Optionally, you can redirect to another page or show a success message.
-                    },
-                    error: function (error) {
-                        console.log("Error updating doctor details: " + error);
-                        // Handle the error, show an error message, etc.
-                    }
+                    // Gather updated data from the input fields
+                    const updatedData = {
+                        doctor_id: doctorId,
+                        doctor_name: $("#dr_name").val(),
+                        email_id: $("#email_id").val(),
+                        phone_no: $("#phoen_no").val(),
+                        gender: $("#gender").val(),
+                        date_of_birth: $("#date_of_birth").val(),
+                        speciality: $("#speciality").val(),
+                        brief_desc: $("#discription").val(),
+                        doctor_certi_no: $("#dr_certificte_number").val(),
+                        doctor_time_from: $("#dr_time_from").val(),
+                        doctor_time_to: $("#dr_time_to").val(),
+                        salary_amount: $("#dr_salary").val(),
+                    };
+                    // Make an API request to update the doctor's details using PATCH
+                    $.ajax({
+                        url: `${doctors}`, // Replace with your API endpoint for updating doctor details
+                        type: "PATCH", // Use PATCH method
+                        data: JSON.stringify(updatedData),
+                        contentType: "application/json",
+                        success: function (response) {
+                            console.log(response)
+                            console.log("Doctor details updated successfully.");
+                            // Optionally, you can redirect to another page or show a success message.
+                        },
+                        error: function (error) {
+                            console.log("Error updating doctor details: " + error);
+                            // Handle the error, show an error message, etc.
+                        }
+                    });
                 });
-            });
-        } else {
-            console.log("Invalid doctorId provided in the URL.");
-        }
-    });
+
+            } else {
+                console.log("Invalid doctorId provided in the URL.");
+            }
+        });
     </script>
 </body>
 

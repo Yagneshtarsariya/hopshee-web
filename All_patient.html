@@ -62,6 +62,7 @@
                     </li> -->
                     <!-- nev bar drop down menu text3 code finsh -->
                 </ul>
+                <button style="background-color: transparent; border: transparent; color: white;" id="Logout">Logout</button>
                 <!-- nav bar page menu code finsh  -->
                 <!-- nav bar code icon  -->
                 <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
@@ -228,6 +229,12 @@
                 const ageInYears = ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000); // 365.25 days per year
                 return Math.floor(ageInYears);
             }
+            $("#Logout").click(function () {
+                console.log("Logout");
+                setCookie("admin_id", "", 1);
+                setCookie('employee_id', "", 1);
+                window.location.replace("login.html");
+            });
         });
 
     </script>
