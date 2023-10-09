@@ -236,11 +236,11 @@
             }
             $("#checkemail").hide();
 
-            $("#email_id").keyup(function () {
+            $("#Email_id").keyup(function () {
                 validateemail();
             });
             function validateemail() {
-                let emailvalue = $("#email_id").val();
+                let emailvalue = $("#Email_id").val();
                 let regularexpression = /^([a-zA-Z\d\.\-]+)@([a-zA-Z\d\.\-]+)\.([a-zA-Z]{2,6})$/;
                 if (regularexpression.test(emailvalue)) {
                     $("#checkemail").hide();
@@ -256,11 +256,11 @@
                 }
             }
             $("#checknumber").hide();
-            $("#phoen_no").keyup(function () {
+            $("#phone_no").keyup(function () {
                 validateno();
             });
             function validateno() {
-                let novalue = $("#phoen_no").val();
+                let novalue = $("#phone_no").val();
                 if (novalue.length == "") {
                     $("#checknumber").show();
                     return true;
@@ -277,11 +277,11 @@
             }
 
             $("#checkgender").hide();
-            $("#gender").keyup(function () {
+            $("#Gender").keyup(function () {
                 validategender();
             });
             function validategender() {
-                let genvalue = $("#gender").val();
+                let genvalue = $("#Gender").val();
                 if (genvalue.length == "") {
                     $("#checkgender").show();
                     // $("#checkgender").html("**enter compolsory");
