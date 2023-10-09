@@ -55,12 +55,13 @@
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown">Patient</a>
                         <ul class="dropdown-menu bg-primary">
-                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>                            </li>
-                        </ul>
+                            <li><a class="dropdown-item text-white" href="All_patient.html">All-Patient</a></li>
                     </li>
-                    <!-- nev bar drop down menu text1 code finsh-->
-                    <!-- nev bar drop down menu text3 code start -->
-                    <!-- <li class="nav-item dropdown">
+                </ul>
+                </li>
+                <!-- nev bar drop down menu text1 code finsh-->
+                <!-- nev bar drop down menu text3 code start -->
+                <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown">Doctor
                             Sidual</a>
@@ -69,9 +70,10 @@
                             <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
                         </ul>
                     </li> -->
-                    <!-- nev bar drop down menu text3 code finsh -->
+                <!-- nev bar drop down menu text3 code finsh -->
                 </ul>
-                <button style="background-color: transparent; border: transparent; color: white;" id="Logout">Logout</button>
+                <button style="background-color: transparent; border: transparent; color: white;"
+                    id="Logout">Logout</button>
                 <!-- nav bar page menu code finsh  -->
                 <!-- nav bar code icon  -->
                 <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
@@ -231,39 +233,54 @@
                         <div class="my-3">
                             <label for="" class="my-1"> NAME : </label>
                             <br>
-                            <input type="text" name="" id="dr_name" style="width: 100%; height: 40PX;" required>
+                            <input type="text" name="" id="dr_name" style="width: 100%; height: 40PX;">
+                            <h6 id="checkname" style="color: rgb(204, 14, 14);">**name is missing</h6>
                         </div>
                         <div class="my-3">
                             <label for="" class="my-1"> EMAIL ID : </label>
                             <br>
-                            <input type="email" name="" id="email_id" style="width: 100%; height: 40PX;" required>
+                            <input type="email" name="" id="email_id" style="width: 100%; height: 40PX;">
+                            <h6 id="checkemail" style="color: rgb(204, 14, 14);">** Invalid Email</h6>
+
                         </div>
                         <div class="my-3">
                             <label for="" class="my-1"> PHONE NO : </label>
                             <br>
-                            <input type="number" name="" id="phoen_no" style="width: 100%; height: 40PX;" required>
+                            <input type="number" name="" id="phoen_no" style="width: 100%; height: 40PX;">
+                            <h6 id="checknumber" style="color: rgb(204, 14, 14);">** enter 10 digits number</h6>
+
                         </div>
-                        <div class="my-3">
+                        <!-- <div class="my-3">
                             <label for="" class="my-1"> PASSWORD : </label>
                             <br>
-                            <input type="text" name="" id="password" style="width: 100%; height: 40PX;" required>
-                        </div>
+                            <input type="password" name="" id="password" style="width: 100%; height: 40PX;">
+                            <h6 id="checkpassword" style="color: rgb(204, 14, 14);">** password missing</h6>
+                        </div> -->
                         <div class="my-3">
                             <label for="" class="my-1"> GENDER( M / F ) : </label>
                             <br>
-                            <input type="text" name="" id="gender" style="width: 100%; height: 40PX;" required>
+                            <input type="text" name="" id="gender" style="width: 100%; height: 40PX;">
+                            <h6 id="checkgender" style="color: rgb(204, 14, 14);;"> Enter M or F</h6>
                         </div>
                         <div class="my-3">
                             <label for="" class="my-1"> DATE OF BIRTH : </label>
                             <br>
-                            <input type="date" name="" id="date_of_birth" style="width: 100%; height: 40PX;" required>
+                            <input type="date" name="" id="date_of_birth" style="width: 100%; height: 40PX;">
+                            <h6 id="checkdate" style="color: rgb(204, 14, 14);;"> Enter proper date </h6>
                         </div>
-                            <div class="my-3">
-                                <label for="" class="my-1"> DR IMAGE : </label>
-                                <br>
-                                <input type="file" name="" id="dr_image"
-                                    style="padding-top: 3px; padding-left: 5px; width: 100%; height: 40PX; border: 1px solid #767676; border-radius: 2px;">
-                            </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> PASSWORD : </label>
+                            <br>
+                            <input type="password" name="" id="password" style="width: 100%; height: 40PX;">
+                            <h6 id="checkpassword" style="color: rgb(204, 14, 14);">** password missing</h6>
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DR IMAGE : </label>
+                            <br>
+                            <input type="file" name="" id="dr_image"
+                                style="padding-top: 3px; padding-left: 5px; width: 100%; height: 40PX; border: 1px solid #767676; border-radius: 2px;">
+                        </div>
+                        <h6 id="checkimg" style="color: rgb(204, 14, 14);">** image missing </h6>
                         <div class="my-3">
                             <label for="" class="my-1"> SPECIALITY : </label>
                             <br>
@@ -298,7 +315,7 @@
                         <div class="my-3">
                             <label for="" class="my-1"> DR SALARY AMOUNT : </label>
                             <br>
-                            <input type="text" name="" id="dr_salary" style="width: 100%; height: 40PX;" required>
+                            <input type="text" name="" id="dr_salary" style="width: 100%; height: 40PX;">
                         </div>
                     </div>
                     <div width="100%">
@@ -313,47 +330,222 @@
     <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
     <script>
         $(document).ready(function () {
-            $('#btnadd').click(function () { 
-                // Create a new FormData object
-                var formData = new FormData();
+            $("#checkname").hide();
+            $("#dr_name").keyup(function () {
+                validateuname();
+            });
+            function validateuname() {
+                let unamevalue = $("#dr_name").val();
+                if (unamevalue.length == "") {
+                    $("#checkname").show();
+                    return true;
+                }
+                else if (unamevalue.length < 3 || unamevalue.length > 20) {
+                    $("#checkname").show();
+                    $("#checkname").html("**enter username between 3 to 20");
+                    return true;
+                }
+                else {
+                    $("#checkname").hide();
+                    return false;
+                }
+            }
+            $("#checkemail").hide();
 
-                // Append form data to the FormData object
-                formData.append('doctor_name', $('#dr_name').val());
-                formData.append('email_id', $('#email_id').val());
-                formData.append('phone_no', $('#phoen_no').val());
-                formData.append('password', $('#password').val());
-                formData.append('gender', $('#gender').val());
-                formData.append('date_of_birth', $('#date_of_birth').val());
-                formData.append('image_url', $('#dr_image')[0].files[0]); // Use [0] to get the actual file
-                formData.append('speciality', $('#speciality').val());
-                formData.append('brief_desc', $('#discription').val());
-                formData.append('doctor_certi_no', $('#dr_certificte_number').val()); 
-                formData.append('doctor_time_from', $('#dr_time_from').val());
-                formData.append('doctor_time_to', $('#dr_time_to').val());
-                formData.append('salary_amount', $('#dr_salary').val());
-                formData.append('is_active',1);
-                formData.append('admin_id',getCookie("admin_id"));
+            $("#email_id").keyup(function () {
+                validateemail();
+            });
+            function validateemail() {
+                let emailvalue = $("#email_id").val();
+                let regularexpression = /^([a-zA-Z\d\.\-]+)@([a-zA-Z\d\.\-]+)\.([a-zA-Z]{2,6})$/;
+                if (regularexpression.test(emailvalue)) {
+                    $("#checkemail").hide();
+                    return false;
+                }
+                else {
+                    $("#checkemail").show();
+                    $("#checkemail").html(" ** Enter @ and . format ")
+                    return true;
+                }
+            }
+            $("#checkpassword").hide();
+            $("#password").keyup(function () {
+                validatepassword();
+            });
+            function validatepassword() {
+                let passvalue = $("#password").val();
+                if (passvalue.length == "") {
+                    $("#checkpassword").show();
+                    return true;
+                }
+                else if (passvalue.length < 8) {
+                    $("#checkpassword").show();
+                    $("#checkpassword").html("**enter password greter then 8 digits");
+                    return true;
+                }
+                else {
+                    $("#checkpassword").hide();
+                    return false;
+                }
+            }
+            $("#checknumber").hide();
+            $("#phoen_no").keyup(function () {
+                validateno();
+            });
+            function validateno() {
+                let novalue = $("#phoen_no").val();
+                if (novalue.length == "") {
+                    $("#checknumber").show();
+                    return true;
+                }
+                else if (novalue.length != 10) {
+                    $("#checknumber").show();
+                    $("#nocheck").html("**enter 10 digit contact no");
+                    return true;
+                }
+                else {
+                    $("#checknumber").hide();
+                    return false;
+                }
+            }
 
-                // URL of the API endpoint
-                var apiUrl = doctors;
+            $("#checkgender").hide();
+            $("#gender").keyup(function () {
+                validategender();
+            });
+            function validategender() {
+                let genvalue = $("#gender").val();
+                if (genvalue.length == "") {
+                    $("#checkgender").show();
+                    // $("#checkgender").html("**enter compolsory");
+                    return true;
+                }
+                if (genvalue == "M" || genvalue == "F") {
+                    $("#checkgender").hide();
+                    return false;
 
-                // Make a POST request to the API with the FormData
-                $.ajax({
-                    url: apiUrl,
-                    type: 'POST',
-                    data: formData,
-                    processData: false,  // Prevent jQuery from processing the data
-                    contentType: false,  // Prevent jQuery from setting the content type
-                    success: function (response) {
-                        // Handle a successful response from the API
-                        console.log('API response:', response);
-                        alert("add successfully");
-                    },
-                    error: function (xhr, status, error) {
-                        // Handle errors
-                        console.error('API request failed:', status, error);
+                } else {
+                    $("#checkgender").show();
+                    return true;
+                }
+            }
+
+            $("#checkdate").hide();
+            $("#date_of_birth").on("input", function () {
+                validateDate();
+            });
+
+            function validateDate() {
+                let dateValue = $("#date_of_birth").val();
+                let selectedDate = new Date(dateValue);
+                let currentDate = new Date();
+                currentDate.setFullYear(currentDate.getFullYear() - 23); // Subtract 23 years from the current date
+
+                if (selectedDate <= currentDate) {
+                    $("#checkdate").hide();
+                    return false;
+                } else {
+                    $("#checkdate").show();
+                    return true;
+                }
+            }
+
+            $("#checkimg").hide();
+            $("#dr_image").on("input", function () {
+                validateimg();
+            });
+
+            // function validateimg() {
+            //     var fileInput = this;
+            //     var validationMessage = $("#checkimg");
+
+            //     if (fileInput.files.length > 0) {
+            //         var file = fileInput.files[0];
+            //         var fileType = file.type.toLowerCase();
+
+            //         if (fileType === "image/jpeg" || fileType === "image/png" || fileType === "image/gif") {
+            //             validationMessage.hide();
+            //             return false;
+
+            //         } else {
+            //             validationMessage.show("Please select a valid image file (JPEG, PNG, GIF).");
+            //             return true;
+            //         }
+            //     } else {
+            //         // If no file was selected, clear the validation message
+            //         validationMessage.show("plese file select");
+            //         return true;
+            //     }
+            // }
+
+            function validateimg() {
+                var fileInput = document.getElementById("dr_image");
+                var validationMessage = $("#checkimg");
+
+                if (fileInput.files.length > 0) {
+                    var file = fileInput.files[0];
+                    var fileType = file.type.toLowerCase();
+
+                    if (fileType === "image/jpeg" || fileType === "image/png" || fileType === "image/gif") {
+                        validationMessage.hide(); // Hide the validation message
+                        return false;
+                    } else {
+                        validationMessage.show(); // Show the validation message
+                        validationMessage.html("Please select a valid image file (JPEG, PNG, GIF).");
+                        return true;
                     }
-                });
+                } else {
+                    // If no file was selected, clear the validation message
+                    validationMessage.show(); // Hide the validation message
+                    return true;
+                }
+            }
+
+
+            $('#btnadd').click(function () {
+                console.log(validateno(), validateuname(), validatepassword(), validategender(), validateDate(), validateimg());
+                if (validateno() == true && validateuname() == true && validateemail() == true && validatepassword() == true && validategender() == true && validateDate() == true && validateimg() == true) {
+                    return alert("Error true");
+                }
+                else {
+                    var formData = new FormData();
+
+                    formData.append('doctor_name', $('#dr_name').val());
+                    formData.append('email_id', $('#email_id').val());
+                    formData.append('phone_no', $('#phoen_no').val());
+                    formData.append('password', $('#password').val());
+                    formData.append('gender', $('#gender').val());
+                    formData.append('date_of_birth', $('#date_of_birth').val());
+                    formData.append('image_url', $('#dr_image')[0].files[0]); // Use [0] to get the actual file
+                    formData.append('speciality', $('#speciality').val());
+                    formData.append('brief_desc', $('#discription').val());
+                    formData.append('doctor_certi_no', $('#dr_certificte_number').val());
+                    formData.append('doctor_time_from', $('#dr_time_from').val());
+                    formData.append('doctor_time_to', $('#dr_time_to').val());
+                    formData.append('salary_amount', $('#dr_salary').val());
+                    formData.append('is_active', 1);
+                    formData.append('admin_id', getCookie("admin_id"));
+
+                    var apiUrl = doctors;
+
+                    $.ajax({
+                        url: apiUrl,
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (response) {
+                            console.log('API response:', response);
+                        },
+                        error: function (xhr, status, error) {
+                            console.log('API request failed:', status, error);
+                        }
+                    });
+
+                }
+
+
+
             });
             $("#Logout").click(function () {
                 console.log("Logout");
