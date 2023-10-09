@@ -504,6 +504,17 @@
                     success: function (response) {
                         // Handle success, you can display a success message or perform other actions
                         console.log('Data updated successfully', response);
+                        $("#successMessage").text("Update successful");
+
+                        // Close the modal after 2 seconds
+                        setTimeout(function () {
+                            $('#exampleModal').modal('hide');
+                        }, 2000);
+
+                        // Reload the page after 2 seconds
+                        setTimeout(function () {
+                            location.reload();
+                        }, 300);
                     },
                     error: function (error) {
                         // Handle error, display an error message or log the error
