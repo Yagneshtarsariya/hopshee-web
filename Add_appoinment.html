@@ -45,7 +45,7 @@
                         <label for="" class="my-1"> Phone No : </label>
                         <br>
                         <input type="text" name="" id="phone_no" style="width: 100%; height: 40PX;">
-                        <h6 id="checkno" style="color: rgb(204, 14, 14);">** </h6>
+                        <h6 id="checkno" style="color: rgb(204, 14, 14);">** Enter number</h6>
                     </div>
                     <div class="my-3">
                         <label for="" class="my-1"> Gender : </label>
@@ -252,23 +252,23 @@
                     return true;
                 }
             }
-            $("#checknumber").hide();
+            $("#checkno").hide();
             $("#phone_no").keyup(function () {
                 validateno();
             });
             function validateno() {
                 let novalue = $("#phone_no").val();
                 if (novalue.length == "") {
-                    $("#checknumber").show();
+                    $("#checkno").show();
                     return true;
                 }
                 else if (novalue.length != 10) {
-                    $("#checknumber").show();
-                    $("#nocheck").html("**enter 10 digit contact no");
+                    $("#checkno").show();
+                    $("#checkno").html("**enter 10 digit contact no");
                     return true;
                 }
                 else {
-                    $("#checknumber").hide();
+                    $("#checkno").hide();
                     return false;
                 }
             }
