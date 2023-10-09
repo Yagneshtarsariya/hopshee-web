@@ -245,9 +245,6 @@
                 if (regularexpression.test(emailvalue)) {
                     $("#checkemail").hide();
                     return false;
-                } else if (emailvalue.length == "") {
-                    $("#checkemail").show();
-                    return true;
                 }
                 else {
                     $("#checkemail").show();

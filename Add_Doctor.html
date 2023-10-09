@@ -247,14 +247,15 @@
                             <label for="" class="my-1"> EMAIL ID : </label>
                             <br>
                             <input type="email" name="" id="email_id" style="width: 100%; height: 40PX;">
-                            <h6 id="checkemail" style="color: rgb(204, 14, 14);">** Emaile Missing</h6>
+                            <h6 id="checkemail" style="color: rgb(204, 14, 14);">** Invalid Email</h6>
 
                         </div>
                         <div class="my-3">
                             <label for="" class="my-1"> PHONE NO : </label>
                             <br>
                             <input type="number" name="" id="phoen_no" style="width: 100%; height: 40PX;">
-                            <h6 id="checknumber" style="color: rgb(204, 14, 14);">** Number Missing</h6>
+                            <h6 id="checknumber" style="color: rgb(204, 14, 14);">** enter 10 digits number</h6>
+
                         </div>
                         <div class="my-3">
                             <label for="" class="my-1"> PASSWORD : </label>
@@ -266,13 +267,13 @@
                             <label for="" class="my-1"> GENDER( M / F ) : </label>
                             <br>
                             <input type="text" name="" id="gender" style="width: 100%; height: 40PX;">
-                            <h6 id="checkgender" style="color: rgb(204, 14, 14);;">** Gender Missing</h6>
+                            <h6 id="checkgender" style="color: rgb(204, 14, 14);;"> Enter M or F</h6>
                         </div>
                         <div class="my-3">
                             <label for="" class="my-1"> DATE OF BIRTH : </label>
                             <br>
                             <input type="date" name="" id="date_of_birth" style="width: 100%; height: 40PX;">
-                            <h6 id="checkdate" style="color: rgb(204, 14, 14);;"> ** Enter The Date Before 23 year </h6>
+                            <h6 id="checkdate" style="color: rgb(204, 14, 14);;"> Enter proper date </h6>
                         </div>
                         <!-- <div class="my-3">
                             <label for="" class="my-1"> PASSWORD : </label>
@@ -295,7 +296,7 @@
                             <br>
                             <input type="text" name="" id="dr_certificte_number" style="width: 100%; height: 40PX;">
                         </div>
-                        <h6 id="checkdrno" style="color: rgb(204, 14, 14);">** certificate Number Missing</h6>
+                        <h6 id="checkdrno" style="color: rgb(204, 14, 14);">** Enter image certificate number</h6>
                         <!-- <div class="my-3">
                             <label for="" class="my-1"> DR CERTIFICATE IMAGE : </label>
                             <br>
@@ -362,9 +363,6 @@
                 if (regularexpression.test(emailvalue)) {
                     $("#checkemail").hide();
                     return false;
-                } else if (emailvalue.length == "") {
-                    $("#checkemail").show();
-                    return true;
                 }
                 else {
                     $("#checkemail").show();
@@ -458,30 +456,6 @@
             $("#dr_image").on("input", function () {
                 validateimg();
             });
-
-            // function validateimg() {
-            //     var fileInput = this;
-            //     var validationMessage = $("#checkimg");
-
-            //     if (fileInput.files.length > 0) {
-            //         var file = fileInput.files[0];
-            //         var fileType = file.type.toLowerCase();
-
-            //         if (fileType === "image/jpeg" || fileType === "image/png" || fileType === "image/gif") {
-            //             validationMessage.hide();
-            //             return false;
-
-            //         } else {
-            //             validationMessage.show("Please select a valid image file (JPEG, PNG, GIF).");
-            //             return true;
-            //         }
-            //     } else {
-            //         // If no file was selected, clear the validation message
-            //         validationMessage.show("plese file select");
-            //         return true;
-            //     }
-            // }
-
             function validateimg() {
                 var fileInput = document.getElementById("dr_image");
                 var validationMessage = $("#checkimg");
