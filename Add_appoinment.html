@@ -303,7 +303,7 @@
                 let dateValue = $("#date_of_birth").val();
                 let selectedDate = new Date(dateValue);
                 let currentDate = new Date();
-                currentDate.setFullYear(currentDate.getFullYear() - 23); // Subtract 23 years from the current date
+                currentDate.setFullYear(currentDate.getFullYear() - 0); // Subtract 23 years from the current date
 
                 if (selectedDate <= currentDate) {
                     $("#checkdate").hide();
