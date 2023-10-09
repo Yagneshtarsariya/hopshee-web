@@ -34,25 +34,30 @@
                         <br>
                         <input type="text" name="" id="patient_name" style="width: 100%; height: 40PX;">
                     </div>
+                    <h6 id="checkname" style="color: rgb(204, 14, 14);">**name is missing</h6>
                     <div class="my-3">
                         <label for="" class="my-1"> Email Id : </label>
                         <br>
                         <input type="text" name="" id="Email_id" style="width: 100%; height: 40PX;">
+                        <h6 id="checkemail" style="color: rgb(204, 14, 14);">** Emaile Missing</h6>
                     </div>
                     <div class="my-3">
                         <label for="" class="my-1"> Phone No : </label>
                         <br>
                         <input type="text" name="" id="phone_no" style="width: 100%; height: 40PX;">
+                        <h6 id="checkno" style="color: rgb(204, 14, 14);">** </h6>
                     </div>
                     <div class="my-3">
                         <label for="" class="my-1"> Gender : </label>
                         <br>
                         <input type="text" name="" id="Gender" style="width: 100%; height: 40PX;">
+                        <h6 id="checkgender" style="color: rgb(204, 14, 14);;">** Gender Missing</h6>
                     </div>
                     <div class="my-3">
                         <label for="" class="my-1"> Date Of Birth : </label>
                         <br>
                         <input type="date" name="" id="date_of_birth" style="width: 100%; height: 40PX;">
+                        <h6 id="checkdate" style="color: rgb(204, 14, 14);;"> ** Date Missing </h6>
                     </div>
                     <!-- <div class="my-3">
                         <label for="" class="my-1"> Patient Image : </label>
@@ -208,15 +213,123 @@
                     alert('User ID not found in the URL.');
                 }
             });
-            $('#btnadd').click(function () {
-                if (isPatientHasUser) {
-                    console.log("update");
-                    updatePatients();
-                } else {
-                    console.log("add");
-                    addPatients(userId);
-                }
 
+            $("#checkname").hide();
+            $("#patient_name").keyup(function () {
+                validateuname();
+            });
+            function validateuname() {
+                let unamevalue = $("#patient_name").val();
+                if (unamevalue.length == "") {
+                    $("#checkname").show();
+                    return true;
+                }
+                else if (unamevalue.length < 3 || unamevalue.length > 20) {
+                    $("#checkname").show();
+                    $("#checkname").html("**enter username between 3 to 20");
+                    return true;
+                }
+                else {
+                    $("#checkname").hide();
+                    return false;
+                }
+            }
+            $("#checkemail").hide();
+
+            $("#email_id").keyup(function () {
+                validateemail();
+            });
+            function validateemail() {
+                let emailvalue = $("#email_id").val();
+                let regularexpression = /^([a-zA-Z\d\.\-]+)@([a-zA-Z\d\.\-]+)\.([a-zA-Z]{2,6})$/;
+                if (regularexpression.test(emailvalue)) {
+                    $("#checkemail").hide();
+                    return false;
+                } else if (emailvalue.length == "") {
+                    $("#checkemail").show();
+                    return true;
+                }
+                else {
+                    $("#checkemail").show();
+                    $("#checkemail").html(" ** Enter @ and . format ")
+                    return true;
+                }
+            }
+            $("#checknumber").hide();
+            $("#phoen_no").keyup(function () {
+                validateno();
+            });
+            function validateno() {
+                let novalue = $("#phoen_no").val();
+                if (novalue.length == "") {
+                    $("#checknumber").show();
+                    return true;
+                }
+                else if (novalue.length != 10) {
+                    $("#checknumber").show();
+                    $("#nocheck").html("**enter 10 digit contact no");
+                    return true;
+                }
+                else {
+                    $("#checknumber").hide();
+                    return false;
+                }
+            }
+
+            $("#checkgender").hide();
+            $("#gender").keyup(function () {
+                validategender();
+            });
+            function validategender() {
+                let genvalue = $("#gender").val();
+                if (genvalue.length == "") {
+                    $("#checkgender").show();
+                    // $("#checkgender").html("**enter compolsory");
+                    return true;
+                }
+                if (genvalue == "M" || genvalue == "F") {
+                    $("#checkgender").hide();
+                    return false;
+
+                } else {
+                    $("#checkgender").show();
+                    return true;
+                }
+            }
+
+            $("#checkdate").hide();
+            $("#date_of_birth").on("input", function () {
+                validateDate();
+            });
+
+            function validateDate() {
+                let dateValue = $("#date_of_birth").val();
+                let selectedDate = new Date(dateValue);
+                let currentDate = new Date();
+                currentDate.setFullYear(currentDate.getFullYear() - 23); // Subtract 23 years from the current date
+
+                if (selectedDate <= currentDate) {
+                    $("#checkdate").hide();
+                    return false;
+                } else {
+                    $("#checkdate").show();
+                    return true;
+                }
+            }
+            $('#btnadd').click(function () {
+                console.log(validateno(), validateuname(), validategender(), validateDate(),validateemail());
+                if (validateno() == true || validateuname() == true || validateemail() == true || validategender() == true || validateDate() == true ) {
+                    return alert(" ** Enter Proper Data ** ");
+                }
+                else {
+                    if (isPatientHasUser) {
+                        console.log("update");
+                        updatePatients();
+                    } else {
+                        console.log("add");
+                        addPatients(userId);
+                    }
+                }
             });
 
             function updatePatients() {

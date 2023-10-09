@@ -231,6 +231,13 @@
                     </div> -->
                     <div>
                         <div class="my-3">
+                            <label for="" class="my-1"> DR IMAGE : </label>
+                            <br>
+                            <input type="file" name="" id="dr_image"
+                                style="padding-top: 3px; padding-left: 5px; width: 100%; height: 40PX; border: 1px solid #767676; border-radius: 2px;">
+                        </div>
+                        <h6 id="checkimg" style="color: rgb(204, 14, 14);">** image missing </h6>
+                        <div class="my-3">
                             <label for="" class="my-1"> NAME : </label>
                             <br>
                             <input type="text" name="" id="dr_name" style="width: 100%; height: 40PX;">
@@ -240,15 +247,32 @@
                             <label for="" class="my-1"> EMAIL ID : </label>
                             <br>
                             <input type="email" name="" id="email_id" style="width: 100%; height: 40PX;">
-                            <h6 id="checkemail" style="color: rgb(204, 14, 14);">** Invalid Email</h6>
+                            <h6 id="checkemail" style="color: rgb(204, 14, 14);">** Emaile Missing</h6>
 
                         </div>
                         <div class="my-3">
                             <label for="" class="my-1"> PHONE NO : </label>
                             <br>
                             <input type="number" name="" id="phoen_no" style="width: 100%; height: 40PX;">
-                            <h6 id="checknumber" style="color: rgb(204, 14, 14);">** enter 10 digits number</h6>
-
+                            <h6 id="checknumber" style="color: rgb(204, 14, 14);">** Number Missing</h6>
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> PASSWORD : </label>
+                            <br>
+                            <input type="password" name="" id="password" style="width: 100%; height: 40PX;">
+                            <h6 id="checkpassword" style="color: rgb(204, 14, 14);">** password missing</h6>
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> GENDER( M / F ) : </label>
+                            <br>
+                            <input type="text" name="" id="gender" style="width: 100%; height: 40PX;">
+                            <h6 id="checkgender" style="color: rgb(204, 14, 14);;">** Gender Missing</h6>
+                        </div>
+                        <div class="my-3">
+                            <label for="" class="my-1"> DATE OF BIRTH : </label>
+                            <br>
+                            <input type="date" name="" id="date_of_birth" style="width: 100%; height: 40PX;">
+                            <h6 id="checkdate" style="color: rgb(204, 14, 14);;"> ** Enter The Date Before 23 year </h6>
                         </div>
                         <!-- <div class="my-3">
                             <label for="" class="my-1"> PASSWORD : </label>
@@ -256,31 +280,6 @@
                             <input type="password" name="" id="password" style="width: 100%; height: 40PX;">
                             <h6 id="checkpassword" style="color: rgb(204, 14, 14);">** password missing</h6>
                         </div> -->
-                        <div class="my-3">
-                            <label for="" class="my-1"> GENDER( M / F ) : </label>
-                            <br>
-                            <input type="text" name="" id="gender" style="width: 100%; height: 40PX;">
-                            <h6 id="checkgender" style="color: rgb(204, 14, 14);;"> Enter M or F</h6>
-                        </div>
-                        <div class="my-3">
-                            <label for="" class="my-1"> DATE OF BIRTH : </label>
-                            <br>
-                            <input type="date" name="" id="date_of_birth" style="width: 100%; height: 40PX;">
-                            <h6 id="checkdate" style="color: rgb(204, 14, 14);;"> Enter proper date </h6>
-                        </div>
-                        <div class="my-3">
-                            <label for="" class="my-1"> PASSWORD : </label>
-                            <br>
-                            <input type="password" name="" id="password" style="width: 100%; height: 40PX;">
-                            <h6 id="checkpassword" style="color: rgb(204, 14, 14);">** password missing</h6>
-                        </div>
-                        <div class="my-3">
-                            <label for="" class="my-1"> DR IMAGE : </label>
-                            <br>
-                            <input type="file" name="" id="dr_image"
-                                style="padding-top: 3px; padding-left: 5px; width: 100%; height: 40PX; border: 1px solid #767676; border-radius: 2px;">
-                        </div>
-                        <h6 id="checkimg" style="color: rgb(204, 14, 14);">** image missing </h6>
                         <div class="my-3">
                             <label for="" class="my-1"> SPECIALITY : </label>
                             <br>
@@ -296,12 +295,14 @@
                             <br>
                             <input type="text" name="" id="dr_certificte_number" style="width: 100%; height: 40PX;">
                         </div>
-                        <div class="my-3">
+                        <h6 id="checkdrno" style="color: rgb(204, 14, 14);">** certificate Number Missing</h6>
+                        <!-- <div class="my-3">
                             <label for="" class="my-1"> DR CERTIFICATE IMAGE : </label>
                             <br>
                             <input type="file" name="" id="dr_certi_image"
                                 style="padding-top: 3px; padding-left: 5px; width: 100%; height: 40PX; border: 1px solid #767676; border-radius: 2px;">
-                        </div>
+                        </div> -->
+
                         <div class="my-3">
                             <label for="" class="my-1"> DR TIME FROM : </label>
                             <br>
@@ -315,7 +316,7 @@
                         <div class="my-3">
                             <label for="" class="my-1"> DR SALARY AMOUNT : </label>
                             <br>
-                            <input type="text" name="" id="dr_salary" style="width: 100%; height: 40PX;">
+                            <input type="number" name="" id="dr_salary" style="width: 100%; height: 40PX;">
                         </div>
                     </div>
                     <div width="100%">
@@ -361,6 +362,9 @@
                 if (regularexpression.test(emailvalue)) {
                     $("#checkemail").hide();
                     return false;
+                } else if (emailvalue.length == "") {
+                    $("#checkemail").show();
+                    return true;
                 }
                 else {
                     $("#checkemail").show();
@@ -486,12 +490,12 @@
                     var file = fileInput.files[0];
                     var fileType = file.type.toLowerCase();
 
-                    if (fileType === "image/jpeg" || fileType === "image/png" || fileType === "image/gif") {
+                    if (fileType === "image/jpeg" || fileType === "image/png") {
                         validationMessage.hide(); // Hide the validation message
                         return false;
                     } else {
                         validationMessage.show(); // Show the validation message
-                        validationMessage.html("Please select a valid image file (JPEG, PNG, GIF).");
+                        validationMessage.html("Please select a valid image file (JPEG, PNG).");
                         return true;
                     }
                 } else {
@@ -501,11 +505,27 @@
                 }
             }
 
+            $("#checkdrno").hide();
+            $("#dr_certificte_number").keyup(function () {
+                validatedrno();
+            });
+            function validatedrno() {
+                let genvalue = $("#dr_certificte_number").val();
+                if (genvalue.length == "") {
+                    $("#checkdrno").show();
+                    // $("#checkgender").html("**enter compolsory");
+                    return true;
+                }
+                else {
+                    $("#checkdrno").hide();
+                    return false;
+                }
+            }
 
             $('#btnadd').click(function () {
-                console.log(validateno(), validateuname(), validatepassword(), validategender(), validateDate(), validateimg());
-                if (validateno() == true && validateuname() == true && validateemail() == true && validatepassword() == true && validategender() == true && validateDate() == true && validateimg() == true) {
-                    return alert("Error true");
+                console.log(validateno(), validateuname(), validatepassword(), validategender(), validateDate(), validateimg(), validatedrno());
+                if (validateno() == true || validateuname() == true || validateemail() == true || validatepassword() == true || validategender() == true || validateDate() == true || validateimg() == true || validatedrno() == true) {
+                    return alert(" ** Enter Proper Data ** ");
                 }
                 else {
                     var formData = new FormData();

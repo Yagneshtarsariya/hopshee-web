@@ -445,9 +445,9 @@
                         const age = calculateAge(doctorData.date_of_birth);
                         const img_url = `${host}/${doctorData.image_url}`;
 
-                        let truncatedDescription = doctorData.brief_desc.substring(0, 25);
+                        let truncatedDescription = doctorData.brief_desc.substring(0, 15);
 
-                        const descriptionText = doctorData.brief_desc.length > 25
+                        const descriptionText = doctorData.brief_desc.length > 15
                             ? truncatedDescription + '...'
                             : truncatedDescription;
                         let gen = "";
@@ -458,7 +458,7 @@
                         }
                         // Create a new doctor card for each doctor
                         const doctorCard = `
-                            <div class="col-lg bg-white p-0 shadow" style="height: 500px; margin-top: 3%; margin-left: 2%; margin-right: 1%;">
+                            <div class="col-lg bg-white p-0 shadow" style="height: 500px; margin-top: 3%; margin-left: 0.5%">
                                 <div class="bg-primary px-4 pt-5" style="height:60%; position: relative;">
                                     <div class="bg-white d-flex align-items-center">
                                         <div>

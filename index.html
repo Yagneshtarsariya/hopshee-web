@@ -69,7 +69,8 @@
                     </li> -->
                 <!-- nev bar drop down menu text3 code finsh -->
                 </ul>
-                <button style="background-color: transparent; border: transparent; color: white;" id="Logout">Logout</button>
+                <button style="background-color: transparent; border: transparent; color: white;"
+                    id="Logout">Logout</button>
                 <!-- nav bar page menu code finsh  -->
                 <!-- nav bar code icon  -->
                 <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
@@ -105,45 +106,52 @@
         <br>
         <div class="container-fluid ">
             <div class="row">
-                <div class="col-lg" style="margin:5px;">
+                <div class="col-lg" style="margin-left:5px;margin-right:5px;margin-top:5px;">
                     <div class="counter d-flex">
                         <div>
                             <i class="fa-solid fa-bed" style="font-size:50px; color:#0d6efd; padding-right:10px;"></i>
                         </div>
                         <div>
                             <div class="d-flex">
-                                <h3 style="color:black;" id="a">200 Beds</h3>
+                                <h3 style="color:black;" id="a">200 </h3>
+                                <h3 style="color:black; margin-left: 2px;">Beds</h3>
                                 <button style="background: none; border: none;" type="button" class="btn btn-primary"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <i class="fa-regular fa-pen-to-square" style="color: black;"></i>
                                 </button>
                             </div>
-                            <p style="color:black;">Total Hospital Beds</p>
+                            <p style="color:black;">Hospital Beds</p>
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="chanegefeild"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Edit hospital Detils</h5>
+                                <h5 class="modal-title" id="chanegefeild">Edit hospital Detils</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <form action="" method="">
-                                    <table>
+                                    <tablen>
+                                        <tr>
+                                            <td>
+                                                <h6 id="successMessage"></h6>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>Number of Bed : </td>
-                                            <td><input type="text" name="" id="beds"></td>
+                                            <td><input type="text" id="beds"></td>
                                         </tr>
                                         <br>
                                         <tr>
                                             <td>Number of Ambulunce :</td>
-                                            <td><input type="text" name="" id="ambulunce"></td>
+                                            <td><input type="text" id="ambulunce"></td>
                                         </tr>
-                                    </table>
+                                        </table>
+
                                 </form>
                             </div>
                             <div class="modal-footer">
@@ -154,31 +162,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg" style="margin:5px;">
+                <div class="col-lg" style="margin-left:5px;margin-right:5px;margin-top:5px;">
                     <div class="counter d-flex">
                         <div>
                             <i class="fa-solid fa-user-doctor"
                                 style="font-size:50px; color:#0d6efd; padding-right:10px;"></i>
                         </div>
                         <div>
-                            <h3 style="color:black;" id="b">126 Total Staf</h3>
+                            <div class="d-flex">
+                                <h3 style="color:black;" id="b">126 </h3>
+                                <h3 style="color: black; margin-left: 2px;">Total Staf</h3>
+                            </div>
                             <p style="color:black;">Available Doctors</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg" style="margin:5px;">
+                <div class="col-lg" style="margin-left:5px;margin-right:5px;margin-top:5px;">
                     <div class="counter d-flex">
                         <div>
                             <i class="fa-solid fa-wallet"
                                 style="font-size:50px; color:#0d6efd; padding-right:10px;"></i>
                         </div>
                         <div>
-                            <h3 style="color:black;" id="c">3,743 Bills</h3>
+                            <div class="d-flex">
+                                <h3 style="color:black;" id="c">3,743 </h3>
+                                <h3 style="color: black; margin-left: 2px;">Bills</h3>
+                            </div>
+
                             <p style="color:black;">Pharmacy Bills</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg" style="margin:5px;">
+                <div class="col-lg" style="margin-left:5px;margin-right:5px;margin-top:5px;">
                     <div class="counter d-flex">
                         <div>
                             <i class="fa-solid fa-truck-medical"
@@ -186,13 +201,14 @@
                         </div>
                         <div>
                             <div class="d-flex">
-                                <h3 style="color:black;" id="d">36 Ambula</h3>
+                                <h3 style="color:black;" id="d">36 </h3>
+                                <h3 style="color: black; margin-left: 2px;">Ambula</h3>
                                 <button style="background: none; border: none;" type="button" class="btn btn-primary"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <i class="fa-regular fa-pen-to-square" style="color: black;"></i>
                                 </button>
                             </div>
-                            <p style="color:black;">All Ambulance Cars</p>
+                            <p style="color:black;">Ambulance Cars</p>
                         </div>
                     </div>
                 </div>
@@ -205,7 +221,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- chart strat hear  -->
-                <div class="col-sm myheight_dr mx-4">
+                <div class="col-sm myheight_dr" style="margin-left : 0.5%; margin-right : 0.5%; margin-top: 2%;">
                     <div class=" position-relative ">
                         <div class="bg-primary text-light text-center" style="height:200px;">
                             <h4 class="pt-4">Patient List</h4>
@@ -216,14 +232,14 @@
                         <br>
                         <button onclick="window.location='./All_patient.html'" class="doctor_menu_button shadow">View
                             All
-                            Doctor</button>
+                            Patients</button>
                     </div>
                 </div>
                 <!-- <div class="col-lg-7">
                     <div id="curve_chart" style="height:500px;"></div>
                 </div> -->
                 <!-- Dr Detaile List Code Strat  -->
-                <div class="col-sm myheight_dr">
+                <div class="col-sm myheight_dr" style="margin-left : 0.5%; margin-right : 0.5%; margin-top: 2%;">
                     <div class=" position-relative ">
                         <div class="bg-primary text-light text-center" style="height:200px;">
                             <h4 class="pt-4">Doctors List</h4>
