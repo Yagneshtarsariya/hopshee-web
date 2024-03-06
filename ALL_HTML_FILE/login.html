@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <script src="jquery.min.js"></script>
-    <script src="ALL_JAVA_SCRIPT_FILE/api.js"></script>
-    <script src="ALL_JAVA_SCRIPT_FILE/cookie.js"></script>
-    <title>Document</title>
+    <title>LOG-IN</title>
+
+    <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- ALL_JS_FILE_LINK_HEAR -->
+    <script src="../ALL_JS_FILE/login.js"></script>
+    <script src="../ALL_JS_FILE/api.js"></script>
+    <!-- <script src="../ALL_JS_FILE/drawar.js"></script> -->
+    <script src="../ALL_JS_FILE/cookie.js"></script>
+    <script src="../jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,14 +24,12 @@
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card shadow-2-strong" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
-
                             <h3 class="mb-5">LOG IN</h3>
                             <form id="login-form">
                                 <div class="form-outline mb-4">
                                     <input type="email" id="email" name="email" class="form-control form-control-lg"
                                         placeholder="ENETR RAGISTOR EMAIL" />
                                 </div>
-
                                 <div class="form-outline mb-4">
                                     <input type="password" id="password" name="password"
                                         class="form-control form-control-lg" placeholder="ENTER YOUR PASSWORD" />
@@ -44,19 +48,26 @@
             </div>
         </div>
     </section>
-    <!-- Call apis hear to this page  -->
     <!-- <script>
         $(document).ready(function () {
+            const id = getCookie('admin_id');
+            const eid = getCookie('employee_id');
+            if (id != null && id.length > 0) {
+                window.location.replace("index.html");
+            }
+            if (eid != null && eid.length > 0) {
+                window.location.replace("Reception.html");
+            }
             $('#login-form').submit(function (event) {
                 event.preventDefault(); // Prevent the form from submitting the traditional way
                 // Get form data
                 const username = $('#email').val();
                 const password = $('#password').val();
-                const checkbox = $('#checkbox').is(":checked")
+                const checkbox = $('#checkbox').is(":checked");
 
                 // API URL (replace with your API URL)
                 const apiUrl = adminLogin;
-                const apiUrl2 = employeeslogin; 
+                const apiUrl2 = employeeslogin;
 
                 console.log(apiUrl);
 
@@ -73,15 +84,18 @@
                         url: apiUrl,
                         data: requestData,
                         success: function (response) {
+
                             console.log(response)
                             if (response.error == 0) {
-                                window.close();
-                                window.location = "index.html";
+                                const admin_id = response.data.admin_id;
+                                console.log(admin_id);
+                                setCookie("admin_id", admin_id, 7);
+                                //  $.cookie('admin_id', admin_id, { expires: 7 });
+                                // console.log(getCookie("admin_id"));
+                                window.location.replace("index.html");
+                            } else {
+                                alert('please enter a valid email and password')
                             }
-                            else{
-                                alert('plese enter valid email and passwoed')
-                            }
-                            // Handle a successful login response
                         },
                         error: function (xhr, status, error) {
                             // Handle an error response
@@ -90,20 +104,22 @@
                         }
                     });
                 } else {
-                    
                     $.ajax({
                         type: 'POST',
                         dataType: 'json',
                         url: apiUrl2,
                         data: requestData,
                         success: function (response) {
+
                             console.log(response)
-                            if (response.error == 1) {
-                                alert('plese enter valid email and passwoed')
-                            }
-                            else{
-                                window.close();
-                                window.location = "Reception.html";      
+                            if (response.error == 0) {
+                                const employee_id = response.data.employee_id;
+                                setCookie('employee_id', employee_id, 7);
+
+                                window.location.replace("Reception.html");
+                            } else {
+                                // Redirect to the desired page and prevent the user from going back to the login page
+                                alert('please enter a valid email and password')
                             }
                         },
                         error: function (xhr, status, error) {
@@ -114,6 +130,7 @@
             });
         });
     </script> -->
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
     <script>
         $(document).ready(function () {
             const id = getCookie('admin_id');
@@ -155,9 +172,9 @@
                             if (response.error == 0) {
                                 const admin_id = response.data.admin_id;
                                 console.log(admin_id);
-                                setCookie("admin_id",admin_id , 7 );
-                              //  $.cookie('admin_id', admin_id, { expires: 7 });
-                             // console.log(getCookie("admin_id"));
+                                setCookie("admin_id", admin_id, 7);
+                                //  $.cookie('admin_id', admin_id, { expires: 7 });
+                                // console.log(getCookie("admin_id"));
                                 window.location.replace("index.html");
                             } else {
                                 alert('please enter a valid email and password')
@@ -185,7 +202,7 @@
                                 window.location.replace("Reception.html");
                             } else {
                                 // Redirect to the desired page and prevent the user from going back to the login page
-                                alert('please enter a valid email and password')
+                                alert('please enter a valid email and password');
                             }
                         },
                         error: function (xhr, status, error) {
@@ -196,7 +213,6 @@
             });
         });
     </script>
-
 </body>
 
 </html>

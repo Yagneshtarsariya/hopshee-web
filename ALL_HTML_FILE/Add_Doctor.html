@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ALL_CSS_FILE_LINK_HEAR -->
+    <link rel="stylesheet" href="../ALL_CSS_FILE/Add_doctors.css">
+    <link rel="stylesheet" href="../ALL_CSS_FILE/Drawar.css">
+
+    <!--ICON_LIBREY_LINK_HEAR-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- ALL_CHART_FILE_LINK_HEAR -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../ALL_JS_FILE/coulmnchart.js"></script>
+
+    <!-- ALL_JS_FILE_LINK_HEAR -->
+    <script src="../ALL_JS_FILE/index.js"></script>
+    <script src="../ALL_JS_FILE/api.js"></script>
+    <script src="../ALL_JS_FILE/drawar.js"></script>
+    <script src="../ALL_JS_FILE/cookie.js"></script>
+    <script src="../jquery.min.js"></script>
+
+    <title>ADD DOCTOR</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_details border-bottom">
+            <div class="logo_name">Hopshee-Web</div>
+            <i class="bx bx-menu " id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li id="search">
+                <i class="bx bx-search" style="background-color: white; color: #0d6efd;"></i>
+                <input type="text" id="searchInput" placeholder="search.."
+                    style="color: #0d6efd; background-color: white;">
+                <span class="Tooltip">search</span>
+            </li>
+        </ul>
+        <ul class="nav-list" id="nav_search_item">
+            <li>
+                <a href="index.html" class="selcted">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <span class="Tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="All_Doctor.html">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span class="link_name">Doctors</span>
+                </a>
+                <span class="Tooltip">Doctors</span>
+            </li>
+            <li>
+                <a href="All_patient.html">
+                    <i class="fa-solid fa-user-injured"></i>
+                    <span class="link_name">Patients</span>
+                </a>
+                <span class="Tooltip">Patients</span>
+            </li>
+            <!-- <li>
+                <a href="">
+                    <i class="bx bx-pie-chart-alt-2"></i>
+                    <span class="link_name">Analytics</span>
+                </a>
+                <span class="Tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class="bx bx-folder"></i>
+                    <span class="link_name">Order</span>
+                </a>
+                <span class="Tooltip">Order</span>
+            </li> -->
+            <li>
+                <a href="">
+                    <i class="bx bx-cog"></i>
+                    <span class="link_name">Setting</span>
+                </a>
+                <span class="Tooltip">Setting</span>
+            </li>
+            <li class="profile">
+                <div class="profile_details">
+                    <img src="../ALL_IMAGE/Dr.jpg" alt="profile image" id="D_admin_image">
+                    <div class="profile_content">
+                        <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
+                        <div class="designation">Admin</div>
+                    </div>
+                </div>
+                <button onclick="location.href='login.html'"><i class="bx bx-log-out" id="log_out"></i></button>
+            </li>
+        </ul>
+    </div>
+    <!-- nav bar code start  -->
+    <section class="home-section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+            <div class="container-fluid align-items-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-white" href="All_Doctor.html">Doctors</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="Add_Doctor.html">Add-doctor</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <div class="first_part_body" style="background-color: #f8f9fa; ">
+                <div class="deshbord_normal mt-4 mx-5">
+                    <h1> Deshbord </h1>
+                </div>
+                <div>
+                    <div class="bg-primary text-white text-center p-5 mx-5 mt-4">
+                        <h2>Add Doctor Details</h2>
+                        <p>please Enter proper and valid data. if you are not enter proper and valid data data then your
+                            enterd data is not enter.</p>
+                    </div>
+                    <div style="border: 1px solid rgb(212, 202, 202)" class="mt-5 container bg-primary rounded">
+                        <div class="p-3 mx-3 mt-4">
+                            <h4 class="text-color">Basic Information</h4>
+                        </div>
+                        <div class="mx-4">
+                            <div class="mt-3">
+                                <div>
+                                    <label for="dr_image" class="form-label">DR IMAGE:</label>
+                                    <input type="file" class="form-control" id="dr_image">
+                                    <h6 id="checkimg" class="text-danger">** image missing</h6>
+                                </div>
+                                <!-- <label for="" class="my-1"> DR IMAGE : </label>
+                                <br>
+                                <input type="file" name="" id="dr_image"
+                                    style="padding-top: 3px; padding-left: 5px; width: 100%; height: 40PX; border: 1px solid #767676; border-radius: 2px;"> -->
+                            </div>
+                            <!-- <h6 id="checkimg" style="color: rgb(204, 14, 14);">** image missing </h6> -->
+                            <div class="mt-3 row">
+                                <div class="col-md">
+                                    <label for="" class="my-1"> NAME : </label>
+                                    <br>
+                                    <input type="text" name="" id="dr_name" style="width: 100%; height: 40PX;">
+                                    <h6 id="checkname" style="color: rgb(204, 14, 14);">**name is missing</h6>
+                                </div>
+                                <div class="col-md">
+                                    <label for="" class="my-1"> EMAIL ID : </label>
+                                    <br>
+                                    <input type="email" name="" id="email_id" style="width: 100%; height: 40PX;">
+                                    <h6 id="checkemail" style="color: rgb(204, 14, 14);">** Invalid Email</h6>
+                                </div>
+                            </div>
+                            <div class="mt-3 row">
+                                <div class="col-md">
+                                    <label for="" class="my-1"> PHONE NO : </label>
+                                    <br>
+                                    <input type="number" name="" id="phoen_no" style="width: 100%; height: 40PX;">
+                                    <h6 id="checknumber" style="color: rgb(204, 14, 14);">** enter 10 digits number</h6>
+                                </div>
+                                <div class="col-md">
+                                    <label for="" class="my-1"> PASSWORD : </label>
+                                    <br>
+                                    <input type="password" name="" id="password" style="width: 100%; height: 40PX;">
+                                    <h6 id="checkpassword" style="color: rgb(204, 14, 14);">** password missing</h6>
+                                </div>
+                            </div>
+                            <div class="mt-3 row">
+                                <div class="col-md">
+                                    <label for="" class="my-1"> GENDER( M / F ) : </label>
+                                    <br>
+                                    <input type="text" name="" id="gender" style="width: 100%; height: 40PX;">
+                                    <h6 id="checkgender" style="color: rgb(204, 14, 14);;"> ** Enter M or F ** </h6>
+                                </div>
+                                <div class="col-md">
+                                    <label for="" class="my-1"> DATE OF BIRTH : </label>
+                                    <br>
+                                    <input type="date" name="" id="date_of_birth" style="width: 100%; height: 40PX;">
+                                    <h6 id="checkdate" style="color: rgb(204, 14, 14);;"> Enter proper date </h6>
+                                </div>
+                            </div>
+                            <div class="mt-3 row">
+                                <div class="col-md">
+                                    <label for="" class="my-1"> SPECIALITY : </label>
+                                    <br>
+                                    <input type="text" name="" id="speciality" style="width: 100%; height: 40PX;">
+                                </div>
+                                <div class="col-md">
+                                    <label for="" class="my-1"> DISCRIPTON : </label>
+                                    <br>
+                                    <input type="text" name="" id="discription" style="width: 100%; height: 40PX;">
+                                </div>
+                            </div>
+                            <div class="mt-3 row">
+                                <div class="col-md">
+                                    <label for="" class="my-1"> DOCTOR CERTIFICAT NUMBER : </label>
+                                    <br>
+                                    <input type="text" name="" id="dr_certificte_number"
+                                        style="width: 100%; height: 40PX;">
+                                    <h6 id="checkdrno" style="color: rgb(204, 14, 14);">** Enter certificate
+                                        number
+                                    </h6>
+                                </div>
+                                <div class="col-md">
+                                    <label for="" class="my-1"> DR SALARY AMOUNT : </label>
+                                    <br>
+                                    <input type="number" name="" id="dr_salary" style="width: 100%; height: 40PX;">
+                                </div>
+                            </div>
+                            <div class="mt-3 row">
+                                <div class="col-md">
+                                    <label for="" class="my-1"> DR TIME FROM : </label>
+                                    <br>
+                                    <input type="time" name="" id="dr_time_from" style="width: 100%; height: 40PX;">
+                                </div>
+                                <div class="col-md">
+                                    <label for="" class="my-1"> DR TIME TO : </label>
+                                    <br>
+                                    <input type="time" name="" id="dr_time_to" style="width: 100%; height: 40PX;">
+                                </div>
+                            </div>
+                        </div>
+                        <div width="100%" style="text-align: center;" class="mt-3">
+                            <button class="bg-primary Add_button" id="btnadd"> ADD DOCTOR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bootstrap java script link  -->
+        <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script>
+            $(document).ready(function () {
+                const aid = getCookie("admin_id");
+                $("#checkname").hide();
+                $("#dr_name").keyup(function () {
+                    validateuname();
+                });
+                function validateuname() {
+                    let unamevalue = $("#dr_name").val();
+                    if (unamevalue.length == "") {
+                        $("#checkname").show();
+                        return true;
+                    }
+                    else if (unamevalue.length < 3 || unamevalue.length > 20) {
+                        $("#checkname").show();
+                        $("#checkname").html("**enter username between 3 to 20");
+                        return true;
+                    }
+                    else {
+                        $("#checkname").hide();
+                        return false;
+                    }
+                }
+                $("#checkemail").hide();
+
+                $("#email_id").keyup(function () {
+                    validateemail();
+                });
+                function validateemail() {
+                    let emailvalue = $("#email_id").val();
+                    let regularexpression = /^([a-zA-Z\d\.\-]+)@([a-zA-Z\d\.\-]+)\.([a-zA-Z]{2,6})$/;
+                    if (regularexpression.test(emailvalue)) {
+                        $("#checkemail").hide();
+                        return false;
+                    }
+                    else {
+                        $("#checkemail").show();
+                        $("#checkemail").html(" ** Enter @ and . format ")
+                        return true;
+                    }
+                }
+                $("#checkpassword").hide();
+                $("#password").keyup(function () {
+                    validatepassword();
+                });
+                function validatepassword() {
+                    let passvalue = $("#password").val();
+                    if (passvalue.length == "") {
+                        $("#checkpassword").show();
+                        return true;
+                    }
+                    else if (passvalue.length < 8) {
+                        $("#checkpassword").show();
+                        $("#checkpassword").html("**enter password greter then 8 digits");
+                        return true;
+                    }
+                    else {
+                        $("#checkpassword").hide();
+                        return false;
+                    }
+                }
+                $("#checknumber").hide();
+                $("#phoen_no").keyup(function () {
+                    validateno();
+                });
+                function validateno() {
+                    let novalue = $("#phoen_no").val();
+                    if (novalue.length == "") {
+                        $("#checknumber").show();
+                        return true;
+                    }
+                    else if (novalue.length != 10) {
+                        $("#checknumber").show();
+                        $("#nocheck").html("**enter 10 digit contact no");
+                        return true;
+                    }
+                    else {
+                        $("#checknumber").hide();
+                        return false;
+                    }
+                }
+                $("#checkgender").hide();
+                $("#gender").keyup(function () {
+                    validategender();
+                });
+                function validategender() {
+                    let genvalue = $("#gender").val();
+                    if (genvalue.length == "") {
+                        $("#checkgender").show();
+                        // $("#checkgender").html("**enter compolsory");
+                        return true;
+                    }
+                    if (genvalue == "M" || genvalue == "F") {
+                        $("#checkgender").hide();
+                        return false;
+
+                    } else {
+                        $("#checkgender").show();
+                        return true;
+                    }
+                }
+                $("#checkdate").hide();
+                $("#date_of_birth").on("input", function () {
+                    validateDate();
+                });
+
+                function validateDate() {
+                    let dateValue = $("#date_of_birth").val();
+                    let selectedDate = new Date(dateValue);
+                    let currentDate = new Date();
+                    currentDate.setFullYear(currentDate.getFullYear() - 23); // Subtract 23 years from the current date
+
+                    if (selectedDate <= currentDate) {
+                        $("#checkdate").hide();
+                        return false;
+                    } else {
+                        $("#checkdate").show();
+                        return true;
+                    }
+                }
+                $("#checkimg").hide();
+                $("#dr_image").on("input", function () {
+                    validateimg();
+                });
+                function validateimg() {
+                    var fileInput = document.getElementById("dr_image");
+                    var validationMessage = $("#checkimg");
+
+                    if (fileInput.files.length > 0) {
+                        var file = fileInput.files[0];
+                        var fileType = file.type.toLowerCase();
+
+                        if (fileType === "image/jpeg" || fileType === "image/png") {
+                            validationMessage.hide(); // Hide the validation message
+                            return false;
+                        } else {
+                            validationMessage.show(); // Show the validation message
+                            validationMessage.html("Please select a valid image file (JPEG, PNG).");
+                            return true;
+                        }
+                    } else {
+                        // If no file was selected, clear the validation message
+                        validationMessage.show(); // Hide the validation message
+                        return true;
+                    }
+                }
+                $("#checkdrno").hide();
+                $("#dr_certificte_number").keyup(function () {
+                    validatedrno();
+                });
+                function validatedrno() {
+                    let genvalue = $("#dr_certificte_number").val();
+                    if (genvalue.length == "") {
+                        $("#checkdrno").show();
+                        // $("#checkgender").html("**enter compolsory");
+                        return true;
+                    }
+                    else {
+                        $("#checkdrno").hide();
+                        return false;
+                    }
+                }
+
+                $('#btnadd').click(function () {
+                    console.log(validateno(), validateuname(), validatepassword(), validategender(), validateDate(), validateimg(), validatedrno());
+                    if (validateno() == true || validateuname() == true || validateemail() == true || validatepassword() == true || validategender() == true || validateDate() == true || validateimg() == true || validatedrno() == true) {
+                        return alert(" ** Enter Proper Data ** ");
+                    }
+                    else {
+                        var formData = new FormData();
+
+                        formData.append('doctor_name', $('#dr_name').val());
+                        formData.append('email_id', $('#email_id').val());
+                        formData.append('phone_no', $('#phoen_no').val());
+                        formData.append('password', $('#password').val());
+                        formData.append('gender', $('#gender').val());
+                        formData.append('date_of_birth', $('#date_of_birth').val());
+                        formData.append('image_url', $('#dr_image')[0].files[0]); // Use [0] to get the actual file
+                        formData.append('speciality', $('#speciality').val());
+                        formData.append('brief_desc', $('#discription').val());
+                        formData.append('doctor_certi_no', $('#dr_certificte_number').val());
+                        formData.append('doctor_time_from', $('#dr_time_from').val());
+                        formData.append('doctor_time_to', $('#dr_time_to').val());
+                        formData.append('salary_amount', $('#dr_salary').val());
+                        formData.append('is_active', 1);
+                        formData.append('admin_id', getCookie("admin_id"));
+
+                        var apiUrl = doctors;
+
+                        $.ajax({
+                            url: apiUrl,
+                            type: 'POST',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function (response) {
+                                console.log('API response:', response);
+                                if (response.error == 0) {
+                                    // window.location.replace('All_Doctor.html')
+                                    window.location.href = "All_Doctor.html";
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                console.log('API request failed:', status, error);
+                            }
+                        });
+
+
+                    }
+                });
+                const adminApi = `${admin}/${aid}`;
+                $.ajax({
+                    type: 'GET',
+                    data: 'json',
+                    url: adminApi,
+                    success: function (response) {
+
+                        console.log("response")
+                        $('#D_admin_name').text(response.data[0].admin_name); // Update the navbar brand text
+                        $('#D_admin_image').attr('src', response.data[0].image_url);// Update the navbar brand text
+
+                    },
+                    error: function (error) {
+                        console.logx("Error fetching doctor data:", error);
+                    }
+                });
+                $("#log_out").click(function () {
+                    console.log("log_out");
+                    setCookie("admin_id", "", 1);
+                    setCookie('employee_id', "", 1);
+                    window.location.replace("login.html");
+                });
+            });
+        </script>
+        <!-- bootstrap java script link  complete -->
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+.deshbord_normal {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.F_R_maindiv {
+    height: 510px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.P_D_card12_miandiv {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+
+}
+
+.P_D_Allcard {
+    border-radius: 10px;
+    height: 94px;
+    width: 35%;
+    text-align: center;
+}

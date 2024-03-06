@@ -1,0 +1,65 @@
+/* firts row card css strat hear  */
+.card_edit_i {
+    font-size: 100%;
+    padding: 0px;
+    color: #0d6efd;
+    /* padding-left: 10px; */
+}
+
+.card_font_h3 {
+    color: black;
+    font-size: 1.6rem;
+}
+
+.card_body {
+    background-color: white;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px 1px rgb(243 243 243);
+    transition: background-position 1s;
+}
+
+.icon {
+    font-size: 50px;
+    color: #0d6efd;
+    padding-right: 10px;
+}
+
+/* first row card css complete hear  */
+
+/* second row css start hear  */
+.patient_list_card {
+    background-color: white;
+    height: 500px;
+    padding: 0px !important;
+}
+
+.doctor_menu_button {
+    position: absolute;
+    top: 428px;
+    width: 80%;
+    right: 10%;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* second row css complete  */
+
+@media screen and (max-width: 320px) {
+    .icon {
+        font-size: 2.0rem;
+    }
+
+    .card_font_h3 {
+        color: black;
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+}

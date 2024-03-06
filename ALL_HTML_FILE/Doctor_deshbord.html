@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ALL_CSS_FILE_LINK_HEAR -->
+    <link rel="stylesheet" href="../ALL_CSS_FILE/index.css">
+    <link rel="stylesheet" href="../ALL_CSS_FILE/Drawar.css">
+
+    <!--ICON_LIBREY_LINK_HEAR-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- ALL_CHART_FILE_LINK_HEAR -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../ALL_JS_FILE/coulmnchart.js"></script>
+
+    <!-- ALL_JS_FILE_LINK_HEAR -->
+    <script src="../ALL_JS_FILE/index.js"></script>
+    <script src="../ALL_JS_FILE/api.js"></script>
+    <script src="../ALL_JS_FILE/drawar.js"></script>
+    <script src="../ALL_JS_FILE/cookie.js"></script>
+    <script src="../jquery.min.js"></script>
+
+    <title>DOCTOR DESHBOARD</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_details border-bottom">
+            <div class="logo_name">Hopshee-Web</div>
+            <i class="bx bx-menu " id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li id="search">
+                <i class="bx bx-search" style="background-color: white; color: #0d6efd;"></i>
+                <input type="text" id="searchInput" placeholder="search.."
+                    style="color: #0d6efd; background-color: white;">
+                <span class="Tooltip">search</span>
+            </li>
+        </ul>
+        <ul class="nav-list" id="nav_search_item">
+            <li>
+                <a href="index.html" class="selcted">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <span class="Tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="All_Doctor.html">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span class="link_name">Doctors</span>
+                </a>
+                <span class="Tooltip">Doctors</span>
+            </li>
+            <li>
+                <a href="All_patient.html">
+                    <i class="fa-solid fa-user-injured"></i>
+                    <span class="link_name">Patients</span>
+                </a>
+                <span class="Tooltip">Patients</span>
+            </li>
+            <!-- <li>
+                <a href="">
+                    <i class="bx bx-pie-chart-alt-2"></i>
+                    <span class="link_name">Analytics</span>
+                </a>
+                <span class="Tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="">
+                    <i class="bx bx-folder"></i>
+                    <span class="link_name">Order</span>
+                </a>
+                <span class="Tooltip">Order</span>
+            </li> -->
+            <li>
+                <a href="">
+                    <i class="bx bx-cog"></i>
+                    <span class="link_name">Setting</span>
+                </a>
+                <span class="Tooltip">Setting</span>
+            </li>
+            <li class="profile">
+                <div class="profile_details">
+                    <img src="../ALL_IMAGE/Dr.jpg" alt="profile image" id="D_admin_image">
+                    <div class="profile_content">
+                        <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
+                        <div class="designation">Admin</div>
+                    </div>
+                </div>
+                <button onclick="location.href='login.html'"><i class="bx bx-log-out" id="log_out"></i></button>
+            </li>
+        </ul>
+    </div>
+    <div class="home-section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+            <div class="container-fluid align-items-center">
+                <!-- nav bar logo image code strat  -->
+                <!-- <a class="navbar-brand" href="#">Hopshee</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- nav bar logo image code complete -->
+                <!-- nav bar page menu code start -->
+                <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <!-- nev bar drop down menu text1 code start -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white" href="All_Doctor.html" role="button">Doctors</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                             <a class="nav-link text-white" href="All_Doctor.html">All-Doctor</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="Add_Doctor.html">Add-doctor</a>
+                        </li>
+                    </ul>
+                    </li>
+                    <!-- nev bar drop down menu text1 code finsh-->
+                    <!-- nev bar drop down menu text3 code start -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown">Doctor
+                            Sidual</a>
+                        <ul class="dropdown-menu bg-primary">
+                            <li><a class="dropdown-item text-white" href="#">Add-Docotr-Sidual</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- nev bar drop down menu text3 code finsh -->
+                    <!-- </ul> -->
+                    <!-- <button style="background-color: transparent; border: transparent; color: white;"
+                        id="log_out">Logout</button> -->
+                    <!-- nav bar page menu code finsh  -->
+                    <!-- nav bar code icon  -->
+                    <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
+                    <a href="#" class="text-white  nav-icon iconClass"><i class="fa-regular fa-bell"
+                            style="font-size: 20px;"></i></a>
+                    <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a>
+
+                    <div class="dropdown ">
+                        <button class="dropdown-toggle btn btn-default" id="menu1" data-bs-toggle="dropdown">
+                            <img src="./image/profile.png" alt="" height="30px" class="rounded-pill"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu bg-primary" role="menu" aria-labelledby="menu1">
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">PROFILE</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-link"><a class="dropdown-item text-white" href="#">SETTING</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                    <!-- nav bar icon code finsh  -->
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-lg mt-3">
+                    <div style="height: 600px;" class="bg-white shadow rounded ">
+                        <div style="height: 290px; background-color: #0d6efd;" class="rounded ">
+                            <img src="../ALL_IMAGE/Dr.jpg" alt=" DR IMAGE" height="250px" width="250px"
+                                class="mt-4 mx-4" style="border: 10px solid white;" id="dimage">
+                        </div>
+                        <div class="mt-2 mx-4">
+                            <div class="d-flex" style="height: 25px;">
+                                <h6>Name :</h5>
+                                    <b id="drname" class="mx-2">yagnesh tasraiya</b>
+                            </div>
+                            <div class="d-flex ">
+                                <h6>Speciality : </h5>
+                                    <b class="mb-0 mx-2" id="specialization">Hart specailist</b>
+                            </div>
+                            <div class="d-flex">
+                                <h6>Discription:</h5>
+                                    <b class="mb-0 mx-2" id="discription">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.
+                                        Non
+                                        sint consectetur
+                                        dolore
+                                        voluptatum beatae magnam labore provident, repellendus consequuntur suscipit
+                                        accusantium
+                                        dolores tempora, dignissimos vero deleniti.</b>
+                            </div>
+                            <!-- <div>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div> -->
+                            <div class="d-flex">
+                                <h6 class="m-0">Email Id :</h5>
+                                    <b id="emaile" class="mx-2">yagnesh123@gmail.com</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg mt-3 overflow-scroll" data-spy="scroll" data-target="#scroolebal" data-offset="20">
+                    <div class="bg-white shadow px-3 pt-4" id="scroolebal" style="height: 600px;">
+                        <h3> Appointments </h3>
+                        <div class="d-flex justify-content-center">
+                            <img src="../ALL_IMAGE/Apoinment.png" alt="image not found" height="170px">
+                        </div>
+                        <div id="Appo-NotVisited">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg mt-3">
+                    <div style="height: 600px;" class="bg-white shadow px-3 pt-4">
+                        <h3>Recent Visits</h3>
+                        <div class="text-center">
+                            <img src="../ALL_IMAGE/Recent_visit.png" alt="image not found" height="170px">
+                        </div>
+                        <div id="Appo-Visited"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script>
+            let doctor_id;
+            $(document).ready(function () {
+                // Get the doctor_id from the URL query parameter
+                var urlParams = new URLSearchParams(window.location.search);
+                doctor_id = urlParams.get("doctor_id");
+                // Define the API URL where you can fetch the doctor's data
+                var apiUrl = `${doctors}/${doctor_id}`;
+
+                const aid = getCookie("admin_id");
+                $('#searchInput').on('input', function () {
+                    const searchValue = $(this).val().toLowerCase();
+
+                    // Always show the search input
+                    $('#searchInput').show();
+
+                    // Loop through each list item and show based on search input
+                    $('#nav_search_item li').each(function () {
+                        const listItemText = $(this).text().toLowerCase();
+                        $(this).toggle(listItemText.includes(searchValue));
+                    });
+                });// Replace with your actual API endpoint
+                // Make an AJAX request to fetch the doctor's data
+                $.ajax({
+                    type: 'GET',
+                    data: 'json',
+                    url: apiUrl,
+                    success: function (response) {
+                        // Assuming the response contains the doctor's data
+                        var doctorData = response.data[0];
+                        const img_url = `${host}/${doctorData.image_url}`;
+                        console.log(img_url)
+                        // Update the HTML elements with the doctor's data
+                        $('#drname').text(doctorData.doctor_name); // Update the navbar brand text
+                        $('#dimage').attr('src', img_url); // Update the doctor's image
+                        $('#specialization').text(doctorData.speciality); // Update the specialization
+                        $('#discription').text(doctorData.brief_desc); // Update the biography
+                        $('#emaile').text(doctorData.email_id); // Update the email
+                        // You can similarly update other parts of your HTML with the retrieved data
+                    },
+                    error: function (error) {
+                        console.error("Error fetching doctor data:", error);
+                    }
+                });
+                const adminApi = `${admin}/${aid}`;
+                $.ajax({
+                    type: 'GET',
+                    data: 'json',
+                    url: adminApi,
+                    success: function (response) {
+                        console.log("response")
+                        $('#D_admin_name').text(response.data[0].admin_name); // Update the navbar brand text
+                        $('#D_admin_image').attr('src', response.data[0].image_url);// Update the navbar brand text
+                    },
+                    error: function (error) {
+                        console.logx("Error fetching doctor data:", error);
+                    }
+                });
+                // ========================================================================================
+                populateAppointmentList(0);
+                populateAppointmentList(1);
+
+                function populateAppointmentList(isHospitalVisited) {
+                    var params = {
+                        doctor_id: doctor_id,
+                        is_hospital_visit: isHospitalVisited
+                    };
+                    $.ajax({
+                        url: appoinments,
+                        method: 'GET',
+                        dataType: 'json',
+                        data: params,
+                        success: function (appointmentData) {
+                            console.log(appointmentData);
+                            $.each(appointmentData.data, function (index, appointment) {
+                                if (index < 3) {
+                                    getUserData(appointment.user_id, function (userData) {
+                                        //  if (isHospitalVisited == 0) {
+                                        $.each(appointmentData.data, function (index, appointment) {
+                                            const img_url = `${host}/${userData.data[0].image_url}`;
+
+                                            const isNotVisitCard = `<div class="d-flex bg-white shadow rounded mx-2 px-3 py-3 mt-5">
+                                            <img src="${img_url}" alt="message image not found" height="70px" width="70px"
+                                                class="rounded-circle">
+                                                <div class="mt-0 mx-3">
+                                                    <p class="mb-0"><b>${userData.data[0].user_name}</b></p>
+                                                    <p class="mb-0">${userData.data[0].email_id}</p>
+                                                    <d>${convertISOToIndianDate(appointment.appo_dt)}</d>
+                                                </div>
+                                        </div>`
+                                            if (isHospitalVisited == 0) {
+                                                $('#Appo-NotVisited').append(isNotVisitCard);
+                                            } else {
+                                                $('#Appo-Visited').append(isNotVisitCard);
+                                            }
+
+                                        });
+
+                                        //     console.log(`${isHospitalVisited} Appo : ${appointmentData}`);
+                                        //     console.log(`${isHospitalVisited} User : ${userData.data[0]}`);
+                                        // } else {
+                                        //     console.log(`${isHospitalVisited} appo : ${appointmentData}`);
+                                        //     console.log(`${isHospitalVisited} User : ${userData.data[0]}`);
+                                        // }
+                                        //user
+
+                                    });
+                                }
+                            });
+                        },
+                        error: function (error) {
+                            console.log('Error fetching appointment data: ' + error);
+                        }
+                    });
+                }
+
+                function convertISOToIndianDate(isoDate) {
+                    // Parse the ISO date string into a JavaScript Date object
+                    var date = new Date(isoDate);
+
+                    // Extract the date components
+                    var day = date.getDate();
+                    var month = date.getMonth() + 1; // Months are 0-based, so add 1
+                    var year = date.getFullYear();
+
+                    // Format the date as DD/MM/YYYY (Indian date format)
+                    var indianDateFormatted = year + "-" + (month < 10 ? "0" : "") + month + "-" + (day < 10 ? "0" : "") + day;
+
+                    return indianDateFormatted;
+                }
+
+                function getUserData(userID, callback) {
+                    $.ajax({
+                        url: users + '/' + userID,
+                        method: 'GET',
+                        dataType: 'json',
+                        success: function (userData) {
+                            callback(userData);
+                        },
+                        error: function (error) {
+                            console.error('Error fetching user data: ' + error);
+                            callback(null); // Call the callback with null in case of an error
+                        }
+                    });
+                }
+
+
+
+                // ========================================================================================
+
+                // // Function to redirect to the new page with user ID and doctor ID
+                // function redirectToAddPage(userId, appoId) {
+                //     // Construct the URL with user_id and doctor_id as query parameters
+                //     const redirectURL = `Add_appoinment.html?user_id=${userId}&appo_id=${appoId}`;
+
+                //     // Redirect to the new page
+                //     window.location.href = redirectURL;
+                // }
+
+                // // Call the function to populate the appointment list
+                // populateAppointmentList();
+                $("#log_out").click(function () {
+                    console.log("log_out");
+                    setCookie("admin_id", "", 1);
+                    setCookie('employee_id', "", 1);
+                    window.location.replace("login.html");
+                });
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>

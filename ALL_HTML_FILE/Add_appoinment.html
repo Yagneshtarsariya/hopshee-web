@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ALL_CSS_FILE_LINK_HEAR -->
+    <link rel="stylesheet" href="../ALL_CSS_FILE/Add_appoinment.css">
+
+    <!--ICON_LIBREY_LINK_HEAR-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- ALL_JS_FILE_LINK_HEAR -->
+    <script src="../ALL_JS_FILE/api.js"></script>
+    <script src="../ALL_JS_FILE/cookie.js"></script>
+    <script src="../jquery.min.js"></script>
+
+    <title>ADD APPOINTMENT</title>
+</head>
+
+<body>
+    <div class="px-3 py-2" style="background-color: #f8f9fa">
+        <div class="bg-white p-3 mx-3 mt-2 " style="border-radius: 15px;">
+            <h1> Appointment Deshbord </h1>
+        </div>
+        <div>
+            <div class="bg-primary text-white text-center p-5 mx-5 mt-4">
+                <h2>Add Appointment</h2>
+                <p>please Enter proper and valid data. if you are not enter proper and valid data then its not save.</p>
+            </div>
+            <div style="border: 1px solid rgb(212, 202, 202)" class="mt-5 container bg-primary rounded"">
+                <div class=" p-3 mx-3 mt-4">
+                <h4>Basic Information</h4>
+            </div>
+            <div class="mx-5">
+                <div class="mt-3 row">
+                    <div class="col-md">
+                        <label for="" class="my-1"> NAME : </label>
+                        <br>
+                        <input type="text" name="" id="patient_name" style="width: 100%; height: 40PX;">
+                        <h6 id="checkname" style="color: rgb(204, 14, 14);">**name is missing</h6>
+                    </div>
+                    <div class="col-md">
+                        <label for="" class="my-1"> Email Id : </label>
+                        <br>
+                        <input type="text" name="" id="Email_id" style="width: 100%; height: 40PX;">
+                        <h6 id="checkemail" style="color: rgb(204, 14, 14);">** Emaile Missing</h6>
+                    </div>
+                </div>
+                <div class="mt-3 row">
+                    <div class="col-md">
+                        <label for="" class="my-1"> Phone No : </label>
+                        <br>
+                        <input type="text" name="" id="phone_no" style="width: 100%; height: 40PX;">
+                        <h6 id="checkno" style="color: rgb(204, 14, 14);">** Enter number</h6>
+                    </div>
+                    <div class="col-md">
+                        <label for="" class="my-1"> Date Of Birth : </label>
+                        <br>
+                        <input type="date" name="" id="date_of_birth" style="width: 100%; height: 40PX;">
+                        <h6 id="checkdate" style="color: rgb(204, 14, 14);;"> ** Date Missing </h6>
+                    </div>
+                </div>
+                <div class="mt-3 row">
+                    <div class="col-md">
+                        <label for="" class="my-1"> Gender : </label>
+                        <br>
+                        <input type="text" name="" id="Gender" style="width: 100%; height: 40PX;">
+                        <h6 id="checkgender" style="color: rgb(204, 14, 14);;"> ** Enter M or F ** </h6>
+                    </div>
+                    <div class="col-md">
+                        <label for="" class="my-1"> Height : </label>
+                        <br>
+                        <input type="text" name="" id="height" style="width: 100%; height: 40PX;">
+                    </div>
+                </div>
+                <div class="mt-3 row">
+                    <div class="col-md">
+                        <label for="" class="my-1"> Weight : </label>
+                        <br>
+                        <input type="text" name="" id="weight" style="width: 100%; height: 40PX;">
+                    </div>
+                    <div class="col-md">
+                        <label for="" class="my-1"> Blood Group </label>
+                        <br>
+                        <input type="text" name="" id="blood_group" style="width: 100%; height: 40PX;">
+                    </div>
+                </div>
+                <div class="mt-3 row">
+                    <div class="col-md">
+                        <label for="" class="my-1"> Allegeries : </label>
+                        <br>
+                        <input type="text" name="" id="allegeries" style="width: 100%; height: 40PX;">
+                    </div>
+                    <div class="col-md">
+                        <label for="" class="my-1"> Diseases : </label>
+                        <br>
+                        <input type="text" name="" id="diseases" style="width: 100%; height: 40PX;">
+                    </div>
+                </div>
+                <div class="mt-3 row">
+                    <div class="col-md">
+                        <label for="" class="my-1"> Blood pressure : </label>
+                        <br>
+                        <input type="text" name="" id="blood_pressure" style="width: 100%; height: 40PX;">
+                    </div>
+                    <div class="col-md">
+                        <label for="" class="my-1"> Body Tempreture : </label>
+                        <br>
+                        <input type="text" name="" id="body_temp" style="width: 100%; height: 40PX;">
+                    </div>
+                </div>
+                <div class="mt-3 row">
+                    <div class="col-md">
+                        <label for="" class="my-1"> Blood level : </label>
+                        <br>
+                        <input type="text" name="" id="blood_level" style="width: 100%; height: 40PX;">
+                    </div>
+                    <div class="col-md">
+                        <label for="" class="my-1"> Heart rate : </label>
+                        <br>
+                        <input type="text" name="" id="heart_rate" style="width: 100%; height: 40PX;">
+                    </div>
+                </div>
+                <div class="mt-3 row">
+                    <div class="col-md">
+                        <label for="" class="my-1"> Glucose rate : </label>
+                        <br>
+                        <input type="text" name="" id="glucose_rate" style="width: 100%; height: 40PX;">
+                    </div>
+                    <div class="col-md">
+                        <label for="" class="my-1"> Colestrol : </label>
+                        <br>
+                        <input type="text" name="" id="colestrol" style="width: 100%; height: 40PX;">
+                    </div>
+                </div>
+                <div width="100%" class="mt-3">
+                    <button class=" bg-primary Add_button" id="btnadd">
+                        ADD PATIENTS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        let userId;
+        let appoId;
+        let image_url;
+        let isPatientHasUser;
+        $(document).ready(function () {
+            // Function to get the value of a query parameter from the URL
+            function getQueryParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            // Get the user_id from the URL
+            userId = getQueryParam('user_id');
+            appoId = getQueryParam('appo_id');
+
+            function getUserData(userID, callback) {
+                $.ajax({
+                    url: users + '/' + userID,
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function (userData) {
+                        callback(userData);
+                    },
+                    error: function (error) {
+                        console.error('Error fetching user data: ' + error);
+                        callback(null); // Call the callback with null in case of an error
+                    }
+                });
+            }
+
+            if (userId) {
+                // Make an API request to fetch user data using the userId
+                $.ajax({
+                    url: `${patients}/${userId}`, // Replace with the actual URL of your user API
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function (patientData) {
+                        console.log(patientData);
+                        if (patientData.error == 0) {
+                            isPatientHasUser = true;
+                            const patient = patientData.data[0];
+                            $('#patient_name').val(patient.patient_name);
+                            $('#Email_id').val(patient.email_id);
+                            $('#phone_no').val(patient.phone_no);
+                            $('#Gender').val(patient.gender);
+                            $('#date_of_birth').val(convertISOToIndianDate(patient.date_of_birth));
+                            $('#height').val(patient.height);
+                            $('#weight').val(patient.weight);
+                            $('#blood_group').val(patient.blood_group);
+                            $('#allegeries').val(patient.allegeries);
+                            $('#diseases').val(patient.diseases);
+                            $('#blood_pressure').val(patient.blood_pressure);
+                            $('#body_temp').val(patient.body_temp);
+                            $('#blood_level').val(patient.blood_level);
+                            $('#heart_rate').val(patient.heart_rate);
+                            $('#glucose_rate').val(patient.glucose_rate);
+                            $('#colestrol').val(patient.colestrol);
+                            image_url = patientData.data[0].image_url;
+                        } else {
+                            getUserData(userId, function (userData) {
+                                if (userData) {
+                                    $('#patient_name').val(userData.data[0].user_name);
+                                    $('#Email_id').val(userData.data[0].email_id);
+                                    $('#phone_no').val(userData.data[0].phone_no);
+                                    $('#Gender').val(userData.data[0].gender);
+                                    $('#date_of_birth').val(convertISOToIndianDate(userData.data[0].date_of_birth));
+                                    image_url = userData.data[0].image_url;
+                                    // ... (populate other fields)
+                                } else {
+                                    alert('User data not found.');
+                                }
+                            });
+                        }
+
+                    },
+                    error: function (error) {
+                        console.error('Error fetching user data: ' + error);
+                    }
+                });
+            } else {
+                alert('User ID not found in the URL.');
+            }
+        });
+
+        $("#checkname").hide();
+        $("#patient_name").keyup(function () {
+            validateuname();
+        });
+        function validateuname() {
+            let unamevalue = $("#patient_name").val();
+            if (unamevalue.length == "") {
+                $("#checkname").show();
+                return true;
+            }
+            else if (unamevalue.length < 3 || unamevalue.length > 20) {
+                $("#checkname").show();
+                $("#checkname").html("**enter username between 3 to 20");
+                return true;
+            }
+            else {
+                $("#checkname").hide();
+                return false;
+            }
+        }
+        $("#checkemail").hide();
+
+        $("#Email_id").keyup(function () {
+            validateemail();
+        });
+        function validateemail() {
+            let emailvalue = $("#Email_id").val();
+            let regularexpression = /^([a-zA-Z\d\.\-]+)@([a-zA-Z\d\.\-]+)\.([a-zA-Z]{2,6})$/;
+            if (regularexpression.test(emailvalue)) {
+                $("#checkemail").hide();
+                return false;
+            }
+            else {
+                $("#checkemail").show();
+                $("#checkemail").html(" ** Enter @ and . format ")
+                return true;
+            }
+        }
+        $("#checkno").hide();
+        $("#phone_no").keyup(function () {
+            validateno();
+        });
+        function validateno() {
+            let novalue = $("#phone_no").val();
+            if (novalue.length == "") {
+                $("#checkno").show();
+                return true;
+            }
+            else if (novalue.length != 10) {
+                $("#checkno").show();
+                $("#checkno").html("**enter 10 digit contact no");
+                return true;
+            }
+            else {
+                $("#checkno").hide();
+                return false;
+            }
+        }
+
+        $("#checkgender").hide();
+        $("#Gender").keyup(function () {
+            validategender();
+        });
+        function validategender() {
+            let genvalue = $("#Gender").val();
+            if (genvalue.length == "") {
+                $("#checkgender").show();
+                // $("#checkgender").html("**enter compolsory");
+                return true;
+            }
+            if (genvalue == "M" || genvalue == "F") {
+                $("#checkgender").hide();
+                return false;
+
+            } else {
+                $("#checkgender").show();
+                return true;
+            }
+        }
+
+        $("#checkdate").hide();
+        $("#date_of_birth").on("input", function () {
+            validateDate();
+        });
+
+        function validateDate() {
+            let dateValue = $("#date_of_birth").val();
+            let selectedDate = new Date(dateValue);
+            let currentDate = new Date();
+            currentDate.setFullYear(currentDate.getFullYear() - 0); // Subtract 23 years from the current date
+
+            if (selectedDate <= currentDate) {
+                $("#checkdate").hide();
+                return false;
+            } else {
+                $("#checkdate").show();
+                return true;
+            }
+        }
+        $('#btnadd').click(function () {
+            console.log(validateno(), validateuname(), validategender(), validateDate(), validateemail());
+            if (validateno() == true || validateuname() == true || validateemail() == true || validategender() == true || validateDate() == true) {
+                return alert(" ** Enter Proper Data ** ");
+            }
+            else {
+                if (isPatientHasUser) {
+                    console.log("update");
+                    updatePatients();
+                } else {
+                    console.log("add");
+                    addPatients(userId);
+                }
+            }
+        });
+
+        function updatePatients() {
+            const updatedData = {
+                "patient_id": userId,
+                "patient_name": $('#patient_name').val(),
+                "image_url": image_url,
+                "email_id": $('#Email_id').val(),
+                "phone_no": $('#phone_no').val(),
+                "gender": $('#Gender').val(),
+                "date_of_birth": $('#date_of_birth').val(),
+                "height": $('#height').val(),
+                "weight": $('#weight').val(),
+                "blood_group": $('#blood_group').val(),
+                "allegeries": $('#allegeries').val(),
+                "diseases": $('#diseases').val(),
+                "blood_pressure": $('#blood_pressure').val(),
+                "body_temp": $('#body_temp').val(),
+                "blood_level": $('#blood_level').val(),
+                "heart_rate": $('#heart_rate').val(),
+                "glucose_rate": $('#glucose_rate').val(),
+                "colestrol": $('#colestrol').val()
+            };
+            $.ajax({
+                url: `${patients}`, // Replace with your API endpoint for updating doctor details
+                type: "PATCH", // Use PATCH method
+                data: JSON.stringify(updatedData),
+                headers: {
+                    'appo_id': appoId
+                },
+                contentType: "application/json",
+                success: function (response) {
+                    console.log(response)
+                    console.log("Doctor details updated successfully.");
+                    if (response.error == 0) {
+                        window.location.href = "Reception.html";
+                    } else {
+                        return alert("Enter proper data or server side problem")
+                    }
+                },
+                error: function (error) {
+                    console.log("Error updating doctor details: " + error);
+                    // Handle the error, show an error message, etc.
+                }
+            });
+        }
+
+        function addPatients(userId) {
+            console.log(appoId);
+            const addPatients = {
+                "patient_id": userId,
+                "patient_name": $('#patient_name').val(),
+                "image_url": image_url,
+                "is_active": 1,
+                "appo_id": appoId,
+                "email_id": $('#Email_id').val(),
+                "phone_no": $('#phone_no').val(),
+                "gender": $('#Gender').val(),
+                "date_of_birth": $('#date_of_birth').val(),
+                "height": $('#height').val(),
+                "weight": $('#weight').val(),
+                "blood_group": $('#blood_group').val(),
+                "allegeries": $('#allegeries').val(),
+                "diseases": $('#diseases').val(),
+                "blood_pressure": $('#blood_pressure').val(),
+                "body_temp": $('#body_temp').val(),
+                "blood_level": $('#blood_level').val(),
+                "heart_rate": $('#heart_rate').val(),
+                "glucose_rate": $('#glucose_rate').val(),
+                "colestrol": $('#colestrol').val()
+            };
+            $.ajax({
+                url: patients,
+                type: 'POST',
+                data: JSON.stringify(addPatients),
+                contentType: "application/json",
+                success: function (response) {
+                    // Handle a successful response from the API
+                    console.log('API response:', response);
+                    alert("add successfully");
+                },
+                error: function (xhr, status, error) {
+                    // Handle errors
+                    console.error('API request failed:', status, error);
+                }
+            });
+
+        }
+        function convertISOToIndianDate(isoDate) {
+            // Parse the ISO date string into a JavaScript Date object
+            var date = new Date(isoDate);
+
+            // Extract the date components
+            var day = date.getDate();
+            var month = date.getMonth() + 1; // Months are 0-based, so add 1
+            var year = date.getFullYear();
+
+            // Format the date as DD/MM/YYYY (Indian date format)
+            var indianDateFormatted = year + "-" + (month < 10 ? "0" : "") + month + "-" + (day < 10 ? "0" : "") + day;
+
+            return indianDateFormatted;
+        }
+        // </script>
+
+</body>
+
+</html>
