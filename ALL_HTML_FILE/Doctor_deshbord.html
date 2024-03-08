@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -282,7 +282,7 @@
                     success: function (response) {
                         console.log("response")
                         $('#D_admin_name').text(response.data[0].admin_name); // Update the navbar brand text
-                        $('#D_admin_image').attr('src', response.data[0].image_url);// Update the navbar brand text
+                        $('#D_admin_image').attr('src', `${host}/${response.data[0].image_url}`);// Update the navbar brand text
                     },
                     error: function (error) {
                         console.logx("Error fetching doctor data:", error);

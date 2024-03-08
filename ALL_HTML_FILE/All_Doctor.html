@@ -165,7 +165,7 @@
 
                     console.log("response")
                     $('#D_admin_name').text(response.data[0].admin_name); // Update the navbar brand text
-                    $('#D_admin_image').attr('src', response.data[0].image_url);// Update the navbar brand text
+                    $('#D_admin_image').attr('src', `${host}/${response.data[0].image_url}`);// Update the navbar brand text
 
                 },
                 error: function (error) {
@@ -195,15 +195,15 @@
                             const age = calculateAge(doctorData.date_of_birth);
                             const img_url = `${host}/${doctorData.image_url}`;
 
-                            let truncatedDescription = doctorData.brief_desc.substring(0, 15);
-                            const descriptionText = doctorData.brief_desc.length > 15
+                            let truncatedDescription = doctorData.brief_desc.substring(0, 10);
+                            const descriptionText = doctorData.brief_desc.length > 10
                                 ? truncatedDescription + '...'
                                 : truncatedDescription;
 
                             let truncatedspeciality = doctorData.speciality.substring(0, 10);
                             const specialityonText = doctorData.speciality.length > 10
-                                ? truncatedDescription + '...'
-                                : truncatedDescription;
+                                ? truncatedspeciality + '...'
+                                : truncatedspeciality;
 
                             let gen = "";
                             if (doctorData.gender == 'M') {
