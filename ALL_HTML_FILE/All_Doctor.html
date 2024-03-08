@@ -200,10 +200,10 @@
                                 ? truncatedDescription + '...'
                                 : truncatedDescription;
 
-                                let truncatedspeciality = doctorData.speciality.substring(0, 10);
+                            let truncatedspeciality = doctorData.speciality.substring(0, 10);
                             const specialityonText = doctorData.speciality.length > 10
-                                ? truncatedDescription + '...'
-                                : truncatedDescription;
+                                ? truncatedspeciality + '...'
+                                : truncatedspeciality;
 
                             let gen = "";
                             if (doctorData.gender == 'M') {
