@@ -200,6 +200,11 @@
                                 ? truncatedDescription + '...'
                                 : truncatedDescription;
 
+                                let truncatedspeciality = doctorData.speciality.substring(0, 10);
+                            const specialityonText = doctorData.speciality.length > 10
+                                ? truncatedDescription + '...'
+                                : truncatedDescription;
+
                             let gen = "";
                             if (doctorData.gender == 'M') {
                                 gen = 'MALE'
@@ -217,7 +222,7 @@
                              </div>
                             <div class="mt-1">
                                 <h6 class="m-1">${doctorData.doctor_name}</h6>
-                                <p class="m-1">${doctorData.speciality}</p>  
+                                <p class="m-1">${specialityonText}</p>  
                                 <p class="m-1">${descriptionText}</p>
                              </div>
                         </div>
