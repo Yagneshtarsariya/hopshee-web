@@ -311,19 +311,17 @@
                     $("#in_admin_dob").val(date_of_birth);
                 }
             });
-
-           
             $('#btnsave').click(function () {
                 console.log('i am click')
                 const updatedData = {
-                admin_id: 7,
-                admin_name: $("#in_admin_name").val(),
-                email_id: $("#in_admin_email").val(),
-                phone_no: $("#in_admin_naumber").val(),
-                gender: $("#in_admin_gender").val(),
-            }
+                    admin_id: 7,
+                    admin_name: $("#in_admin_name").val(),
+                    email_id: $("#in_admin_email").val(),
+                    phone_no: $("#in_admin_naumber").val(),
+                    gender: $("#in_admin_gender").val(),
+                }
                 $.ajax({
-                    url: adminApi,
+                    url: admin,
                     type: 'PATCH',
                     data: JSON.stringify(updatedData),
                     contentType: "application/json",
