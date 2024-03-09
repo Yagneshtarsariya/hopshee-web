@@ -162,11 +162,8 @@
                 data: 'json',
                 url: adminApi,
                 success: function (response) {
-
-                    console.log("response")
                     $('#D_admin_name').text(response.data[0].admin_name); // Update the navbar brand text
                     $('#D_admin_image').attr('src', `${host}/${response.data[0].image_url}`);// Update the navbar brand text
-
                 },
                 error: function (error) {
                     console.logx("Error fetching doctor data:", error);
