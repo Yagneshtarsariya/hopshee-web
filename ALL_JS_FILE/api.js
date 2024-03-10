@@ -9,3 +9,4 @@ const employees = `${host}/employees`;
 const employeeslogin = `${host}/employees/login`;
 const appoinments = `${host}/appoinments`;
 const users = `${host}/users`;
+const AppoApproved = `${host}/appoinments/approved`
