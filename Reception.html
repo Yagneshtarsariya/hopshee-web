@@ -150,7 +150,9 @@
                                     approvedButton.find('button').click(function () {
                                         const appoinmentsid = appointment.appo_id;
                                         // console.log(appoinmentsid)
-
+                                        const updatedbody = {
+                                            appo_id: appoinmentsid,
+                                        }
                                         console.log(updatedbody)
                                         $.ajax({
                                             url: AppoApproved,
@@ -162,9 +164,7 @@
                                             }
 
                                         });
-                                        const updatedbody = {
-                                            appo_id: appoinmentsid
-                                        }
+                                       
                                     });
                                     var cancalbutton = $('<td><button style="background: none; border: none;"><i class="fa fa-times" aria-hidden="true"></i></button></td>');
                                     cancalbutton.find('button').click(function () {
