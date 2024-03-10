@@ -1,5 +1,5 @@
 // const host = 'http://localhost:8000';
-const host = 'https://node-hophsee.onrender.com';
+const host = 'https://crowded-galoshes-elk.cyclic.app/';
 
 const admin = `${host}/admin`;
 const adminLogin = `${host}/admin/login`;

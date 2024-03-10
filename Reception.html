@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ALL_CSS_FILE_LINK_HEAR -->
-    <link rel="stylesheet" href="ALL_CSS_FILE/index.css">
-    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css">
+    <!-- <link rel="stylesheet" href="ALL_CSS_FILE/index.css"> -->
+    <!-- <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css"> -->
 
     <!--ICON_LIBREY_LINK_HEAR-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
 
     <!-- ALL_CHART_FILE_LINK_HEAR -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="ALL_JS_FILE/coulmnchart.js"></script>
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+    <!-- <script src="ALL_JS_FILE/coulmnchart.js"></script> -->
 
     <!-- ALL_JS_FILE_LINK_HEAR -->
-    <script src="ALL_JS_FILE/index.js"></script>
+    <!-- <script src="ALL_JS_FILE/index.js"></script> -->
     <script src="ALL_JS_FILE/api.js"></script>
-    <script src="ALL_JS_FILE/drawar.js"></script>
+    <!-- <script src="ALL_JS_FILE/drawar.js"></script> -->
     <script src="ALL_JS_FILE/cookie.js"></script>
     <script src="jquery.min.js"></script>
 
@@ -47,47 +47,21 @@
     <div class="container bg-white pt-4 pb-4">
         <div style="height: 50px; background-color: white;" class="pt-0 px-4 border rounded"> <label
                 style="font-size: 30px;">Appointment List</label></div>
-        <div class="row mx-0 mt-2 border pt-2 pb-2 shadow-sm">
-            <div class="col-1">ID</div>
-            <div class="col-2">USER NAME</div>
-            <div class="col-2">DOCTOR NAME</div>
-            <div class="col-2">DATE</div>
-            <div class="col-2">TIME</div>
-            <div class="col-1">ADD</div>
-            <div class="col-1">Approved</div>
-            <div class="col-1">Delete</div>
-        </div>
-        <!-- Table body where appointment data will be populated -->
-        <div id="appointmentList"></div>
         <div class="table-responsive">
-            <table id="dtHorizontalExample" class="table table-striped table-bordered table-sm" cellspacing="0"
-                width="100%" style="overflow-x: auto;">
+            <table class="table table-bordered mt-4" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                        <th>Extn.</th>
-                        <th>E-mail</th>
+                        <th>ID</th>
+                        <th>USER NAME</th>
+                        <th>DOCTOR NAME</th>
+                        <th>DATE</th>
+                        <th>TIME</th>
+                        <th>ADD</th>
+                        <th>Approved</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Tiger</td>
-                        <td>Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>5421</td>
-                        <td>t.nixon@datatables.net</td>
-                    </tr>
-                </tbody>
+                <tbody id="appointmentList_tbody"></tbody>
             </table>
         </div>
 
@@ -102,7 +76,7 @@
                 // window.location.replace("login.html");
             }
             // Define API URLs
-            const appointmentAPI = `${appoinments}?is_hospital_visit=0`;
+            const appointmentAPI = `${appoinments}/upcoming`;
             console.log(appointmentAPI);
             const userAPI = users;
             const doctorAPI = doctors;
@@ -147,7 +121,6 @@
                 const formattedDate = `${year}/${month}/${day}`;
                 return formattedDate;
             }
-
             function populateAppointmentList() {
                 $.ajax({
                     url: appointmentAPI,
@@ -159,23 +132,34 @@
                             getUserData(appointment.user_id, function (userData) {
                                 getDoctorData(appointment.doctor_id, function (doctorData) {
                                     // Create a new row and populate it with appointment, user, and doctor data
-                                    var newRow = $('<div class="row mx-0 mt-2 border pt-2 pb-2 shadow-sm"></div>');
-                                    newRow.append('<div class="col-1">' + appointment.appo_id + '</div>');
-                                    newRow.append('<div class="col-2">' + (userData ? userData.data[0].user_name : 'N/A') + '</div>');
-                                    newRow.append('<div class="col-2">' + (doctorData ? doctorData.data[0].doctor_name : 'N/A') + '</div>');
-                                    newRow.append('<div class="col-2">' + formatDate(appointment.appo_dt) + '</div>');
-                                    newRow.append('<div class="col-2">' + appointment.appo_time + '</div>');
-                                    newRow.append('<div class="col-1">' + appointment.appo_time + '</div>');
-                                    newRow.append('<div class="col-1">' + appointment.appo_time + '</div>');
+                                    var newRow = $('<tr></tr>');
+                                    newRow.append('<td>' + appointment.appo_id + '</td>');
+                                    newRow.append('<td>' + (userData ? userData.data[0].user_name : 'N/A') + '</td>');
+                                    newRow.append('<td>' + (doctorData ? doctorData.data[0].doctor_name : 'N/A') + '</td>');
+                                    newRow.append('<td>' + formatDate(appointment.appo_dt) + '</td>');
+                                    newRow.append('<td>' + appointment.appo_time + '</td>');
+                                    // newRow.append('<td>' + appointment.appo_time + '</td>');
+                                    // newRow.append('<td>' + appointment.appo_time + '</td>');
+
                                     // Create a button for ADD with a click event to redirect
-                                    var addButton = $('<div class="col-1"><button style="background: none; border: none;"><i class="fa-regular fa-pen-to-square"></i></button></div>');
+                                    var addButton = $('<td><button style="background: none; border: none;"><i class="fa-regular fa-pen-to-square"></i></button></td>');
                                     addButton.find('button').click(function () {
                                         redirectToAddPage(appointment.user_id, appointment.appo_id);
                                     });
+                                    var approvedButton = $('<td><button style="background: none; border: none;"><i class="fa fa-check" aria-hidden="true"></i></button></td>');
+                                    approvedButton.find('button').click(function () {
+                                        redirectToAddPage(appointment.user_id, appointment.appo_id);
+                                    });
+                                    var cancalbutton = $('<td><button style="background: none; border: none;"><i class="fa fa-times" aria-hidden="true"></i></button></td>');
+                                    cancalbutton.find('button').click(function () {
+                                        redirectToAddPage(appointment.user_id, appointment.appo_id);
+                                    });
                                     newRow.append(addButton);
+                                    newRow.append(approvedButton);
+                                    newRow.append(cancalbutton);
 
                                     // Append the row to the appointment list
-                                    $('#appointmentList').append(newRow);
+                                    $('#appointmentList_tbody').append(newRow);
                                 });
                             });
                         });
@@ -185,6 +169,7 @@
                     }
                 });
             }
+
 
             // Function to redirect to the new page with user ID and doctor ID
             function redirectToAddPage(userId, appoId) {
