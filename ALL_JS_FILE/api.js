@@ -11,3 +11,6 @@ const employeeslogin = `${host}/employees/login`;
 const appoinments = `${host}/appoinments`;
 const users = `${host}/users`;
 const AppoApproved = `${host}/appoinments/approved`
+const Appoupcoming = `${host}/appoinments/upcoming`
+const Appocancelled = `${host}/appoinments/cancelled`
+const Appoexpired = `${host}/appoinments/expired`

@@ -81,6 +81,90 @@
             const userAPI = users;
             const doctorAPI = doctors;
 
+            $.ajax({
+                url: appointmentAPI,
+                method: 'GET',
+                dataType: 'json',
+                success: function (appointmentData) {
+                    console.log(appointmentData);
+                    $.each(appointmentData.data, function (index, appointment) {
+                        getUserData(appointment.user_id, function (userData) {
+                            getDoctorData(appointment.doctor_id, function (doctorData) {
+                                // Create a new row and populate it with appointment, user, and doctor data
+                                var newRow = $('<tr></tr>');
+                                newRow.append('<td>' + appointment.appo_id + '</td>');
+                                newRow.append('<td>' + (userData ? userData.data[0].user_name : 'N/A') + '</td>');
+                                newRow.append('<td>' + (doctorData ? doctorData.data[0].doctor_name : 'N/A') + '</td>');
+                                newRow.append('<td>' + formatDate(appointment.appo_dt) + '</td>');
+                                newRow.append('<td>' + appointment.appo_time + '</td>');
+                                // newRow.append('<td>' + appointment.appo_time + '</td>');
+                                // newRow.append('<td>' + appointment.appo_time + '</td>');
+
+                                // Create a button for ADD with a click event to redirect
+                                var addButton = $('<td><button style="background: none; border: none;"><i class="fa-regular fa-pen-to-square"></i></button></td>');
+                                addButton.find('button').click(function () {
+                                    redirectToAddPage(appointment.user_id, appointment.appo_id);
+                                });
+                                var approvedButton = $('<td><button style="background: none; border: none;"><i class="fa fa-check" aria-hidden="true"></i></button></td>');
+                                approvedButton.find('button').click(function () {
+                                    const Approvidapi = "https://node-hophsee.onrender.com/appoinments/approved"
+                                    const appoinmentsid = appointment.appo_id;
+                                    console.log(appoinmentsid);
+                                    const postData = {
+                                        appo_id: appoinmentsid,
+                                    }
+                                    // console.log(updatedbody)
+                                    $.ajax({
+                                        url: Approvidapi,
+                                        method: 'POST',
+                                        dataType: 'json', // Set the expected data type of the response
+                                        data: postData,  // Include the data to be sent in the request
+                                        success: function (response) {
+                                            // Handle success, if needed
+                                            // console.log('POST request successful', response);
+                                            return alert("appoint ment approved successfull");
+                                        },
+                                        error: function (xhr, status, error) {
+                                            // Handle errors, if any
+                                            console.error('Error in POST request', status, error);
+                                        }
+                                    });
+                                });
+                                var cancalbutton = $('<td><button style="background: none; border: none;"><i class="fa fa-times" aria-hidden="true"></i></button></td>');
+                                cancalbutton.find('button').click(function () {
+                                    console.log('delete button click');
+                                    // console.log(`${AppoApproved}`);
+                                    const deleteapi = "https://node-hophsee.onrender.com/appoinments";
+                                    const appoinmentsid = appointment.appo_id;
+                                    $.ajax({
+                                        url: `${deleteapi}/${appoinmentsid}`,
+                                        method: 'DELETE',
+                                        dataType: 'json', // Set the expected data type of the response
+                                        success: function (response) {
+                                            // Handle success, if needed
+                                            console.log('DELETE request successful', response);
+                                        },
+                                        error: function (xhr, status, error) {
+                                            // Handle errors, if any
+                                            console.error('Error in DELETE request', status, error);
+                                        }
+                                    });
+                                });
+                                newRow.append(addButton);
+                                newRow.append(approvedButton);
+                                newRow.append(cancalbutton);
+
+                                // Append the row to the appointment list
+                                $('#appointmentList_tbody').append(newRow);
+                            });
+                        });
+                    });
+                },
+                error: function (error) {
+                    console.log('Error fetching appointment data: ' + error);
+                }
+            });
+
             // Function to fetch user data based on user ID
             function getUserData(userID, callback) {
                 $.ajax({
@@ -122,67 +206,7 @@
                 return formattedDate;
             }
             function populateAppointmentList() {
-                $.ajax({
-                    url: appointmentAPI,
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function (appointmentData) {
-                        console.log(appointmentData);
-                        $.each(appointmentData.data, function (index, appointment) {
-                            getUserData(appointment.user_id, function (userData) {
-                                getDoctorData(appointment.doctor_id, function (doctorData) {
-                                    // Create a new row and populate it with appointment, user, and doctor data
-                                    var newRow = $('<tr></tr>');
-                                    newRow.append('<td>' + appointment.appo_id + '</td>');
-                                    newRow.append('<td>' + (userData ? userData.data[0].user_name : 'N/A') + '</td>');
-                                    newRow.append('<td>' + (doctorData ? doctorData.data[0].doctor_name : 'N/A') + '</td>');
-                                    newRow.append('<td>' + formatDate(appointment.appo_dt) + '</td>');
-                                    newRow.append('<td>' + appointment.appo_time + '</td>');
-                                    // newRow.append('<td>' + appointment.appo_time + '</td>');
-                                    // newRow.append('<td>' + appointment.appo_time + '</td>');
 
-                                    // Create a button for ADD with a click event to redirect
-                                    var addButton = $('<td><button style="background: none; border: none;"><i class="fa-regular fa-pen-to-square"></i></button></td>');
-                                    addButton.find('button').click(function () {
-                                        redirectToAddPage(appointment.user_id, appointment.appo_id);
-                                    });
-                                    var approvedButton = $('<td><button style="background: none; border: none;"><i class="fa fa-check" aria-hidden="true"></i></button></td>');
-                                    approvedButton.find('button').click(function () {
-                                        const appoinmentsid = appointment.appo_id;
-                                        // console.log(appoinmentsid)
-                                        const updatedbody = {
-                                            appo_id: appoinmentsid,
-                                        }
-                                        // console.log(updatedbody)
-                                        $.ajax({
-                                            url: AppoApproved,
-                                            method: 'POST',
-                                            dataType: 'json',
-                                            body: updatedbody,
-                                            success: function (appointmentData) {
-
-                                            }
-
-                                        });
-                                    });
-                                    var cancalbutton = $('<td><button style="background: none; border: none;"><i class="fa fa-times" aria-hidden="true"></i></button></td>');
-                                    cancalbutton.find('button').click(function () {
-                                        redirectToAddPage(appointment.user_id, appointment.appo_id);
-                                    });
-                                    newRow.append(addButton);
-                                    newRow.append(approvedButton);
-                                    newRow.append(cancalbutton);
-
-                                    // Append the row to the appointment list
-                                    $('#appointmentList_tbody').append(newRow);
-                                });
-                            });
-                        });
-                    },
-                    error: function (error) {
-                        console.log('Error fetching appointment data: ' + error);
-                    }
-                });
             }
 
 
