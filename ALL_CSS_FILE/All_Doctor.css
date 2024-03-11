@@ -1,13 +1,13 @@
-@media only screen and (min-width: 425px) {
+/* @media only screen and (min-width: 425px) {
     .customize_img {
         height: 50px;
         width: 50px;
     }
     .decoration-text{
-        /* font-size: 12px; */
+        font-size: 12px;
     }
     p{
-        /* font-size: 10px; */
+        font-size: 10px;
     }
 }
 
@@ -19,12 +19,12 @@
         
     }
     .decoration-text{
-        /* font-size: 12px; */
+        font-size: 12px;
        
         
     }
     p{
-        /* font-size: 10px; */
+        font-size: 10px;
     }
 }
-
+ */
