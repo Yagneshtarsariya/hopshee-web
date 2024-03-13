@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -30,10 +30,11 @@
     <script src="jquery.min.js"></script>
 
     <title>DOCTOR DESHBOARD</title>
+
 </head>
 
 <body>
-     <div class="sidebar">
+    <div class="sidebar">
         <div class="logo_details border-bottom">
             <div class="logo_name">Hopshee-Web</div>
             <i class="bx bx-menu " id="btn"></i>
@@ -170,8 +171,8 @@
                 <div class="col-lg mt-3">
                     <div style="height: 600px;" class="bg-white shadow rounded ">
                         <div style="height: 290px; background-color: #0d6efd;" class="rounded ">
-                            <img src="ALL_IMAGE/Dr.jpg" alt=" DR IMAGE" height="250px" width="250px"
-                                class="mt-4 mx-4" style="border: 10px solid white;" id="dimage">
+                            <img src="ALL_IMAGE/Dr.jpg" alt=" DR IMAGE" height="250px" width="250px" class="mt-4 mx-4"
+                                style="border: 10px solid white;" id="dimage">
                         </div>
                         <div class="mt-2 mx-4">
                             <div class="d-flex" style="height: 25px;">
@@ -207,24 +208,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg mt-3 overflow-scroll" data-spy="scroll" data-target="#scroolebal" data-offset="20">
-                    <div class="bg-white shadow px-3 pt-4" id="scroolebal" style="height: 600px;">
-                        <h3> Appointments </h3>
-                        <div class="d-flex justify-content-center">
-                            <img src="ALL_IMAGE/Apoinment.png" alt="image not found" height="170px">
-                        </div>
-                        <div id="Appo-NotVisited">
+                <div style="background-color: white;" class="col-lg mt-3 shadow">
+                    <div class="col-lg overflow-scroll" data-spy="scroll" data-target="#scroolebal" data-offset="20">
+                        <div class="pb-2 pt-4" id="scroolebal" style="height: 600px;">
+                            <h3> Appointments </h3>
+                            <div class="d-flex justify-content-center">
+                                <img src="ALL_IMAGE/Apoinment.png" alt="image not found" height="170px"
+                                    style="position: static;">
+                            </div>
+                            <div id="Appo-NotVisited">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg mt-3">
-                    <div style="height: 600px;" class="bg-white shadow px-3 pt-4">
-                        <h3>Recent Visits</h3>
-                        <div class="text-center">
-                            <img src="ALL_IMAGE/Recent_visit.png" alt="image not found" height="170px">
+                <div style="background-color: white;" class="col-lg mt-3 shadow mx-2">
+                    <div class="col-lg overflow-scroll" data-spy="scroll" data-target="#scroolebal" data-offset="20">
+                        <div class="px-3 pb-2 pt-4" id="scroolebal" style="height: 600px;">
+                            <h3>Recent Visits</h3>
+                            <div class="text-center">
+                                <img src="ALL_IMAGE/Recent_visit.png" alt="image not found" height="170px">
+                            </div>
+                            <div id="Appo-Visited"></div>
                         </div>
-                        <div id="Appo-Visited"></div>
                     </div>
                 </div>
             </div>
@@ -311,7 +316,8 @@
                                         $.each(appointmentData.data, function (index, appointment) {
                                             const img_url = `${host}/${userData.data[0].image_url}`;
 
-                                            const isNotVisitCard = `<div class="d-flex bg-white shadow rounded mx-2 px-3 py-3 mt-5">
+                                            const isNotVisitCard = `
+                                            <div class="d-flex bg-white border rounded mx-2 px-3 py-3 mt-2">
                                             <img src="${img_url}" alt="message image not found" height="70px" width="70px"
                                                 class="rounded-circle">
                                                 <div class="mt-0 mx-3">

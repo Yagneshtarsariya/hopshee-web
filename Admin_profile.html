@@ -213,6 +213,27 @@
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
     <script>
         $(document).ready(function () {
+            $.ajax({
+                type: 'GET',
+                data: 'json',
+                url: `${appoinments}/summary`,
+                success: function (response) {
+                    console.log(`summary = ${response.error}`);
+                    if (response.error == 0) {
+                        var upcoming = response.data.upcoming_appo;
+                        var approved = response.data.approved_appo;
+                        var cancelled = response.data.cancelled_appo;
+                        var expired = response.data.expired_appo;
+                        console.log(upcoming);
+                        drawChart(upcoming, approved, cancelled, expired);
+                    }
+                },
+                error: function (error) {
+                    console.logx("Error fetching doctor data:", error);
+                }
+            });
+
+
             const aid = getCookie("admin_id");
             // Drwaer search
             // const adminApi = `${admin}/${aid}`;

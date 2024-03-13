@@ -28,11 +28,6 @@
     <script src="ALL_JS_FILE/cookie.js"></script>
     <script src="jquery.min.js"></script>
 
-    <style>
-        #table_appo tr:nth-child(odd) {
-  background-color: #f2f2f2;
-}
-    </style>
     <title>RECEPTION PENAL</title>
 </head>
 
@@ -110,19 +105,20 @@
             <div class="container-fluid align-items-center">
                 <!-- nav bar logo image code strat  -->
                 <a class="navbar-brand" href="#">Hopshee</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
                 <button style="background-color: transparent; border: transparent; color: white;"
                     id="Logout">Logout</button>
             </div>
         </nav>
 
         <div class="mx-4 pt-4 pb-4">
-            <div style="height: 50px;" class="pt-0"> <label style="font-size: 30px;">Appointment List</label></div>
+            <div style="height: 50px;" class="pt-0 rounded"> <label style="font-size: 30px;">Approved
+                    Appoinments</label></div>
             <div class="table-responsive mt-4">
-                <table class="bg-white rounded" cellspacing="0" width="100%" style="padding: 100px!important;" id="table_appo">
+                <table class="bg-white rounded" cellspacing="0" width="100%" style="padding: 100px!important;">
                     <thead>
                         <tr style="text-align: center; height: 70px;">
                             <th>ID</th>
@@ -130,12 +126,11 @@
                             <th>DOCTOR NAME</th>
                             <th>DATE</th>
                             <th>TIME</th>
-                            <!-- <th>ADD</th> -->
-                            <th>Approved</th>
-                            <th>Cancal</th>
+                            <th>ADD</th>
+                            <!-- <th>Approved</th> -->
+                            <!-- <th>Cancal</th> -->
                         </tr>
                     </thead>
-                    
                     <tbody id="appointmentList_tbody"></tbody>
                 </table>
             </div>
@@ -150,6 +145,7 @@
             } else {
                 // window.location.replace("login.html");
             }
+
             $('#searchInput').on('input', function () {
                 const searchValue = $(this).val().toLowerCase();
 
@@ -163,7 +159,7 @@
                 });
             });
             // Define API URLs
-            const appointmentAPI = `${appoinments}/upcoming`;
+            const appointmentAPI = `${appoinments}/approved`;
             console.log(appointmentAPI);
             const userAPI = users;
             const doctorAPI = doctors;
@@ -221,7 +217,7 @@
                             getUserData(appointment.user_id, function (userData) {
                                 getDoctorData(appointment.doctor_id, function (doctorData) {
                                     // Create a new row and populate it with appointment, user, and doctor data
-                                    var newRow = $('<tr style="text-align: center; height: 70px;"></tr>');
+                                    var newRow = $('<tr></tr>');
                                     newRow.append('<td>' + appointment.appo_id + '</td>');
                                     newRow.append('<td>' + (userData ? userData.data[0].user_name : 'N/A') + '</td>');
                                     newRow.append('<td>' + (doctorData ? doctorData.data[0].doctor_name : 'N/A') + '</td>');
@@ -231,58 +227,58 @@
                                     // newRow.append('<td>' + appointment.appo_time + '</td>');
 
                                     // Create a button for ADD with a click event to redirect
-                                    // var addButton = $('<td><button style="background: none; border: none;"><i class="fa-regular fa-pen-to-square"></i></button></td>');
-                                    // addButton.find('button').click(function () {
-                                    //     redirectToAddPage(appointment.user_id, appointment.appo_id);
+                                    var addButton = $('<td><button style="background: none; border: none;"><i class="fa-regular fa-pen-to-square"></i></button></td>');
+                                    addButton.find('button').click(function () {
+                                        redirectToAddPage(appointment.user_id, appointment.appo_id);
+                                    });
+                                    // var approvedButton = $('<td><button style="background: none; border: none;"><i class="fa fa-check" aria-hidden="true"></i></button></td>');
+                                    // approvedButton.find('button').click(function () {
+                                    //     const Approvidapi = "https://node-hophsee.onrender.com/appoinments/approved"
+                                    //     const appoinmentsid = appointment.appo_id;
+                                    //     console.log(appoinmentsid);
+                                    //     const postData = {
+                                    //         appo_id: appoinmentsid,
+                                    //     }
+                                    //     // console.log(updatedbody)
+                                    //     $.ajax({
+                                    //         url: Approvidapi,
+                                    //         method: 'POST',
+                                    //         dataType: 'json', // Set the expected data type of the response
+                                    //         data: postData,  // Include the data to be sent in the request
+                                    //         success: function (response) {
+                                    //             // Handle success, if needed
+                                    //             // console.log('POST request successful', response);
+                                    //             return alert("appoint ment approved successfull");
+                                    //         },
+                                    //         error: function (xhr, status, error) {
+                                    //             // Handle errors, if any
+                                    //             console.error('Error in POST request', status, error);
+                                    //         }
+                                    //     });
                                     // });
-                                    var approvedButton = $('<td><button style="background: none; border: none;"><i class="fa fa-check" aria-hidden="true"></i></button></td>');
-                                    approvedButton.find('button').click(function () {
-                                        const Approvidapi = "https://node-hophsee.onrender.com/appoinments/approved"
-                                        const appoinmentsid = appointment.appo_id;
-                                        console.log(appoinmentsid);
-                                        const postData = {
-                                            appo_id: appoinmentsid,
-                                        }
-                                        // console.log(updatedbody)
-                                        $.ajax({
-                                            url: Approvidapi,
-                                            method: 'POST',
-                                            dataType: 'json', // Set the expected data type of the response
-                                            data: postData,  // Include the data to be sent in the request
-                                            success: function (response) {
-                                                // Handle success, if needed
-                                                // console.log('POST request successful', response);
-                                                return alert("appoint ment approved successfull");
-                                            },
-                                            error: function (xhr, status, error) {
-                                                // Handle errors, if any
-                                                console.error('Error in POST request', status, error);
-                                            }
-                                        });
-                                    });
-                                    var cancalbutton = $('<td><button style="background: none; border: none;"><i class="fa fa-times" aria-hidden="true"></i></button></td>');
-                                    cancalbutton.find('button').click(function () {
-                                        console.log('delete button click');
-                                        // console.log(`${AppoApproved}`);
-                                        const deleteapi = "https://node-hophsee.onrender.com/appoinments";
-                                        const appoinmentsid = appointment.appo_id;
-                                        $.ajax({
-                                            url: `${deleteapi}/${appoinmentsid}`,
-                                            method: 'DELETE',
-                                            dataType: 'json', // Set the expected data type of the response
-                                            success: function (response) {
-                                                // Handle success, if needed
-                                                console.log('DELETE request successful', response);
-                                            },
-                                            error: function (xhr, status, error) {
-                                                // Handle errors, if any
-                                                console.error('Error in DELETE request', status, error);
-                                            }
-                                        });
-                                    });
-                                    // newRow.append(addButton);
-                                    newRow.append(approvedButton);
-                                    newRow.append(cancalbutton);
+                                    // var cancalbutton = $('<td><button style="background: none; border: none;"><i class="fa fa-times" aria-hidden="true"></i></button></td>');
+                                    // cancalbutton.find('button').click(function () {
+                                    //     console.log('delete button click');
+                                    //     // console.log(`${AppoApproved}`);
+                                    //     const deleteapi = "https://node-hophsee.onrender.com/appoinments";
+                                    //     const appoinmentsid = appointment.appo_id;
+                                    //     $.ajax({
+                                    //         url: `${deleteapi}/${appoinmentsid}`,
+                                    //         method: 'DELETE',
+                                    //         dataType: 'json', // Set the expected data type of the response
+                                    //         success: function (response) {
+                                    //             // Handle success, if needed
+                                    //             console.log('DELETE request successful', response);
+                                    //         },
+                                    //         error: function (xhr, status, error) {
+                                    //             // Handle errors, if any
+                                    //             console.error('Error in DELETE request', status, error);
+                                    //         }
+                                    //     });
+                                    // });
+                                    newRow.append(addButton);
+                                    // newRow.append(approvedButton);
+                                    // newRow.append(cancalbutton);
 
                                     // Append the row to the appointment list
                                     $('#appointmentList_tbody').append(newRow);
