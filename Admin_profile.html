@@ -279,7 +279,12 @@
                     var formattedDate = new Date(rawDate);
                     var rawDate2 = response.data[0].last_login;
                     var formattedDate2 = new Date(rawDate2);
-
+                    let gen = "";
+                            if (response.data[0].gender == 'M') {
+                                gen = 'MALE'
+                            } else {
+                                gen = 'FEMALE'
+                            }
 
                     var date_of_birth = (formattedDate.getMonth() + 1) + '/' + formattedDate.getDate() + '/' + formattedDate.getFullYear();
                     var last_login = (formattedDate2.getMonth() + 1) + '/' + formattedDate2.getDate() + '/' + formattedDate2.getFullYear();
@@ -288,7 +293,7 @@
                     $('.D_admin_name').text(response.data[0].admin_name);
                     $('#Email').text(response.data[0].email_id);
                     $('#Mono').text(response.data[0].phone_no);
-                    $('#gender').text(response.data[0].gender);
+                    $('#gender').text(gen);
                     $('#DOB').text(date_of_birth);
                     $('#L_LOGIN').text(last_login);
                     // $('#L_LOGIN').text(response.data[0].last_login);

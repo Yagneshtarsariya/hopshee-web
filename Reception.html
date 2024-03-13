@@ -124,7 +124,7 @@
             <div class="table-responsive mt-4">
                 <table class="bg-white rounded" cellspacing="0" width="100%" style="padding: 100px!important;" id="table_appo">
                     <thead>
-                        <tr style="text-align: center; height: 70px;">
+                        <tr style="text-align: center; height: 70px; border-bottom: 1px solid lightgrey;" id="table_appo">
                             <th>ID</th>
                             <th>USER NAME</th>
                             <th>DOCTOR NAME</th>
@@ -247,12 +247,14 @@
                                         $.ajax({
                                             url: Approvidapi,
                                             method: 'POST',
-                                            dataType: 'json', // Set the expected data type of the response
-                                            data: postData,  // Include the data to be sent in the request
+                                            dataType: 'json', 
+                                            data: postData,  
                                             success: function (response) {
-                                                // Handle success, if needed
-                                                // console.log('POST request successful', response);
-                                                return alert("appoint ment approved successfull");
+                                                if(response.error == 0){
+                                                    window.location.href = 'approved_appo.html';
+                                                }else{
+                                                    return alert("somthing went wrong for server side")
+                                                }
                                             },
                                             error: function (xhr, status, error) {
                                                 // Handle errors, if any
@@ -271,8 +273,11 @@
                                             method: 'DELETE',
                                             dataType: 'json', // Set the expected data type of the response
                                             success: function (response) {
-                                                // Handle success, if needed
-                                                console.log('DELETE request successful', response);
+                                                if(response.error == 0){
+                                                    window.location.href = 'cancelled_appo.html';
+                                                }else{
+                                                    return alert("somthing went wrong for server side")
+                                                }
                                             },
                                             error: function (xhr, status, error) {
                                                 // Handle errors, if any
@@ -298,13 +303,9 @@
 
 
             // Function to redirect to the new page with user ID and doctor ID
-            function redirectToAddPage(userId, appoId) {
-                // Construct the URL with user_id and doctor_id as query parameters
-                const redirectURL = `Add_appoinment.html?user_id=${userId}&appo_id=${appoId}`;
-
-                // Redirect to the new page
-                window.location.href = redirectURL;
-            }
+            // function redirectToAddPage() {
+            //     window.location.href = redirectURL;
+            // }
 
             // Call the function to populate the appointment list
             populateAppointmentList();

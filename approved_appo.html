@@ -28,7 +28,12 @@
     <script src="ALL_JS_FILE/cookie.js"></script>
     <script src="jquery.min.js"></script>
 
-    <title>RECEPTION PENAL</title>
+    <title>APPROVED APPOINMENTS</title>
+    <style>
+        #table_appo tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 
 <body>
@@ -118,9 +123,10 @@
             <div style="height: 50px;" class="pt-0 rounded"> <label style="font-size: 30px;">Approved
                     Appoinments</label></div>
             <div class="table-responsive mt-4">
-                <table class="bg-white rounded" cellspacing="0" width="100%" style="padding: 100px!important;">
+                <table class="bg-white rounded" cellspacing="0" width="100%" style="padding: 100px!important;"
+                    id="table_appo">
                     <thead>
-                        <tr style="text-align: center; height: 70px;">
+                        <tr style="text-align: center; height: 70px; border-bottom: 1px solid lightgray;">
                             <th>ID</th>
                             <th>USER NAME</th>
                             <th>DOCTOR NAME</th>
@@ -217,7 +223,7 @@
                             getUserData(appointment.user_id, function (userData) {
                                 getDoctorData(appointment.doctor_id, function (doctorData) {
                                     // Create a new row and populate it with appointment, user, and doctor data
-                                    var newRow = $('<tr></tr>');
+                                    var newRow = $('<tr style="text-align: center; height: 70px;"></tr>');
                                     newRow.append('<td>' + appointment.appo_id + '</td>');
                                     newRow.append('<td>' + (userData ? userData.data[0].user_name : 'N/A') + '</td>');
                                     newRow.append('<td>' + (doctorData ? doctorData.data[0].doctor_name : 'N/A') + '</td>');
