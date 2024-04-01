@@ -418,12 +418,12 @@
                         const img_url = `${host}/${doctorData.image_url}`;
                         // Create the HTML for the doctor card
                         const doctorCard = `
-                        <div class="bg-white p-4  d-flex shadow bg-white rounded">
+                        <div class="bg-white p-4 d-flex shadow bg-white rounded">
                             <div style="margin-right:20px;">
-                                <img src="${img_url}" alt="" height="100px" width="100px" style="border-radius:4px; class = "image_degine"">
+                                <img src="${img_url}" alt="" height="100px" width="100px" style="border-radius:4px; class = "image_degine img-fluid"">
                              </div>
                              <div>
-                                <h4>${doctorData.doctor_name}</h4>
+                                <h4 class="">${doctorData.doctor_name}</h4>
                                 <p>${doctorData.speciality}</p>
                                 </div>
                          </div><br>

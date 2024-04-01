@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ALL_CSS_FILE_LINK_HEAR -->
+    <!-- <link rel="stylesheet" href="ALL_CSS_FILE/index.css"> -->
+    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css">
+
+    <!--ICON_LIBREY_LINK_HEAR-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- ALL_JS_FILE_LINK_HEAR -->
+    <script src="ALL_JS_FILE/api.js"></script>
+    <script src="ALL_JS_FILE/drawar.js"></script>
+    <script src="ALL_JS_FILE/cookie.js"></script>
+    <script src="jquery.min.js"></script>
+
+    <style>
+        #table_appo tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+    </style>
+    <title>RECEPTION PENAL</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_details border-bottom">
+            <div class="logo_name">Hopshee-Web</div>
+            <i class="bx bx-menu " id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li id="search">
+                <i class="bx bx-search" style="background-color: white; color: #0d6efd;"></i>
+                <input type="text" id="searchInput" placeholder="search.."
+                    style="color: #0d6efd; background-color: white;">
+                <span class="Tooltip">search</span>
+            </li>
+        </ul>
+        <ul class="nav-list" id="nav_search_item">
+            <li>
+                <a href="Reception.html" class="selcted">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Appointment</span>
+                </a>
+                <span class="Tooltip">Appointment</span>
+            </li>
+            <li>
+                <a href="approved_appo.html">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span class="link_name">Approved_Appo</span>
+                </a>
+                <span class="Tooltip">Approved_Appo</span>
+            </li>
+            <li>
+                <a href="cancelled_appo.html">
+                    <i class="fa-solid fa-user-injured"></i>
+                    <span class="link_name">Cancelled</span>
+                </a>
+                <span class="Tooltip">Cancelled</span>
+            </li> 
+           <li>
+                <a href="Rec_Doc_detail.html">
+                    <i class="fa-solid fa-user-injured"></i>
+                    <span class="link_name">Doc_detail</span>
+                </a>
+                <span class="Tooltip">Doc_detail</span>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+            <div class="container-fluid align-items-center">
+                <!-- nav bar logo image code strat  -->
+                <a class="navbar-brand" href="#">Hopshee</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button style="background-color: transparent; border: transparent; color: white;"
+                    id="Logout">Logout</button>
+            </div>
+        </nav>
+        <div class="mx-4 pt-4 pb-4">
+            <div style="height: 50px;" class="pt-0"> <label style="font-size: 30px;"> Doctor Details </label></div>
+            <div class="table-responsive mt-4">
+                <table class="bg-white rounded" cellspacing="0" width="100%" style="padding: 100px!important;" id="table_appo">
+                    <thead>
+                        <tr style="text-align: center; height: 70px; border-bottom: 1px solid lightgrey;" id="table_appo">
+                            <th>ID</th>
+                            <th>DOCTOR IMAGE</th>
+                            <th>DOCTOR NAME</th>
+                            <th>TIME FROM</th>
+                            <th>TIME TO</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="appointmentList_tbody"></tbody>
+                </table>
+            </div>
+    </section>
+    </div>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(document).ready(function () {
+            const eid = getCookie('employee_id');
+            if (eid != null && eid.length > 0) {
+                // alert(eid);
+            } else {
+                // window.location.replace("login.html");
+            }
+            $('#searchInput').on('input', function () {
+                const searchValue = $(this).val().toLowerCase();
+
+                // Always show the search input
+                $('#searchInput').show();
+
+                // Loop through each list item and show based on search input
+                $('#nav_search_item li').each(function () {
+                    const listItemText = $(this).text().toLowerCase();
+                    $(this).toggle(listItemText.includes(searchValue));
+                });
+            });
+            const doctorAPI = doctors;
+            function populateAppointmentList() {
+                $.ajax({
+                    url: doctorAPI,
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(doctorData){
+                        const img_url = `${host}/${doctorData.image_url}`;
+                        console.log(img_url);
+                        $.each(doctorData.data, function(index, doctorData){
+                            var newRow = $('<tr style="text-align: center; height: 70px;"></tr>');
+                            newRow.append('<td>' + doctorData.doctor_id  + '</td>');
+                            newRow.append('<td><img src="' + `${host}/${doctorData.image_url}`+ '" alt="Doctor Image" height=50px; width=50px; style="object-fit:cover"></td>');
+                            newRow.append('<td>' + doctorData.doctor_name  + '</td>');
+                            newRow.append('<td>' + doctorData.doctor_time_from  + '</td>');
+                            newRow.append('<td>' + doctorData.doctor_time_to  + '</td>');
+
+                            $('#appointmentList_tbody').append(newRow);
+                        })
+                   
+                }    
+                });
+            }            
+            populateAppointmentList();
+            $("#Logout").click(function () {
+                console.log("Logout");
+                setCookie("admin_id", "", 1);
+                setCookie('employee_id', "", 1);
+                window.location.replace("login.html");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
