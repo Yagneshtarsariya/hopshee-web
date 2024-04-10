@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ALL_CSS_FILE_LINK_HEAR -->
+    <!-- <link rel="stylesheet" href="ALL_CSS_FILE/index.css"> -->
+    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css">
+
+    <!--ICON_LIBREY_LINK_HEAR-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- ALL_JS_FILE_LINK_HEAR -->
+    <script src="ALL_JS_FILE/api.js"></script>
+    <script src="ALL_JS_FILE/drawar.js"></script>
+    <script src="ALL_JS_FILE/cookie.js"></script>
+    <script src="jquery.min.js"></script>
+
+    <style>
+        #table_appo tr:nth-child(odd) {
+        background-color: #f2f2f2;
+        }
+    </style>
+    <title>RECEPTION PENAL</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_details border-bottom">
+            <div class="logo_name">Hophsee-Web</div>
+            <i class="bx bx-menu " id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li id="search">
+                <i class="bx bx-search" style="background-color: white; color: #0d6efd;"></i>
+                <input type="text" id="searchInput" placeholder="search.."
+                    style="color: #0d6efd; background-color: white;">
+                <span class="Tooltip">search</span>
+            </li>
+        </ul>
+        <ul class="nav-list" id="nav_search_item">
+            <li>
+                <a href="index.html" class="selcted">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <span class="Tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="All_Doctor.html">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span class="link_name">Doctors</span>
+                </a>
+                <span class="Tooltip">Doctors</span>
+            </li>
+            <li>
+                <a href="All_patient.html">
+                    <i class="fa-solid fa-user-injured"></i>
+                    <span class="link_name">Patients</span>
+                </a>
+                <span class="Tooltip">Patients</span>
+            </li>
+            <li>
+                <a href="Payment_info.html">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <span class="link_name">PaymentDetails</span>
+                </a>
+                <span class="Tooltip">PaymentDetails</span>
+            </li>
+            <li>
+                <a href="Admin_profile.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span class="link_name">Profile</span>
+                </a>
+                <span class="Tooltip">Profile</span>
+            </li>
+            <li class="profile">
+                <div class="profile_details">
+                    <img src="ALL_IMAGE/Dr.jpg" alt="profile image" id="D_admin_image">
+                    <div class="profile_content">
+                        <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
+                        <div class="designation">Admin</div>
+                    </div>
+                </div>
+                <button onclick="location.href='login.html'"><i class="bx bx-log-out" id="log_out"></i></button>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+            <div class="container-fluid align-items-center">
+                <!-- nav bar logo image code strat  -->
+                <a class="navbar-brand" href="#">Hophsee</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button style="background-color: transparent; border: transparent; color: white;"
+                    id="Logout">Logout</button>
+            </div>
+        </nav>
+        <div class="mx-4 pt-4 pb-4">
+            <div class="d-flex justify-content-between align-items-center bg-primary" style="height: 60px;">
+            <div style="height: 50px;" class="pt-0"> <label style="font-size: 30px; color: white; margin-left: 10px;"> Payments Details </label></div>
+            <div>
+                <input type="text" id="inputserch" placeholder="Search by Payer Name" style="height: 40px; width: 450px; border-radius: 10px; padding: 10px; border: none; margin-right: 10px;">
+            </div>
+            
+           
+        </div>
+            <div class="table-responsive mt-4">
+                <table class="bg-white rounded" cellspacing="0" width="100%" style="padding: 100px!important;" id="table_appo">
+                    <thead>
+                        <tr style="text-align: center; height: 70px; border-bottom: 1px solid lightgrey;">
+                            <th>Payment ID</th>
+                            <th>Payment Reference Number</th>
+                            <th>Payer</th>
+                            <th>Payee</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="paymentsBody">
+                </table>
+            </div>
+    </section>
+    </div>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            const eid = getCookie('employee_id');
+            if (eid != null && eid.length > 0) {
+                // alert(eid);
+            } else {
+                // window.location.replace("login.html");
+            }
+            $('#searchInput').on('input', function () {
+                const searchValue = $(this).val().toLowerCase();
+
+                // Always show the search input
+                $('#searchInput').show();
+
+                // Loop through each list item and show based on search input
+                $('#nav_search_item li').each(function () {
+                    const listItemText = $(this).text().toLowerCase();
+                    $(this).toggle(listItemText.includes(searchValue));
+                });
+            });
+            // var PaymentsAPI = `${payments}`;
+            var userdata = users;
+            var doctordata = doctors;
+            // console.log(users);
+
+            function populateAppointmentList() {
+                
+                $.ajax({
+        url: 'https://hophsee-backend.onrender.com/payments',
+        method: 'GET',
+        dataType: 'json',
+        success: function(response) {
+            // console.log(response);
+            if (response.error == 0) {
+                var payments = response.data   
+            // console.log(payments); 
+            var total = 0;
+                // Loop through payments data
+                $.each(payments, function(index, payment) {
+                    total = total + payment.payment_ammount;
+                    // Replace doctor_id with doctor_name
+                    $.ajax({
+                        url: `${users}`+ '/' + payment.payer_id,
+                        method: 'GET',
+                        dataType: 'json',
+                        success: function(userResponse) {
+                            // console.log(userResponse)
+                            if (userResponse.error == 0) {
+                                var payerName = userResponse.data[0].user_name;
+                                // console.log(payerName);
+                                // Replace user_id with user_name
+                                $.ajax({
+                                    url: `${doctors}`+ '/' + payment.payee_id,
+                                    method: 'GET',
+                                    dataType: 'json',
+                                    success: function(Docotrresponse) {
+                            console.log(Docotrresponse);
+
+                                        if (Docotrresponse.error == 0) {
+                                            var payeeName = Docotrresponse.data.doctor_name;
+                                             if(Docotrresponse.data.length == 0){
+                                                $('#paymentsBody').append('<tr style="text-align: center; height: 70px;">' +
+                                                '<td>' + payment.payment_id + '</td>' +
+                                                '<td>' + payment.payment_ref_no + '</td>' +
+                                                '<td>' + payerName + '</td>' +
+                                                '<td>' + 'Dr.Variya'+ '</td>' +
+                                                '<td>' + payment.payment_ammount + '</td>' +
+                                                '<td>' + payment.payment_dt + '</td>' +
+                                                '</tr>');
+                                                
+                                             }else{
+                                                $('#paymentsBody').append('<tr style="text-align: center; height: 70px;">' +
+                                                '<td>' + payment.payment_id + '</td>' +
+                                                '<td>' + payment.payment_ref_no + '</td>' +
+                                                '<td>' + payerName + '</td>' +
+                                                '<td>' + payeeName + '</td>' +
+                                                '<td>' + payment.payment_ammount + '</td>' +
+                                                '<td>' + payment.payment_dt + '</td>' +
+                                                '</tr>');
+                                             }
+                                             document.getElementById("searchInput").addEventListener("keyup", filterTable);
+                                            // Append row to the table
+                                           
+                                        }
+                                        filterTable();
+                                    }
+                                });
+                            }
+                        }
+                    });
+                });
+                console.log(`Total payments = ${total}`)
+            }
+        }
+    });
+   }         
+   function filterTable() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("inputserch");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("table_appo");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[2]; // Index 2 corresponds to the payerName column
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}   
+            populateAppointmentList();
+            $("#Logout").click(function () {
+                // console.log("Logout");
+                setCookie("admin_id", "", 1);
+                setCookie('employee_id', "", 1);
+                window.location.replace("login.html");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

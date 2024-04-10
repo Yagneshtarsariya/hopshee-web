@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ALL_CSS_FILE_LINK_HEAR -->
-    <link rel="stylesheet" href="ALL_CSS_FILE/All_Patient.css">
-    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css">
+    <link rel="stylesheet" href="ALL_CSS_FILE/All_Patient.css" />
+    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css" />
 
     <!--ICON_LIBREY_LINK_HEAR-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
 
     <!-- ALL_CHART_FILE_LINK_HEAR -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script src="ALL_JS_FILE/coulmnchart.js"></script>
 
     <!-- ALL_JS_FILE_LINK_HEAR -->
@@ -30,95 +39,116 @@
     <script src="jquery.min.js"></script>
 
     <title>HOME PAGE</title>
-</head>
+  </head>
 
-<body>
-     <div class="sidebar">
-        <div class="logo_details border-bottom">
-            <div class="logo_name">Hopshee-Web</div>
-            <i class="bx bx-menu " id="btn"></i>
-        </div>
-        <ul class="nav-list">
-            <li id="search">
-                <i class="bx bx-search" style="background-color: white; color: #0d6efd;"></i>
-                <input type="text" id="searchInput" placeholder="search.."
-                    style="color: #0d6efd; background-color: white;">
-                <span class="Tooltip">search</span>
-            </li>
-        </ul>
-        <ul class="nav-list" id="nav_search_item">
-            <li>
-                <a href="index.html" class="selcted">
-                    <i class="bx bx-grid-alt"></i>
-                    <span class="link_name">Dashboard</span>
-                </a>
-                <span class="Tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="All_Doctor.html">
-                    <i class="fa-solid fa-user-doctor"></i>
-                    <span class="link_name">Doctors</span>
-                </a>
-                <span class="Tooltip">Doctors</span>
-            </li>
-            <li>
-                <a href="All_patient.html">
-                    <i class="fa-solid fa-user-injured"></i>
-                    <span class="link_name">Patients</span>
-                </a>
-                <span class="Tooltip">Patients</span>
-            </li>
-            <!-- <li>
+  <body>
+    <div class="sidebar">
+      <div class="logo_details border-bottom">
+        <div class="logo_name">Hophsee-Web</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li id="search">
+          <i
+            class="bx bx-search"
+            style="background-color: white; color: #0d6efd"
+          ></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="search.."
+            style="color: #0d6efd; background-color: white"
+          />
+          <span class="Tooltip">search</span>
+        </li>
+      </ul>
+      <ul class="nav-list" id="nav_search_item">
+        <li>
+          <a href="index.html" class="selcted">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <span class="Tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="All_Doctor.html">
+            <i class="fa-solid fa-user-doctor"></i>
+            <span class="link_name">Doctors</span>
+          </a>
+          <span class="Tooltip">Doctors</span>
+        </li>
+        <li>
+          <a href="All_patient.html">
+            <i class="fa-solid fa-user-injured"></i>
+            <span class="link_name">Patients</span>
+          </a>
+          <span class="Tooltip">Patients</span>
+        </li>
+        <!-- <li>
                 <a href="Admin_profile.html">>
                     <i class="bx bx-pie-chart-alt-2"></i>
                     <span class="link_name">Analytics</span>
                 </a>
                 <span class="Tooltip">Analytics</span>
             </li>
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="bx bx-folder"></i>
-                    <span class="link_name">Order</span>
-                </a>
-                <span class="Tooltip">Order</span>
-            </li> -->
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="fa-solid fa-user-tie"></i>
-                    <span class="link_name">Profile</span>
-                </a>
-                <span class="Tooltip">Profile</span>
-            </li>
-            <li class="profile">
-                <div class="profile_details">
-                    <img src="ALL_IMAGE/Dr.jpg" alt="profile image" id="D_admin_image">
-                    <div class="profile_content">
-                        <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
-                        <div class="designation">Admin</div>
-                    </div>
-                </div>
-                <button onclick="location.href='login.html'"><i class="bx bx-log-out" id="log_out"></i></button>
-            </li>
-        </ul>
+             -->
+        <li>
+          <a href="Payment_info.html">
+            <i class="fa-solid fa-money-check-dollar"></i>
+            <span class="link_name">PaymentDetails</span>
+          </a>
+          <span class="Tooltip">PaymentDetails</span>
+        </li>
+        <li>
+          <a href="Admin_profile.html">
+            <i class="fa-solid fa-user-tie"></i>
+            <span class="link_name">Profile</span>
+          </a>
+          <span class="Tooltip">Profile</span>
+        </li>
+        <li class="profile">
+          <div class="profile_details">
+            <img
+              src="ALL_IMAGE/Dr.jpg"
+              alt="profile image"
+              id="D_admin_image"
+            />
+            <div class="profile_content">
+              <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
+              <div class="designation">Admin</div>
+            </div>
+          </div>
+          <button onclick="location.href='login.html'">
+            <i class="bx bx-log-out" id="log_out"></i>
+          </button>
+        </li>
+      </ul>
     </div>
     <section class="home-section">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
-            <div class="container-fluid align-items-center">
-                <!-- nav bar logo image code strat  -->
-                <!-- <a class="navbar-brand" href="#">Hopshee</a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- nav bar logo image code complete -->
-                <!-- nav bar page menu code start -->
-                <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <!-- <li class="nav-item">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid align-items-center">
+          <!-- nav bar logo image code strat  -->
+          <!-- <a class="navbar-brand" href="#">Hophsee</a> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- nav bar logo image code complete -->
+          <!-- nav bar page menu code start -->
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="collapsibleNavbar"
+          >
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
                             <a class="nav-link text-white" href="index.html">Deshbord</a>
                         </li> -->
-                        <!-- nev bar drop down menu text1 code start -->
-                        <!-- <li class="nav-item dropdown">
+              <!-- nev bar drop down menu text1 code start -->
+              <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                 data-bs-toggle="dropdown">Doctor</a>
                             <ul class="dropdown-menu bg-primary">
@@ -127,13 +157,15 @@
                                 <li><a class="dropdown-item text-white" href="Edit_Doctor.html">Edit-doctor</a></li>
                             </ul>
                         </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link  text-white" href="All_patient.html">Patients</a>
-                        </li>
-                    </ul>
-                    <!-- nev bar drop down menu text1 code finsh-->
-                    <!-- nev bar drop down menu text3 code start -->
-                    <!-- <li class="nav-item dropdown">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="All_patient.html"
+                  >Patients</a
+                >
+              </li>
+            </ul>
+            <!-- nev bar drop down menu text1 code finsh-->
+            <!-- nev bar drop down menu text3 code start -->
+            <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown">Doctor
                             Sidual</a>
@@ -142,13 +174,13 @@
                             <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
                         </ul>
                     </li> -->
-                    <!-- nev bar drop down menu text3 code finsh -->
-                    <!-- </ul> -->
-                    <!-- <button style="background-color: transparent; border: transparent; color: white;"
+            <!-- nev bar drop down menu text3 code finsh -->
+            <!-- </ul> -->
+            <!-- <button style="background-color: transparent; border: transparent; color: white;"
                         id="Logout">Logout</button> -->
-                    <!-- nav bar page menu code finsh  -->
-                    <!-- nav bar code icon  -->
-                    <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
+            <!-- nav bar page menu code finsh  -->
+            <!-- nav bar code icon  -->
+            <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
                     <a href="#" class="text-white  nav-icon iconClass"><i class="fa-regular fa-bell"
                             style="font-size: 20px;"></i></a>
                     <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a>
@@ -165,13 +197,13 @@
                         </ul>
                     </div>
                 </div> -->
-                    <!-- nav bar icon code finsh  -->
-                </div>
-            </div>
-        </nav>
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+            <!-- nav bar icon code finsh  -->
+          </div>
+        </div>
+      </nav>
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
         <div class="container-fluid align-items-center">
-            <a class="navbar-brand" href="#">Hopshee</a>
+            <a class="navbar-brand" href="#">Hophsee</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -227,55 +259,62 @@
         </div>
     </nav> -->
 
-        <div class="first_part_body">
-            <div class="deshbord_normal mt-4 mx-5">
-                <h1> All Patient </h1>
-            </div>
-            <div class="container">
-                <div class="row" id="patient-list">
-                </div>
-            </div>
+      <div class="first_part_body">
+        <div class="deshbord_normal mt-4 mx-5">
+          <h1>All Patient</h1>
         </div>
-        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
-        <script src="jquery.min.js"></script>
-        <script>
-            function pageredirect(doctor_id) {
-                window.location.href = "Patients_Deshbord.html?patient_id=" + encodeURIComponent(doctor_id);
-            }
-            $(document).ready(function () {
-                const aid = getCookie("admin_id");
-                $('#searchInput').on('input', function () {
-                    const searchValue = $(this).val().toLowerCase();
+        <div class="container">
+          <div class="row" id="patient-list"></div>
+        </div>
+      </div>
+      <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+      <script src="jquery.min.js"></script>
+      <script>
+        function pageredirect(doctor_id) { 
+          window.location.href =
+            "Patients_Deshbord.html?patient_id=" +
+            encodeURIComponent(doctor_id);
+        }
+        $(document).ready(function () {
+          const aid = getCookie("admin_id");
+          if (aid != null && aid.length > 0) {
+            console.log("Login succuss full");
+          } else {
+            window.location.replace("login.html");
+          }
 
-                    // Always show the search input
-                    $('#searchInput').show();
+          $("#searchInput").on("input", function () {
+            const searchValue = $(this).val().toLowerCase();
 
-                    // Loop through each list item and show based on search input
-                    $('#nav_search_item li').each(function () {
-                        const listItemText = $(this).text().toLowerCase();
-                        $(this).toggle(listItemText.includes(searchValue));
-                    });
-                });
-                const apiurl = patients;
-                $.ajax({
-                    url: apiurl,
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function (response) {
-                        let patientsHtml = '';
-                        let patientCount = 0;
-                        response.data.forEach(function (patientData) {
-                            const age = calculateAge(patientData.date_of_birth);
-                            const img_url = `${host}/${patientData.image_url}`;
+            // Always show the search input
+            $("#searchInput").show();
 
-                            let gen = "";
-                            if (patientData.gender == 'M') {
-                                gen = 'MALE'
-                            } else {
-                                gen = 'FEMALE'
-                            }
+            // Loop through each list item and show based on search input
+            $("#nav_search_item li").each(function () {
+              const listItemText = $(this).text().toLowerCase();
+              $(this).toggle(listItemText.includes(searchValue));
+            });
+          });
+          const apiurl = patients;
+          $.ajax({
+            url: apiurl,
+            method: "GET",
+            dataType: "json",
+            success: function (response) {
+              let patientsHtml = "";
+              let patientCount = 0;
+              response.data.forEach(function (patientData) {
+                const age = calculateAge(patientData.date_of_birth);
+                const img_url = `${host}/${patientData.image_url}`;
 
-                            const patientCard = `
+                let gen = "";
+                if (patientData.gender == "M") {
+                  gen = "MALE";
+                } else {
+                  gen = "FEMALE";
+                }
+
+                const patientCard = `
                     <div class="col-lg px-0 shadow F_R_maindiv mt-5" style="border-radius:10px">
                         <div class="bg-primary px-3 pt-3 pb-5 text-center" style="border-radius:10px">
                             <img src="${img_url}" alt="" height="150px" width="150px" class="rounded-circle">
@@ -296,58 +335,59 @@
                         </div>
                     </div>
                 `;
-                            patientsHtml += patientCard;
-                            patientCount++;
+                patientsHtml += patientCard;
+                patientCount++;
 
-
-                            if (patientCount === 3) {
-                                $('#patient-list').append('<div class="row">' + patientsHtml + '</div>');
-                                patientsHtml = '';
-                                patientCount = 0;
-                            }
-                        });
-
-
-                        if (patientCount > 0) {
-                            $('#patient-list').append('<div class="row">' + patientsHtml + '</div>');
-                        }
-                    },
-                    error: function (error) {
-                        console.error('Error:', error);
-                    }
-                });
-                const adminApi = `${admin}/${aid}`;
-                $.ajax({
-                    type: 'GET',
-                    data: 'json',
-                    url: adminApi,
-                    success: function (response) {
-                        console.log("response")
-                        $('#D_admin_name').text(response.data[0].admin_name); // Update the navbar brand text
-                        $('#D_admin_image').attr('src', response.data[0].image_url);// Update the navbar brand text
-                    },
-                    error: function (error) {
-                        console.logx("Error fetching doctor data:", error);
-                    }
-                });
-
-                function calculateAge(date_of_birth) {
-                    const dob = new Date(date_of_birth);
-                    const currentDate = new Date();
-                    const ageInMilliseconds = currentDate - dob;
-                    const ageInYears = ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000); // 365.25 days per year
-                    return Math.floor(ageInYears);
+                if (patientCount === 3) {
+                  $("#patient-list").append(
+                    '<div class="row">' + patientsHtml + "</div>"
+                  );
+                  patientsHtml = "";
+                  patientCount = 0;
                 }
-                $("#log_out").click(function () {
-                    console.log("log_out");
-                    setCookie("admin_id", "", 1);
-                    setCookie('employee_id', "", 1);
-                    window.location.replace("login.html");
-                });
-            });
+              });
 
-        </script>
+              if (patientCount > 0) {
+                $("#patient-list").append(
+                  '<div class="row">' + patientsHtml + "</div>"
+                );
+              }
+            },
+            error: function (error) {
+              console.error("Error:", error);
+            },
+          });
+          const adminApi = `${admin}/${aid}`;
+          $.ajax({
+            type: "GET",
+            data: "json",
+            url: adminApi,
+            success: function (response) {
+              console.log("response");
+              $("#D_admin_name").text(response.data[0].admin_name); // Update the navbar brand text
+              $("#D_admin_image").attr("src", response.data[0].image_url); // Update the navbar brand text
+            },
+            error: function (error) {
+              console.logx("Error fetching doctor data:", error);
+            },
+          });
+
+          function calculateAge(date_of_birth) {
+            const dob = new Date(date_of_birth);
+            const currentDate = new Date();
+            const ageInMilliseconds = currentDate - dob;
+            const ageInYears =
+              ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000); // 365.25 days per year
+            return Math.floor(ageInYears);
+          }
+          $("#log_out").click(function () {
+            console.log("log_out");
+            setCookie("admin_id", "", 1);
+            setCookie("employee_id", "", 1);
+            window.location.replace("login.html");
+          });
+        });
+      </script>
     </section>
-</body>
-
+  </body>
 </html>

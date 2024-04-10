@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ALL_CSS_FILE_LINK_HEAR -->
-    <link rel="stylesheet" href="ALL_CSS_FILE/Patients_Deshbord.css">
-    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css">
+    <link rel="stylesheet" href="ALL_CSS_FILE/Patients_Deshbord.css" />
+    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css" />
 
     <!--ICON_LIBREY_LINK_HEAR-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
 
     <!-- ALL_CHART_FILE_LINK_HEAR -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script src="ALL_JS_FILE/coulmnchart.js"></script>
 
     <!-- ALL_JS_FILE_LINK_HEAR -->
@@ -30,96 +39,117 @@
     <script src="jquery.min.js"></script>
 
     <title>PATIENT DESHBORD</title>
-</head>
+  </head>
 
-<body>
-     <div class="sidebar">
-        <div class="logo_details border-bottom">
-            <div class="logo_name">Hopshee-Web</div>
-            <i class="bx bx-menu " id="btn"></i>
-        </div>
-        <ul class="nav-list">
-            <li id="search">
-                <i class="bx bx-search" style="background-color: white; color: #0d6efd;"></i>
-                <input type="text" id="searchInput" placeholder="search.."
-                    style="color: #0d6efd; background-color: white;">
-                <span class="Tooltip">search</span>
-            </li>
-        </ul>
-        <ul class="nav-list" id="nav_search_item">
-            <li>
-                <a href="index.html" class="selcted">
-                    <i class="bx bx-grid-alt"></i>
-                    <span class="link_name">Dashboard</span>
-                </a>
-                <span class="Tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="All_Doctor.html">
-                    <i class="fa-solid fa-user-doctor"></i>
-                    <span class="link_name">Doctors</span>
-                </a>
-                <span class="Tooltip">Doctors</span>
-            </li>
-            <li>
-                <a href="All_patient.html">
-                    <i class="fa-solid fa-user-injured"></i>
-                    <span class="link_name">Patients</span>
-                </a>
-                <span class="Tooltip">Patients</span>
-            </li>
-            <!-- <li>
+  <body>
+    <div class="sidebar">
+      <div class="logo_details border-bottom">
+        <div class="logo_name">Hophsee-Web</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li id="search">
+          <i
+            class="bx bx-search"
+            style="background-color: white; color: #0d6efd"
+          ></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="search.."
+            style="color: #0d6efd; background-color: white"
+          />
+          <span class="Tooltip">search</span>
+        </li>
+      </ul>
+      <ul class="nav-list" id="nav_search_item">
+        <li>
+          <a href="index.html" class="selcted">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <span class="Tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="All_Doctor.html">
+            <i class="fa-solid fa-user-doctor"></i>
+            <span class="link_name">Doctors</span>
+          </a>
+          <span class="Tooltip">Doctors</span>
+        </li>
+        <li>
+          <a href="All_patient.html">
+            <i class="fa-solid fa-user-injured"></i>
+            <span class="link_name">Patients</span>
+          </a>
+          <span class="Tooltip">Patients</span>
+        </li>
+        <!-- <li>
                 <a href="Admin_profile.html">>
                     <i class="bx bx-pie-chart-alt-2"></i>
                     <span class="link_name">Analytics</span>
                 </a>
                 <span class="Tooltip">Analytics</span>
             </li>
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="bx bx-folder"></i>
-                    <span class="link_name">Order</span>
-                </a>
-                <span class="Tooltip">Order</span>
-            </li> -->
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="fa-solid fa-user-tie"></i>
-                    <span class="link_name">Profile</span>
-                </a>
-                <span class="Tooltip">Profile</span>
-            </li>
-            <li class="profile">
-                <div class="profile_details">
-                    <img src="ALL_IMAGE/Dr.jpg" alt="profile image" id="D_admin_image">
-                    <div class="profile_content">
-                        <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
-                        <div class="designation">Admin</div>
-                    </div>
-                </div>
-                <button onclick="location.href='login.html'"><i class="bx bx-log-out" id="log_out"></i></button>
-            </li>
-        </ul>
+             -->
+        <li>
+          <a href="Payment_info.html">
+            <i class="fa-solid fa-money-check-dollar"></i>
+            <span class="link_name">PaymentDetails</span>
+          </a>
+          <span class="Tooltip">PaymentDetails</span>
+        </li>
+        <li>
+          <a href="Admin_profile.html">
+            <i class="fa-solid fa-user-tie"></i>
+            <span class="link_name">Profile</span>
+          </a>
+          <span class="Tooltip">Profile</span>
+        </li>
+        <li class="profile">
+          <div class="profile_details">
+            <img
+              src="ALL_IMAGE/Dr.jpg"
+              alt="profile image"
+              id="D_admin_image"
+            />
+            <div class="profile_content">
+              <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
+              <div class="designation">Admin</div>
+            </div>
+          </div>
+          <button onclick="location.href='login.html'">
+            <i class="bx bx-log-out" id="log_out"></i>
+          </button>
+        </li>
+      </ul>
     </div>
 
     <section class="home-section">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
-            <div class="container-fluid align-items-center">
-                <!-- nav bar logo image code strat  -->
-                <!-- <a class="navbar-brand" href="#">Hopshee</a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- nav bar logo image code complete -->
-                <!-- nav bar page menu code start -->
-                <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <!-- <li class="nav-item">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid align-items-center">
+          <!-- nav bar logo image code strat  -->
+          <!-- <a class="navbar-brand" href="#">Hophsee</a> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- nav bar logo image code complete -->
+          <!-- nav bar page menu code start -->
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="collapsibleNavbar"
+          >
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
                             <a class="nav-link text-white" href="index.html">Deshbord</a>
                         </li> -->
-                        <!-- nev bar drop down menu text1 code start -->
-                        <!-- <li class="nav-item dropdown">
+              <!-- nev bar drop down menu text1 code start -->
+              <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                 data-bs-toggle="dropdown">Doctor</a>
                             <ul class="dropdown-menu bg-primary">
@@ -128,13 +158,15 @@
                                 <li><a class="dropdown-item text-white" href="Edit_Doctor.html">Edit-doctor</a></li>
                             </ul>
                         </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link  text-white" href="All_patient.html">Patients</a>
-                        </li>
-                    </ul>
-                    <!-- nev bar drop down menu text1 code finsh-->
-                    <!-- nev bar drop down menu text3 code start -->
-                    <!-- <li class="nav-item dropdown">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="All_patient.html"
+                  >Patients</a
+                >
+              </li>
+            </ul>
+            <!-- nev bar drop down menu text1 code finsh-->
+            <!-- nev bar drop down menu text3 code start -->
+            <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                             data-bs-toggle="dropdown">Doctor
                             Sidual</a>
@@ -143,13 +175,13 @@
                             <li><a class="dropdown-item text-white" href="#">Edit-Patient-Sidual</a></li>
                         </ul>
                     </li> -->
-                    <!-- nev bar drop down menu text3 code finsh -->
-                    <!-- </ul> -->
-                    <!-- <button style="background-color: transparent; border: transparent; color: white;"
+            <!-- nev bar drop down menu text3 code finsh -->
+            <!-- </ul> -->
+            <!-- <button style="background-color: transparent; border: transparent; color: white;"
                         id="log_out">Logout</button> -->
-                    <!-- nav bar page menu code finsh  -->
-                    <!-- nav bar code icon  -->
-                    <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
+            <!-- nav bar page menu code finsh  -->
+            <!-- nav bar code icon  -->
+            <!-- <div class="d-flex col-md-2 justify-content-around align-items-center">
                     <a href="#" class="text-white  nav-icon iconClass"><i class="fa-regular fa-bell"
                             style="font-size: 20px;"></i></a>
                     <a href="#" class="text-white"><i class="fa-regular fa-envelope" style="font-size: 20px;"></i></a>
@@ -166,80 +198,109 @@
                         </ul>
                     </div>
                 </div> -->
-                    <!-- nav bar icon code finsh  -->
+            <!-- nav bar icon code finsh  -->
+          </div>
+        </div>
+      </nav>
+      <!-- nav bar code complete heare  -->
+      <!-- Patient-Profile strta hear  -->
+      <div class="first_part_body container-fluid">
+        <div class="mt-4 mx-3">
+          <h1>Patient</h1>
+        </div>
+        <br />
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-sm col-lg px-0 F_R_maindiv mt-4 shadow card_radius">
+              <div class="bg-primary px-3 pt-3 pb-5 text-center card_radius">
+                <img
+                  src="./image/Dr.jpg"
+                  id="dimage"
+                  height="100px"
+                  width="100px"
+                  class="rounded-circle"
+                />
+                <h4 class="text-white mt-1" id="drname">Name : Smith Wright</h4>
+                <p class="text-white" id="email">Smith@gmail.com</p>
+              </div>
+              <div class="d-flex justify-content-evenly P_D_card12_miandiv">
+                <div class="bg-white shadow P_D_Allcard card_radius">
+                  <h5 class="mt-3">Male</h5>
+                  <p>Gender</p>
                 </div>
+                <div class="bg-white shadow P_D_Allcard card_radius">
+                  <div class="d-flex justify-content-center">
+                    <h5 class="mt-3">Age:</h5>
+                    <h5 id="age" class="mt-3 mx-1"></h5>
+                  </div>
+                  <p>Years old</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-evenly P_D_card34_miandiv">
+                <div class="bg-white shadow P_D_Allcard card_radius">
+                  <div class="d-flex justify-content-center">
+                    <h5 id="height" class="mt-3"></h5>
+                    <h5 class="mt-3">cm</h5>
+                  </div>
+                  <p>height</p>
+                </div>
+                <div class="bg-white shadow P_D_Allcard card_radius">
+                  <div class="d-flex justify-content-center">
+                    <h5 id="Wight" class="mt-3"></h5>
+                    <h5 class="mt-3">kg</h5>
+                  </div>
+                  <p>Wight</p>
+                </div>
+              </div>
             </div>
-        </nav>
-        <!-- nav bar code complete heare  -->
-        <!-- Patient-Profile strta hear  -->
-        <div class="first_part_body container-fluid">
-            <div class="mt-4 mx-3">
-                <h1> Patient </h1>
+            <div
+              class="col-sm bg-primary mt-4 mx-3 px-4 py-4 shadow text-white card_radius"
+            >
+              <div>
+                <h3>Patient Details</h3>
+                <hr />
+                <div
+                  class="bg-white shadow text-center card_radius mt-4"
+                  style="height: 70px"
+                >
+                  <h5 style="color: black" class="pt-4">
+                    Boold Type :
+                    <span style="font-size: 85%" id="BooldType">AB+</span>
+                  </h5>
+                </div>
+                <div
+                  class="bg-white shadow text-center card_radius mt-2"
+                  style="height: 70px"
+                >
+                  <h5 style="color: black" class="pt-4">
+                    Allergies :
+                    <span style="font-size: 85%" id="Allergies">
+                      Penicilin, peanuts</span
+                    >
+                  </h5>
+                </div>
+                <div
+                  class="bg-white shadow text-center card_radius mt-2"
+                  style="height: 70px"
+                >
+                  <h5 style="color: black" class="pt-4">
+                    Diseases :
+                    <span style="font-size: 85%" id="Diseases">Diabetes</span>
+                  </h5>
+                </div>
+                <div
+                  class="bg-white shadow text-center card_radius mt-2"
+                  style="height: 70px"
+                >
+                  <h5 style="color: black" class="pt-4">
+                    Temperture :
+                    <span style="font-size: 85%" id="Temperture">36.8 </span
+                    ><span style="font-size: 85%"> Degree</span>
+                  </h5>
+                </div>
+              </div>
             </div>
-            <br>
-            <div class="pb-4">
-                <div class="row">
-                    <div class="col-sm col-lg px-0 F_R_maindiv mt-4 shadow card_radius">
-                        <div class="bg-primary px-3 pt-3 pb-5 text-center card_radius">
-                            <img src="./image/Dr.jpg" id="dimage" height="100px" width="100px" class="rounded-circle">
-                            <h4 class="text-white mt-1" id="drname">Name : Smith Wright</h4>
-                            <p class="text-white" id="email">Smith@gmail.com</p>
-                        </div>
-                        <div class="d-flex justify-content-evenly P_D_card12_miandiv">
-                            <div class="bg-white shadow P_D_Allcard card_radius">
-                                <h5 class="mt-3">Male</h5>
-                                <p>Gender</p>
-                            </div>
-                            <div class="bg-white shadow P_D_Allcard card_radius">
-                                <div class="d-flex justify-content-center">
-                                    <h5 class="mt-3">Age:</h5>
-                                    <h5 id="age" class="mt-3 mx-1"></h5>
-                                </div>
-                                <p>Years old</p>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-evenly P_D_card34_miandiv">
-                            <div class="bg-white shadow P_D_Allcard card_radius">
-                                <div class="d-flex justify-content-center">
-                                    <h5 id="height" class="mt-3"></h5>
-                                    <h5 class="mt-3"> cm</h5>
-                                </div>
-                                <p>height</p>
-                            </div>
-                            <div class="bg-white shadow P_D_Allcard card_radius">
-                                <div class="d-flex justify-content-center">
-                                    <h5 id="Wight" class="mt-3"></h5>
-                                    <h5 class="mt-3"> kg</h5>
-                                </div>
-                                <p>Wight</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm bg-primary mt-4 mx-3 px-4 py-4 shadow text-white card_radius">
-                        <div>
-                            <h3>Patient Details</h3>
-                            <hr>
-                            <div class="bg-white shadow text-center card_radius mt-4" style="height: 70px;">
-                                <h5 style="color: black;" class="pt-4">Boold Type : <span style="font-size: 85%;"
-                                        id="BooldType">AB+</span></h5>
-                            </div>
-                            <div class="bg-white shadow text-center card_radius mt-2" style="height: 70px;">
-                                <h5 style="color: black;" class="pt-4">Allergies : <span style="font-size: 85%;"
-                                        id="Allergies"> Penicilin, peanuts</span></h5>
-                            </div>
-                            <div class="bg-white shadow text-center card_radius mt-2" style="height: 70px;">
-                                <h5 style="color: black;" class="pt-4">Diseases : <span style="font-size: 85%;"
-                                        id="Diseases">Diabetes</span></h5>
-                            </div>
-                            <div class="bg-white shadow text-center card_radius mt-2" style="height: 70px;">
-                                <h5 style="color: black;" class="pt-4">Temperture : <span style="font-size: 85%;"
-                                        id="Temperture">36.8 </span><span style="font-size: 85%;"> Degree</span></h5>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <!-- <div class="col-lg bg-danger mt-4 mx-3 px-4 py-4 shadow text-white">
+            <!-- <div class="col-lg bg-danger mt-4 mx-3 px-4 py-4 shadow text-white">
                     <div>
                         <h3 style="font-size: 170%;">Regular checkups</h3>
                         <h5>Dr Anthony Wager : <span style="font-size: 85%;">
@@ -250,37 +311,63 @@
                         <h5>Dr Riphat Jion : <span style="font-size: 85%;">Surgeon</span></h5>
                     </div>
                 </div> -->
-                    <div class="col-sm bg-success mt-4 mx-3 px-4 py-4 shadow text-white card_radius">
-                        <div>
-                            <h3>Patient check detils</h3>
-                            <hr>
-                            <div class="bg-white shadow text-center card_radius mt-4" style="height: 70px;">
-                                <h5 style="color: black;" class="pt-3">Blood pressure: <span style="font-size: 85%;"
-                                        id="bloodpresher">120/89</span><span style="font-size: 85%;"> MMHG</span></h5>
-                            </div>
-                            <div class="bg-white shadow text-center card_radius mt-2" style="height: 70px;">
-                                <h5 style="color: black;" class="pt-3">Heart Rate : <span style="font-size: 85%;"
-                                        id="HeartRate"> 107</span><span style="font-size: 85%;"> per min</span></h5>
-                            </div>
-                            <div class="bg-white shadow text-center card_radius mt-2" style="height: 70px;">
-                                <h5 style="color: black;" class="pt-3">Glucose Rate : <span style="font-size: 85%;"
-                                        id="GlucoseRate">97</span><span style="font-size: 85%;"> mg/dl</span></h5>
-                            </div>
-                            <div class="bg-white shadow text-center card_radius mt-2" style="height: 70px;">
-                                <h5 style="color: black;" class="pt-3">Clolesterol : <span style="font-size: 85%;"
-                                        id="Clolesterol">124</span><span style="font-size: 85%;"> mg/dl</span></h5>
-                            </div>
-                        </div>
-                    </div>
+            <div
+              class="col-sm bg-success mt-4 mx-3 px-4 py-4 shadow text-white card_radius"
+            >
+              <div>
+                <h3>Patient check detils</h3>
+                <hr />
+                <div
+                  class="bg-white shadow text-center card_radius mt-4"
+                  style="height: 70px"
+                >
+                  <h5 style="color: black" class="pt-3">
+                    Blood pressure:
+                    <span style="font-size: 85%" id="bloodpresher">120/89</span
+                    ><span style="font-size: 85%"> MMHG</span>
+                  </h5>
+                </div>
+                <div
+                  class="bg-white shadow text-center card_radius mt-2"
+                  style="height: 70px"
+                >
+                  <h5 style="color: black" class="pt-3">
+                    Heart Rate :
+                    <span style="font-size: 85%" id="HeartRate"> 107</span
+                    ><span style="font-size: 85%"> per min</span>
+                  </h5>
+                </div>
+                <div
+                  class="bg-white shadow text-center card_radius mt-2"
+                  style="height: 70px"
+                >
+                  <h5 style="color: black" class="pt-3">
+                    Glucose Rate :
+                    <span style="font-size: 85%" id="GlucoseRate">97</span
+                    ><span style="font-size: 85%"> mg/dl</span>
+                  </h5>
+                </div>
+                <div
+                  class="bg-white shadow text-center card_radius mt-2"
+                  style="height: 70px"
+                >
+                  <h5 style="color: black" class="pt-3">
+                    Clolesterol :
+                    <span style="font-size: 85%" id="Clolesterol">124</span
+                    ><span style="font-size: 85%"> mg/dl</span>
+                  </h5>
+                </div>
+              </div>
+            </div>
 
-                    <!-- <div class="col-sm col-lg-8 col-sm"
+            <!-- <div class="col-sm col-lg-8 col-sm"
                     style="height: 520px; background-color: white; margin-right: 20px; padding-top: 20px;">
                     <h5 class="">Blood level after admit</h5>
                     <div id="curve_chart" style="height: 440px"></div>
                 </div> -->
-                </div>
-            </div>
-            <!-- <div class="container-fluid">
+          </div>
+        </div>
+        <!-- <div class="container-fluid">
             <div class="row">
                 <div class="col-sm bg-primary mt-4 mx-3 px-4 py-4 shadow text-white">
                     <div>
@@ -314,92 +401,96 @@
                 </div>
             </div>
         </div> -->
-            <!-- bootstrap java script link  -->
-            <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
-            <!-- bootstrap java script link  complete -->
-        </div>
+        <!-- bootstrap java script link  -->
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <!-- bootstrap java script link  complete -->
+      </div>
     </section>
     <script src="jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            // Get the doctor_id from the URL query parameter
-            var urlParams = new URLSearchParams(window.location.search);
+      $(document).ready(function () {
 
-            var patient_id = urlParams.get("patient_id");
+        var urlParams = new URLSearchParams(window.location.search);
+        consol.log(urlParams);
+        var patient_id = urlParams.get("patient_id");
 
-            const aid = getCookie("admin_id");
-            $('#searchInput').on('input', function () {
-                const searchValue = $(this).val().toLowerCase();
-
-                // Always show the search input
-                $('#searchInput').show();
-
-                // Loop through each list item and show based on search input
-                $('#nav_search_item li').each(function () {
-                    const listItemText = $(this).text().toLowerCase();
-                    $(this).toggle(listItemText.includes(searchValue));
-                });
-            });
-            // Define the API URL where you can fetch the doctor's data
-            var apiUrl = `${patients}/${patient_id}`;
-
-            // Make an AJAX request to fetch the doctor's data
-            $.ajax({
-                type: 'GET',
-                data: 'json',
-                url: apiUrl,
-                success: function (response) {
-                    // Assuming the response contains the doctor's data
-                    var patientData = response.data[0];
-                    const age = calculateAge(patientData.date_of_birth);
-                    const img_url = `${host}/${patientData.image_url}`;
-                    let gen = "";
-                    if (patientData.gender == 'M') {
-                        gen = 'MALE'
-                    } else {
-                        gen = 'FEMALE'
-                    }// Replace with your actual API endpoint
-                    console.log(img_url)
-                    // Update the HTML elements with the doctor's data
-                    $('#drname').text(patientData.patient_name); // Update the navbar brand text
-                    $('#dimage').attr('src', img_url); // Update the doctor's image // Update the specialization
-                    $('#email').text(patientData.email_id);// Update the biography// Update the email
-                    $('#gender').text(gen);// Update the biography// Update the email
-                    $('#age').text(age);// Update the biography// Update the email
-                    $('#height').text(patientData.height);
-                    $('#Wight').text(patientData.weight);// Update the biography// Update the email
-
-                    $('#BooldType').text(patientData.blood_group);
-                    $('#Allergies').text(patientData.allegeries);
-                    $('#Diseases').text(patientData.diseases);
-                    $('#bloodpresher').text(patientData.blood_pressure);
-                    $('#Temperture').text(patientData.body_temp);
-                    $('#HeartRate').text(patientData.heart_rate);
-                    $('#GlucoseRate').text(patientData.glucose_rate);
-                    $('#Clolesterol').text(patientData.colestrol);
-
-                },
-
-                error: function (error) {
-                    console.error("Error fetching doctor data:", error);
-                }
-
-            });
-            $("#log_out").click(function () {
-                console.log("log_out");
-                setCookie("admin_id", "", 1);
-                setCookie('employee_id', "", 1);
-                window.location.replace("login.html");
-            });
-        });
-        function calculateAge(date_of_birth) {
-            const dob = new Date(date_of_birth);
-            const currentDate = new Date();
-            const ageInMilliseconds = currentDate - dob;
-            const ageInYears = ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000); // 365.25 days per year
-            return Math.floor(ageInYears);
+        const aid = getCookie("admin_id");
+        if (aid != null && aid.length > 0) {
+          console.log("Login succuss full");
+        } else { 
+          window.location.replace("login.html");
         }
-    </script>
-</body>
 
+        $("#searchInput").on("input", function () {
+          const searchValue = $(this).val().toLowerCase();
+
+          // Always show the search input
+          $("#searchInput").show();
+
+          // Loop through each list item and show based on search input
+          $("#nav_search_item li").each(function () {
+            const listItemText = $(this).text().toLowerCase();
+            $(this).toggle(listItemText.includes(searchValue));
+          });
+        });
+        
+        // Define the API URL where you can fetch the doctor's data
+        var apiUrl = `${patients}/${patient_id}`;
+
+        // Make an AJAX request to fetch the doctor's data
+        $.ajax({
+          type: "GET",
+          data: "json",
+          url: apiUrl,
+          success: function (response) {
+            // Assuming the response contains the doctor's data
+            var patientData = response.data[0];
+            const age = calculateAge(patientData.date_of_birth);
+            const img_url = `${host}/${patientData.image_url}`;
+            let gen = "";
+            if (patientData.gender == "M") {
+              gen = "MALE";
+            } else {
+              gen = "FEMALE";
+            } // Replace with your actual API endpoint
+            console.log(img_url);
+            // Update the HTML elements with the doctor's data
+            $("#drname").text(patientData.patient_name); // Update the navbar brand text
+            $("#dimage").attr("src", img_url); // Update the doctor's image // Update the specialization
+            $("#email").text(patientData.email_id); // Update the biography// Update the email
+            $("#gender").text(gen); // Update the biography// Update the email
+            $("#age").text(age); // Update the biography// Update the email
+            $("#height").text(patientData.height);
+            $("#Wight").text(patientData.weight); // Update the biography// Update the email
+
+            $("#BooldType").text(patientData.blood_group);
+            $("#Allergies").text(patientData.allegeries);
+            $("#Diseases").text(patientData.diseases);
+            $("#bloodpresher").text(patientData.blood_pressure);
+            $("#Temperture").text(patientData.body_temp);
+            $("#HeartRate").text(patientData.heart_rate);
+            $("#GlucoseRate").text(patientData.glucose_rate);
+            $("#Clolesterol").text(patientData.colestrol);
+          },
+
+          error: function (error) {
+            console.error("Error fetching doctor data:", error);
+          },
+        });
+        $("#log_out").click(function () {
+          console.log("log_out");
+          setCookie("admin_id", "", 1);
+          setCookie("employee_id", "", 1);
+          window.location.replace("login.html");
+        });
+      });
+      function calculateAge(date_of_birth) {
+        const dob = new Date(date_of_birth);
+        const currentDate = new Date();
+        const ageInMilliseconds = currentDate - dob;
+        const ageInYears = ageInMilliseconds / (365.25 * 24 * 60 * 60 * 1000); // 365.25 days per year
+        return Math.floor(ageInYears);
+      }
+    </script>
+  </body>
 </html>

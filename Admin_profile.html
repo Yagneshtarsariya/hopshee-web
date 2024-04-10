@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ALL_CSS_FILE_LINK_HEAR -->
-    <link rel="stylesheet" href="ALL_CSS_FILE/index.css">
-    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css">
+    <link rel="stylesheet" href="ALL_CSS_FILE/index.css" />
+    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css" />
 
     <!--ICON_LIBREY_LINK_HEAR-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- chart link  -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript"> </script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript"></script>
 
     <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
 
     <!-- ALL_JS_FILE_LINK_HEAR -->
     <script src="ALL_JS_FILE/api.js"></script>
@@ -30,325 +39,450 @@
     <script src="jquery.min.js"></script>
 
     <title>ADMIN PROFILE</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="sidebar">
-        <div class="logo_details border-bottom">
-            <div class="logo_name">Hopshee-Web</div>
-            <i class="bx bx-menu " id="btn"></i>
-        </div>
-        <ul class="nav-list">
-            <li id="search">
-                <i class="bx bx-search" style="background-color: white; color: #0d6efd;"></i>
-                <input type="text" id="searchInput" placeholder="search.."
-                    style="color: #0d6efd; background-color: white;">
-                <span class="Tooltip">search</span>
-            </li>
-        </ul>
-        <ul class="nav-list" id="nav_search_item">
-            <li>
-                <a href="index.html" class="selcted">
-                    <i class="bx bx-grid-alt"></i>
-                    <span class="link_name">Dashboard</span>
-                </a>
-                <span class="Tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="All_Doctor.html">
-                    <i class="fa-solid fa-user-doctor"></i>
-                    <span class="link_name">Doctors</span>
-                </a>
-                <span class="Tooltip">Doctors</span>
-            </li>
-            <li>
-                <a href="All_patient.html">
-                    <i class="fa-solid fa-user-injured"></i>
-                    <span class="link_name">Patients</span>
-                </a>
-                <span class="Tooltip">Patients</span>
-            </li>
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="fa-solid fa-user-tie"></i>
-                    <span class="link_name">Profile</span>
-                </a>
-                <span class="Tooltip">Profile</span>
-            </li>
-            <li class="profile">
-                <div class="profile_details">
-                    <img src="ALL_IMAGE/Dr.jpg" alt="profile image" class="D_admin_image">
-                    <div class="profile_content">
-                        <div class="name D_admin_name">Yagnesh Tarsariya</div>
-                        <div class="designation">Admin</div>
-                    </div>
-                </div>
-                <button onclick="location.href='login.html'"><i class="bx bx-log-out" id="log_out"></i></button>
-            </li>
-        </ul>
+      <div class="logo_details border-bottom">
+        <div class="logo_name">Hophsee-Web</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li id="search">
+          <i
+            class="bx bx-search"
+            style="background-color: white; color: #0d6efd"
+          ></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="search.."
+            style="color: #0d6efd; background-color: white"
+          />
+          <span class="Tooltip">search</span>
+        </li>
+      </ul>
+      <ul class="nav-list" id="nav_search_item">
+        <li>
+          <a href="index.html" class="selcted">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <span class="Tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="All_Doctor.html">
+            <i class="fa-solid fa-user-doctor"></i>
+            <span class="link_name">Doctors</span>
+          </a>
+          <span class="Tooltip">Doctors</span>
+        </li>
+        <li>
+          <a href="All_patient.html">
+            <i class="fa-solid fa-user-injured"></i>
+            <span class="link_name">Patients</span>
+          </a>
+          <span class="Tooltip">Patients</span>
+        </li>
+        <li>
+          <a href="Payment_info.html">
+            <i class="fa-solid fa-money-check-dollar"></i>
+            <span class="link_name">PaymentDetails</span>
+          </a>
+          <span class="Tooltip">PaymentDetails</span>
+        </li>
+        <li>
+          <a href="Admin_profile.html">
+            <i class="fa-solid fa-user-tie"></i>
+            <span class="link_name">Profile</span>
+          </a>
+          <span class="Tooltip">Profile</span>
+        </li>
+
+        <li class="profile">
+          <div class="profile_details">
+            <img
+              src="ALL_IMAGE/Dr.jpg"
+              alt="profile image"
+              class="D_admin_image"
+            />
+            <div class="profile_content">
+              <div class="name D_admin_name">Yagnesh Tarsariya</div>
+              <div class="designation">Admin</div>
+            </div>
+          </div>
+          <button onclick="location.href='login.html'">
+            <i class="bx bx-log-out" id="log_out"></i>
+          </button>
+        </li>
+      </ul>
     </div>
     <section class="home-section">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
-            <div class="container-fluid align-items-center">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link text-white" href="Admin_profile.html"> Admin </a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div>
-            <div class="mt-4 mx-3 bg-white" style="padding: 10px;
-            border-radius: 15px;
-            background-color: white;">
-                <h1> Admin Profile </h1>
-            </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid align-items-center">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="collapsibleNavbar"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="Admin_profile.html">
+                  Admin
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="row mt-2 mx-2">
-            <div class="col-3 bg-primary mt-3 mx-4 px-4 text-white" style="align-items: center; text-align: center;">
-                <h4 class="mt-3 mb-3">Admin image</h4>
-                <hr>
-                <img class="D_admin_image" src="ALL_IMAGE/Dr.jpg" alt="" height="200px" width="200px"
-                    style="border: solid white 10px;">
-                <hr>
-                <h4 class="mt-3 mb-3">Name : <span class="D_admin_name">Yagnesh..</span></h4>
-                <!-- <button>Edit Profile</button> -->
+      </nav>
+      <div>
+        <div
+          class="mt-4 mx-3 bg-white"
+          style="padding: 10px; border-radius: 15px; background-color: white"
+        >
+          <h1>Admin Profile</h1>
+        </div>
+      </div>
+      <div class="row mt-2 mx-2">
+        <div
+          class="col-3 bg-primary mt-3 mx-4 px-4 text-white"
+          style="align-items: center; text-align: center"
+        >
+          <h4 class="mt-3 mb-3">Admin image</h4>
+          <hr />
+          <img
+            class="D_admin_image"
+            src="ALL_IMAGE/Dr.jpg"
+            alt=""
+            height="200px"
+            width="200px"
+            style="border: solid white 10px"
+          />
+          <hr />
+          <h4 class="mt-3 mb-3">
+            Name : <span class="D_admin_name">Yagnesh..</span>
+          </h4>
+          <!-- <button>Edit Profile</button> -->
+        </div>
+        <div class="col-4 bg-primary mt-3 px-4 pt-3 pb-2 text-white">
+          <div
+            class="d-flex justify-content-between"
+            style="align-items: center"
+          >
+            <div>
+              <h3>Prsonal Details</h3>
             </div>
-            <div class="col-4 bg-primary mt-3 px-4 pt-3 pb-2 text-white">
-                <div class="d-flex justify-content-between" style="align-items: center;">
-                    <div>
-                        <h3>Prsonal Details</h3>
+            <div>
+              <button
+                class="bg-primary btn"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                <i
+                  class="fa-solid fa-square-pen card_edit_i"
+                  style="color: white; font-size: 30px"
+                ></i>
+              </button>
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content bg-primary">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                        ADMIN UPDATE
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
                     </div>
-                    <div>
-                        <button class="bg-primary btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                class="fa-solid fa-square-pen card_edit_i" style="color: white; font-size: 30px;"></i>
-                        </button>
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content bg-primary">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">ADMIN UPDATE</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label>NAME</label>
-                                                <input type="email" class="form-control" id="in_admin_name"
-                                                    aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>EMAIL</label>
-                                                <input type="email" class="form-control" id="in_admin_email">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>NUMBER</label>
-                                                <input type="number" class="form-control" id="in_admin_naumber">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>GENDER</label>
-                                                <input type="text" class="form-control" id="in_admin_gender">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>DOB</label>
-                                                <input type="date" class="form-control" id="in_admin_dob" required>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn bg-white"
-                                            data-bs-dismiss="modal">CANCAL</button>
-                                        <button type="button" class="btn bg-white" id="btnsave">SAVE</button>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label>NAME</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="in_admin_name"
+                            aria-describedby="emailHelp"
+                          />
                         </div>
+                        <div class="form-group">
+                          <label>EMAIL</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="in_admin_email"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label>NUMBER</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="in_admin_naumber"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label>GENDER</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="in_admin_gender"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label>DOB</label>
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="in_admin_dob"
+                            required
+                          />
+                        </div>
+                      </form>
                     </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn bg-white"
+                        data-bs-dismiss="modal"
+                      >
+                        CANCAL
+                      </button>
+                      <button type="button" class="btn bg-white" id="btnsave">
+                        SAVE
+                      </button>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
 
-                <hr>
-                <div class="row pb-2" style="align-items: center; text-align: center;">
-                    <div class="card text-primary  mx-2 px-3 pt-2 col-sm">
-                        <h4>Email</h4>
-                        <b>
-                            <p id="Email">yagnesh@gmail.com</p>
-                        </b>
-                    </div>
-                </div>
-                <div class="row pb-2" style="align-items: center; text-align: center;">
-                    <div class="card text-primary  mx-2 px-3 pt-2 col-sm">
-                        <h4>Number</h4>
-                        <p id="Mono">1234567890</p>
-                    </div>
-                    <div class="card text-primary  mx-2 px-3 pt-2 col-sm">
-                        <h4>Last Login</h4>
-                        <p id="L_LOGIN">1234567890</p>
-                    </div>
-                </div>
-                <div class="row pb-2" style="align-items: center; text-align: center;">
-                    <div class="card text-primary  mx-2 px-3 pt-2 col-sm">
-                        <h4>Gender</h4>
-                        <p id="gender">MALE</p>
-                    </div>
-                    <div class="card text-primary mx-2 px-3 pt-2 col-sm">
-                        <h4>DOB</h4>
-                        <p id="DOB"></p>
-                    </div>
-                </div>
+          <hr />
+          <div class="row pb-2" style="align-items: center; text-align: center">
+            <div class="card text-primary mx-2 px-3 pt-2 col-sm">
+              <h4>Email</h4>
+              <b>
+                <p id="Email">yagnesh@gmail.com</p>
+              </b>
             </div>
-            <div class="col-4 bg-primary mx-3 mt-3 px-4 pt-3 text-white">
-                <h3>Dashboard Details</h3>
-                <hr>
-                <div id="donutchart" style="height: 280px;"></div>
+          </div>
+          <div class="row pb-2" style="align-items: center; text-align: center">
+            <div class="card text-primary mx-2 px-3 pt-2 col-sm">
+              <h4>Number</h4>
+              <p id="Mono">1234567890</p>
             </div>
+            <div class="card text-primary mx-2 px-3 pt-2 col-sm">
+              <h4>Last Login</h4>
+              <p id="L_LOGIN">1234567890</p>
+            </div>
+          </div>
+          <div class="row pb-2" style="align-items: center; text-align: center">
+            <div class="card text-primary mx-2 px-3 pt-2 col-sm">
+              <h4>Gender</h4>
+              <p id="gender">MALE</p>
+            </div>
+            <div class="card text-primary mx-2 px-3 pt-2 col-sm">
+              <h4>DOB</h4>
+              <p id="DOB"></p>
+            </div>
+          </div>
         </div>
+        <div class="col-4 bg-primary mx-3 mt-3 px-4 pt-3 text-white">
+          <h3>Dashboard Details</h3>
+          <hr />
+          <div id="donutchart" style="height: 280px"></div>
+        </div>
+      </div>
     </section>
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
     <script>
-        $(document).ready(function () {
-            $.ajax({
-                type: 'GET',
-                data: 'json',
-                url: `${appoinments}/summary`,
-                success: function (response) {
-                    console.log(`summary = ${response.error}`);
-                    if (response.error == 0) {
-                        var upcoming = response.data.upcoming_appo;
-                        var approved = response.data.approved_appo;
-                        var cancelled = response.data.cancelled_appo;
-                        var expired = response.data.expired_appo;
-                        console.log(upcoming);
-                        drawChart(upcoming, approved, cancelled, expired);
-                    }
-                },
-                error: function (error) {
-                    console.logx("Error fetching doctor data:", error);
-                }
-            });
+      $(document).ready(function () {
+        $.ajax({
+          type: "GET",
+          data: "json",
+          url: `${appoinments}/summary`,
+          success: function (response) {
+            console.log(`summary = ${response.error}`);
+            if (response.error == 0) {
+              var upcoming = response.data.upcoming_appo;
+              var approved = response.data.approved_appo;
+              var cancelled = response.data.cancelled_appo;
+              var expired = response.data.expired_appo;
+              console.log(upcoming);
+              drawChart(upcoming, approved, cancelled, expired);
+            }
+          },
+          error: function (error) {
+            console.logx("Error fetching doctor data:", error);
+          },
+        });
 
+        const aid = getCookie("admin_id"); 
 
-            const aid = getCookie("admin_id");
-            // Drwaer search
-            // const adminApi = `${admin}/${aid}`;
-            const adminApi = `${admin}/7`;
-            $('#searchInput').on('input', function () {
-                const searchValue = $(this).val().toLowerCase();
-                $('#searchInput').show();
-                $('#nav_search_item li').each(function () {
-                    const listItemText = $(this).text().toLowerCase();
-                    $(this).toggle(listItemText.includes(searchValue));
-                });
-            });
-            // logouyt 
-            $("#log_out").click(function () {
-                console.log("log_out");
-                setCookie("admin_id", "", 1);
-                setCookie('employee_id', "", 1);
-                window.location.replace("login.html");
-            });
-            function convertISOToIndianDate(isoDate) {
-                // Parse the ISO date string into a JavaScript Date object
-                var date = new Date(isoDate);
+        const adminApi = `${admin}/${aid}`;
+        if (aid != null && aid.length > 0) {
+          console.log("Login succuss full");
+        } else {
+          window.location.replace("login.html");
+        }
+        $("#searchInput").on("input", function () {
+          const searchValue = $(this).val().toLowerCase();
+          $("#searchInput").show();
+          $("#nav_search_item li").each(function () {
+            const listItemText = $(this).text().toLowerCase();
+            $(this).toggle(listItemText.includes(searchValue));
+          });
+        });
+        // logouyt
+        $("#log_out").click(function () {
+          console.log("log_out");
+          setCookie("admin_id", "", 1);
+          setCookie("employee_id", "", 1);
+          window.location.replace("login.html");
+        });
+        function convertISOToIndianDate(isoDate) {
+          // Parse the ISO date string into a JavaScript Date object
+          var date = new Date(isoDate);
 
-                // Extract the date components
-                var day = date.getDate();
-                var month = date.getMonth() + 1; // Months are 0-based, so add 1
-                var year = date.getFullYear();
+          // Extract the date components
+          var day = date.getDate();
+          var month = date.getMonth() + 1; // Months are 0-based, so add 1
+          var year = date.getFullYear();
 
-                // Format the date as DD/MM/YYYY (Indian date format)
-                var indianDateFormatted = year + "-" + (month < 10 ? "0" : "") + month + "-" + (day < 10 ? "0" : "") + day;
+          // Format the date as DD/MM/YYYY (Indian date format)
+          var indianDateFormatted =
+            year +
+            "-" +
+            (month < 10 ? "0" : "") +
+            month +
+            "-" +
+            (day < 10 ? "0" : "") +
+            day;
 
-                return indianDateFormatted;
+          return indianDateFormatted;
+        }
+
+        // admin photos and name
+        $.ajax({
+          type: "GET",
+          data: "json",
+          url: adminApi,
+          success: function (response) {
+            var rawDate = response.data[0].date_of_birth;
+            var formattedDate = new Date(rawDate);
+            var rawDate2 = response.data[0].last_login;
+            var formattedDate2 = new Date(rawDate2);
+            let gen = "";
+            if (response.data[0].gender == "M") {
+              gen = "MALE";
+            } else {
+              gen = "FEMALE";
             }
 
+            var date_of_birth =
+              formattedDate.getMonth() +
+              1 +
+              "/" +
+              formattedDate.getDate() +
+              "/" +
+              formattedDate.getFullYear();
+            var last_login =
+              formattedDate2.getMonth() +
+              1 +
+              "/" +
+              formattedDate2.getDate() +
+              "/" +
+              formattedDate2.getFullYear();
+            // var formattedDateString = (response.data[0].getMonth() + 1) + '/' + response.data[0].getDate() + '/' + response.data[0].getFullYear();
+            $(".D_admin_name").text(response.data[0].admin_name);
+            $(".D_admin_name").text(response.data[0].admin_name);
+            $("#Email").text(response.data[0].email_id);
+            $("#Mono").text(response.data[0].phone_no);
+            $("#gender").text(gen);
+            $("#DOB").text(date_of_birth);
+            $("#L_LOGIN").text(last_login);
+            // $('#L_LOGIN').text(response.data[0].last_login);
 
-            // admin photos and name
-            $.ajax({
-                type: 'GET',
-                data: 'json',
-                url: adminApi,
-                success: function (response) {
-                    var rawDate = response.data[0].date_of_birth;
-                    var formattedDate = new Date(rawDate);
-                    var rawDate2 = response.data[0].last_login;
-                    var formattedDate2 = new Date(rawDate2);
-                    let gen = "";
-                            if (response.data[0].gender == 'M') {
-                                gen = 'MALE'
-                            } else {
-                                gen = 'FEMALE'
-                            }
-
-                    var date_of_birth = (formattedDate.getMonth() + 1) + '/' + formattedDate.getDate() + '/' + formattedDate.getFullYear();
-                    var last_login = (formattedDate2.getMonth() + 1) + '/' + formattedDate2.getDate() + '/' + formattedDate2.getFullYear();
-                    // var formattedDateString = (response.data[0].getMonth() + 1) + '/' + response.data[0].getDate() + '/' + response.data[0].getFullYear();
-                    $('.D_admin_name').text(response.data[0].admin_name);
-                    $('.D_admin_name').text(response.data[0].admin_name);
-                    $('#Email').text(response.data[0].email_id);
-                    $('#Mono').text(response.data[0].phone_no);
-                    $('#gender').text(gen);
-                    $('#DOB').text(date_of_birth);
-                    $('#L_LOGIN').text(last_login);
-                    // $('#L_LOGIN').text(response.data[0].last_login);
-
-
-                    // $('#DOB').text(formattedDateString);
-                    // $('#D_admin_name2').text(response.data[0].admin_name);
-                    $('.D_admin_image').attr('src', `${host}/${response.data[0].image_url}`);// Update the navbar brand text
-                },
-                error: function (error) {
-                    console.logx("Error fetching doctor data:", error);
-                }
-            });
-            $.ajax({
-                url: admin,
-                type: 'GET',
-                data: 'JSON',
-                success: function (response) {
-                    const admindata = response.data[0];
-                    var rawDate = admindata.date_of_birth;
-                    var formattedDate = new Date(rawDate);
-                    var date_of_birth = (formattedDate.getMonth() + 1) + '/' + formattedDate.getDate() + '/' + formattedDate.getFullYear();
-                    $("#in_admin_name").val(admindata.admin_name);
-                    $("#in_admin_email").val(admindata.email_id);
-                    $("#in_admin_naumber").val(admindata.phone_no);
-                    $("#in_admin_gender").val(admindata.gender);
-                    $("#in_admin_dob").val(date_of_birth);
-                }
-            });
-            $('#btnsave').click(function () {
-                console.log('i am click')
-                const updatedData = {
-                    admin_id: 7,
-                    admin_name: $("#in_admin_name").val(),
-                    email_id: $("#in_admin_email").val(),
-                    phone_no: $("#in_admin_naumber").val(),
-                    gender: $("#in_admin_gender").val(),
-                }
-                $.ajax({
-                    url: admin,
-                    type: 'PATCH',
-                    data: JSON.stringify(updatedData),
-                    contentType: "application/json",
-                    success: function (response) {
-                        console.log(response)
-                        if (response.error == 0) {
-                            window.location.href = "Admin_profile.html"
-                        } else {
-                            return alert("plese enter valid data");
-                        }
-                    }
-                });
-            });
-        }); 
+            // $('#DOB').text(formattedDateString);
+            // $('#D_admin_name2').text(response.data[0].admin_name);
+            $(".D_admin_image").attr(
+              "src",
+              `${host}/${response.data[0].image_url}`
+            ); // Update the navbar brand text
+          },
+          error: function (error) {
+            console.logx("Error fetching doctor data:", error);
+          },
+        });
+        $.ajax({
+          url: admin,
+          type: "GET",
+          data: "JSON",
+          success: function (response) {
+            const admindata = response.data[0];
+            var rawDate = admindata.date_of_birth;
+            var formattedDate = new Date(rawDate);
+            var date_of_birth =
+              formattedDate.getMonth() +
+              1 +
+              "/" +
+              formattedDate.getDate() +
+              "/" +
+              formattedDate.getFullYear();
+            $("#in_admin_name").val(admindata.admin_name);
+            $("#in_admin_email").val(admindata.email_id);
+            $("#in_admin_naumber").val(admindata.phone_no);
+            $("#in_admin_gender").val(admindata.gender);
+            $("#in_admin_dob").val(date_of_birth);
+          },
+        });
+        $("#btnsave").click(function () {
+          console.log("i am click");
+          const updatedData = {
+            admin_id: 7,
+            admin_name: $("#in_admin_name").val(),
+            email_id: $("#in_admin_email").val(),
+            phone_no: $("#in_admin_naumber").val(),
+            gender: $("#in_admin_gender").val(),
+          };
+          $.ajax({
+            url: admin,
+            type: "PATCH",
+            data: JSON.stringify(updatedData),
+            contentType: "application/json",
+            success: function (response) {
+              console.log(response);
+              if (response.error == 0) {
+                window.location.href = "Admin_profile.html";
+              } else {
+                return alert("plese enter valid data");
+              }
+            },
+          });
+        });
+      });
     </script>
-</body>
-
+  </body>
 </html>

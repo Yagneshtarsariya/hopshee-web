@@ -36,7 +36,7 @@
 <body>
     <div class="sidebar">
         <div class="logo_details border-bottom">
-            <div class="logo_name">Hopshee-Web</div>
+            <div class="logo_name">Hophsee-Web</div>
             <i class="bx bx-menu " id="btn"></i>
         </div>
         <ul class="nav-list">
@@ -76,13 +76,14 @@
                 </a>
                 <span class="Tooltip">Analytics</span>
             </li>
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="bx bx-folder"></i>
-                    <span class="link_name">Order</span>
-                </a>
-                <span class="Tooltip">Order</span>
-            </li> -->
+             -->
+           <li>
+          <a href="Payment_info.html">
+            <i class="fa-solid fa-money-check-dollar"></i>
+            <span class="link_name">PaymentDetails</span>
+          </a>
+          <span class="Tooltip">PaymentDetails</span>
+        </li>
             <li>
                 <a href="Admin_profile.html">
                     <i class="fa-solid fa-user-tie"></i>
@@ -106,7 +107,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
             <div class="container-fluid align-items-center">
                 <!-- nav bar logo image code strat  -->
-                <!-- <a class="navbar-brand" href="#">Hopshee</a> -->
+                <!-- <a class="navbar-brand" href="#">Hophsee</a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -245,6 +246,11 @@
                 var apiUrl = `${doctors}/${doctor_id}`;
 
                 const aid = getCookie("admin_id");
+                if (aid != null && aid.length > 0) {
+                    console.log("Login succuss full");
+                 } else {
+                     window.location.replace("login.html");
+                 }
                 $('#searchInput').on('input', function () {
                     const searchValue = $(this).val().toLowerCase();
 
@@ -276,7 +282,7 @@
                         // You can similarly update other parts of your HTML with the retrieved data
                     },
                     error: function (error) {
-                        console.error("Error fetching doctor data:", error);
+                        console.error("Error fetching doctor data:", error); 
                     }
                 });
                 const adminApi = `${admin}/${aid}`;

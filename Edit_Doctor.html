@@ -35,7 +35,7 @@
 <body>
      <div class="sidebar">
         <div class="logo_details border-bottom">
-            <div class="logo_name">Hopshee-Web</div>
+            <div class="logo_name">Hophsee-Web</div>
             <i class="bx bx-menu " id="btn"></i>
         </div>
         <ul class="nav-list">
@@ -75,13 +75,14 @@
                 </a>
                 <span class="Tooltip">Analytics</span>
             </li>
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="bx bx-folder"></i>
-                    <span class="link_name">Order</span>
-                </a>
-                <span class="Tooltip">Order</span>
-            </li> -->
+             -->
+           <li>
+          <a href="Payment_info.html">
+            <i class="fa-solid fa-money-check-dollar"></i>
+            <span class="link_name">PaymentDetails</span>
+          </a>
+          <span class="Tooltip">PaymentDetails</span>
+        </li>
             <li>
                 <a href="Admin_profile.html">
                     <i class="fa-solid fa-user-tie"></i>
@@ -106,7 +107,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
             <div class="container-fluid align-items-center">
                 <!-- nav bar logo image code strat  -->
-                <!-- <a class="navbar-brand" href="#">Hopshee</a> -->
+                <!-- <a class="navbar-brand" href="#">Hophsee</a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -309,6 +310,11 @@
         <script>
             $(document).ready(function () {
                 const aid = getCookie("admin_id");
+                if (aid != null && aid.length > 0) {
+                    console.log("Login succuss full");
+                 } else   {
+                        window.location.replace("login.html");
+                }
 
                 $('#searchInput').on('input', function () {
                     const searchValue = $(this).val().toLowerCase();
@@ -362,14 +368,14 @@
                             $("#phoen_no").val(doctor.phone_no);
                             // $("#password").val(doctor.password);
                             $("#gender").val(doctor.gender);
-                            // $("#date_of_birth").val(doctor.date_of_birth);
+                            $("#date_of_birth").val(doctor.date_of_birth);
                             // $("#dr_image").val(doctor.image_url);
                             $("#speciality").val(doctor.speciality);
                             $("#discription").val(doctor.brief_desc);
                             $("#dr_certificte_number").val(doctor.doctor_certi_no);
                             // $("#dr_certi_image").val(doctor.doctor_certi_image_url);
-                            // $("#dr_time_from").val(doctor.doctor_time_from);
-                            // $("#dr_time_to").val(doctor.doctor_time_to);
+                            $("#dr_time_from").val(doctor.doctor_time_from);
+                            $("#dr_time_to").val(doctor.doctor_time_to);
                             $("#dr_salary").val(doctor.salary_amount);
                         },
                         error: function (error) {
@@ -406,7 +412,7 @@
                         let emailvalue = $("#email_id").val();
                         let regularexpression = /^([a-zA-Z\d\.\-]+)@([a-zA-Z\d\.\-]+)\.([a-zA-Z]{2,6})$/;
                         if (regularexpression.test(emailvalue)) {
-                            $("#checkemail").hide();
+                            $("#checkemail").hide(); 
                             return false;
                         }
                         else {

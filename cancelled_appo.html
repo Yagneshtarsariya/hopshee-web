@@ -39,7 +39,7 @@
 <body>
     <div class="sidebar">
         <div class="logo_details border-bottom">
-            <div class="logo_name">Hopshee-Web</div>
+            <div class="logo_name">Hophsee-Web</div>
             <i class="bx bx-menu " id="btn"></i>
         </div>
         <ul class="nav-list">
@@ -79,44 +79,13 @@
                 </a>
                 <span class="Tooltip">Doc_detail</span>
             </li>
-            <!-- <li>
-                <a href="Admin_profile.html">>
-                    <i class="bx bx-pie-chart-alt-2"></i>
-                    <span class="link_name">Analytics</span>
-                </a>
-                <span class="Tooltip">Analytics</span>
-            </li>
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="bx bx-folder"></i>
-                    <span class="link_name">Order</span>
-                </a>
-                <span class="Tooltip">Order</span>
-            </li> -->
-            <!-- <li>
-                <a href="Admin_profile.html">
-                    <i class="fa-solid fa-user-tie"></i>
-                    <span class="link_name">Profile</span>
-                </a>
-                <span class="Tooltip">Profile</span>
-            </li>
-            <li class="profile">
-                <div class="profile_details">
-                    <img src="ALL_IMAGE/Dr.jpg" alt="profile image" id="D_admin_image">
-                    <div class="profile_content">
-                        <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
-                        <div class="designation">Admin</div>
-                    </div>
-                </div>
-                <button onclick="location.href='login.html'"><i class="bx bx-log-out" id="log_out"></i></button>
-            </li> -->
         </ul>
     </div>
     <section class="home-section">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
             <div class="container-fluid align-items-center">
                 <!-- nav bar logo image code strat  -->
-                <a class="navbar-brand" href="#">Hopshee</a>
+                <a class="navbar-brand" href="#">Hophsee</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -141,9 +110,6 @@
                             <th>DOCTOR NAME</th>
                             <th>DATE</th>
                             <th>TIME</th>
-                            <!-- <th>ADD</th> -->
-                            <!-- <th>Approved</th> -->
-                            <!-- <th>Cancal</th> -->
                         </tr>
                     </thead>
                     <tbody id="appointmentList_tbody"></tbody>
@@ -203,7 +169,7 @@
                     method: 'GET',
                     dataType: 'json',
                     success: function (doctorData) {
-                        callback(doctorData);
+                        callback(doctorData); 
                     },
                     error: function (error) {
                         console.error('Error fetching doctor data: ' + error);
@@ -238,62 +204,6 @@
                                     newRow.append('<td>' + (doctorData ? doctorData.data[0].doctor_name : 'N/A') + '</td>');
                                     newRow.append('<td>' + formatDate(appointment.appo_dt) + '</td>');
                                     newRow.append('<td>' + appointment.appo_time + '</td>');
-                                    // newRow.append('<td>' + appointment.appo_time + '</td>');
-                                    // newRow.append('<td>' + appointment.appo_time + '</td>');
-
-                                    // Create a button for ADD with a click event to redirect
-                                    // var addButton = $('<td><button style="background: none; border: none;"><i class="fa-regular fa-pen-to-square"></i></button></td>');
-                                    // addButton.find('button').click(function () {
-                                    //     redirectToAddPage(appointment.user_id, appointment.appo_id);
-                                    // });
-                                    // var approvedButton = $('<td><button style="background: none; border: none;"><i class="fa fa-check" aria-hidden="true"></i></button></td>');
-                                    // approvedButton.find('button').click(function () {
-                                    //     const Approvidapi = "https://node-hophsee.onrender.com/appoinments/approved"
-                                    //     const appoinmentsid = appointment.appo_id;
-                                    //     console.log(appoinmentsid);
-                                    //     const postData = {
-                                    //         appo_id: appoinmentsid,
-                                    //     }
-                                    //     // console.log(updatedbody)
-                                    //     $.ajax({
-                                    //         url: Approvidapi,
-                                    //         method: 'POST',
-                                    //         dataType: 'json', // Set the expected data type of the response
-                                    //         data: postData,  // Include the data to be sent in the request
-                                    //         success: function (response) {
-                                    //             // Handle success, if needed
-                                    //             // console.log('POST request successful', response);
-                                    //             return alert("appoint ment approved successfull");
-                                    //         },
-                                    //         error: function (xhr, status, error) {
-                                    //             // Handle errors, if any
-                                    //             console.error('Error in POST request', status, error);
-                                    //         }
-                                    //     });
-                                    // });
-                                    // var cancalbutton = $('<td><button style="background: none; border: none;"><i class="fa fa-times" aria-hidden="true"></i></button></td>');
-                                    // cancalbutton.find('button').click(function () {
-                                    //     console.log('delete button click');
-                                    //     // console.log(`${AppoApproved}`);
-                                    //     const deleteapi = "https://node-hophsee.onrender.com/appoinments";
-                                    //     const appoinmentsid = appointment.appo_id;
-                                    //     $.ajax({
-                                    //         url: `${deleteapi}/${appoinmentsid}`,
-                                    //         method: 'DELETE',
-                                    //         dataType: 'json', // Set the expected data type of the response
-                                    //         success: function (response) {
-                                    //             // Handle success, if needed
-                                    //             console.log('DELETE request successful', response);
-                                    //         },
-                                    //         error: function (xhr, status, error) {
-                                    //             // Handle errors, if any
-                                    //             console.error('Error in DELETE request', status, error);
-                                    //         }
-                                    //     });
-                                    // });
-                                    // newRow.append(addButton);
-                                    // newRow.append(approvedButton);
-                                    // newRow.append(cancalbutton);
 
                                     // Append the row to the appointment list
                                     $('#appointmentList_tbody').append(newRow);

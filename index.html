@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ALL_CSS_FILE_LINK_HEAR -->
-    <link rel="stylesheet" href="ALL_CSS_FILE/index.css">
-    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css">
+    <link rel="stylesheet" href="ALL_CSS_FILE/index.css" />
+    <link rel="stylesheet" href="ALL_CSS_FILE/Drawar.css" />
 
     <!--ICON_LIBREY_LINK_HEAR-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- BOOTSTRAP_CSS_FILE_LINK_HEAR -->
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
 
-    <!-- ALL_CHART_FILE_LINK_HEAR -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script src="ALL_JS_FILE/coulmnchart.js"></script>
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="" />
 
     <!-- ALL_JS_FILE_LINK_HEAR -->
     <script src="ALL_JS_FILE/api.js"></script>
@@ -31,235 +39,339 @@
     <script src="jquery.min.js"></script>
 
     <title>HOME PAGE</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="sidebar">
-        <div class="logo_details border-bottom">
-            <div class="logo_name">Hopshee-Web</div>
-            <i class="bx bx-menu " id="btn"></i>
-        </div>
-        <ul class="nav-list">
-            <li id="search">
-                <i class="bx bx-search" style="background-color: white; color: #0d6efd;"></i>
-                <input type="text" id="searchInput" placeholder="search.."
-                    style="color: #0d6efd; background-color: white;">
-                <span class="Tooltip">search</span>
-            </li>
-        </ul>
-        <ul class="nav-list" id="nav_search_item">
-            <li>
-                <a href="index.html" class="selcted">
-                    <i class="bx bx-grid-alt"></i>
-                    <span class="link_name">Dashboard</span>
-                </a>
-                <span class="Tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="All_Doctor.html">
-                    <i class="fa-solid fa-user-doctor"></i>
-                    <span class="link_name">Doctors</span>
-                </a>
-                <span class="Tooltip">Doctors</span>
-            </li>
-            <li>
-                <a href="All_patient.html">
-                    <i class="fa-solid fa-user-injured"></i>
-                    <span class="link_name">Patients</span>
-                </a>
-                <span class="Tooltip">Patients</span>
-            </li>
-            <!-- <li>
+      <div class="logo_details border-bottom">
+        <div class="logo_name">Hophsee-Web</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li id="search">
+          <i
+            class="bx bx-search"
+            style="background-color: white; color: #0d6efd"
+          ></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="search.."
+            style="color: #0d6efd; background-color: white"
+          />
+          <span class="Tooltip">search</span>
+        </li>
+      </ul>
+      <ul class="nav-list" id="nav_search_item">
+        <li>
+          <a href="index.html" class="selcted">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <span class="Tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="All_Doctor.html">
+            <i class="fa-solid fa-user-doctor"></i>
+            <span class="link_name">Doctors</span>
+          </a>
+          <span class="Tooltip">Doctors</span>
+        </li>
+        <li>
+          <a href="All_patient.html">
+            <i class="fa-solid fa-user-injured"></i>
+            <span class="link_name">Patients</span>
+          </a>
+          <span class="Tooltip">Patients</span>
+        </li>
+        <!-- <li>
                 <a href="Admin_profile.html">>
                     <i class="bx bx-pie-chart-alt-2"></i>
                     <span class="link_name">Analytics</span>
                 </a>
                 <span class="Tooltip">Analytics</span>
             </li>
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="bx bx-folder"></i>
-                    <span class="link_name">Order</span>
-                </a>
-                <span class="Tooltip">Order</span>
-            </li> -->
-            <li>
-                <a href="Admin_profile.html">
-                    <i class="fa-solid fa-user-tie"></i>
-                    <span class="link_name">Profile</span>
-                </a>
-                <span class="Tooltip">Profile</span>
-            </li>
-            <li class="profile">
-                <div class="profile_details">
-                    <img src="ALL_IMAGE/Dr.jpg" alt="profile image" id="D_admin_image">
-                    <div class="profile_content">
-                        <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
-                        <div class="designation">Admin</div>
-                    </div>
-                </div>
-                <button onclick="location.href='login.html'"><i class="bx bx-log-out" id="log_out"></i></button>
-            </li>
-        </ul>
+             -->
+        <li>
+          <a href="Payment_info.html">
+            <i class="fa-solid fa-money-check-dollar"></i>
+            <span class="link_name">PaymentDetails</span>
+          </a>
+          <span class="Tooltip">PaymentDetails</span>
+        </li>
+        <li>
+          <a href="Admin_profile.html">
+            <i class="fa-solid fa-user-tie"></i>
+            <span class="link_name">Profile</span>
+          </a>
+          <span class="Tooltip">Profile</span>
+        </li>
+        <li class="profile">
+          <div class="profile_details">
+            <img
+              src="ALL_IMAGE/Dr.jpg"
+              alt="profile image"
+              id="D_admin_image"
+            />
+            <div class="profile_content">
+              <div class="name" id="D_admin_name">Yagnesh Tarsariya</div>
+              <div class="designation">Admin</div>
+            </div>
+          </div>
+          <button onclick="location.href='login.html'">
+            <i class="bx bx-log-out" id="log_out"></i>
+          </button>
+        </li>
+      </ul>
     </div>
     <section class="home-section">
-        <nav class="navbar  navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid align-item-center">
-                <ul class="navbar-nav">
-                    <li class="navbar-item">
-                        <a class="nav-link text-white" href="index.html">Deshbord</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="px-3 py-2" style="background-color: #f8f9fa">
-            <div class="bg-white p-3 mx-3 mt-2 " style="border-radius: 15px;">
-                <h2>Dashboard</h2>
-            </div>
-            <div class="container-fluid ">
-                <div class="row my-4">
-                    <div class="col-lg " style="margin-left:5px; margin-right:5px; margin-top:5px;">
-                        <div class=" card_body d-flex ">
-                            <div>
-                                <i class="fa-solid fa-bed icon "></i>
-                            </div>
-                            <div>
-                                <div class="d-flex">
-                                    <h3 class="card_font_h3" id="a">20</h3>
-                                    <h3 class="card_font_h3">Beds</h3>
-                                    <button style="background: none; border: none;" type="button" class="btn"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size: 100px;">
-                                        <i class="fa-solid fa-square-pen card_edit_i" style="color: blue;"></i>
-                                    </button>
-                                </div>
-                                <p style="color:black;">Hospital Beds</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="chanegefeild"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered ">
-                            <div class="modal-content text-white" style="background-color: #0d6efd;">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="chanegefeild">Edit hospital Detils</h5>
-                                    <button class="btn text-white" data-bs-dismiss="modal" aria-label="Close"><i
-                                            class="fa-solid fa-xmark"></i>
-
-                                    </button>
-                                </div>
-                                <div class="modal-body" style="padding :40px 0px 40px 20px">
-                                    <form action="" method="">
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <h6 id="successMessage"></h6>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Number of Bed : </td>
-                                                <td><input type="number" id="beds"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Number of Ambulunce :</td>
-                                                <td><input type="number" id="ambulunce"></td>
-                                            </tr>
-                                        </table>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn" data-bs-dismiss="modal"
-                                        style="background-color: white;">Close</button>
-                                    <button type="button" class="btn" id="saveChangesButton"
-                                        style="background-color: white;">Save
-                                        changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg " style="margin-left:5px;margin-right:5px;margin-top:5px;">
-                        <div class="d-flex card_body">
-                            <div>
-                                <i class="fa-solid fa-user-doctor icon"></i>
-                            </div>
-                            <div>
-                                <div class="d-flex">
-                                    <h3 class="card_font_h3" id="b">126 </h3>
-                                    <h3 class="card_font_h3" style="margin-left: 2px;">Total Staf</h3>
-                                </div>
-                                <p style="color:black;">Available Doctors</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg " style="margin-left:5px;margin-right:5px;margin-top:5px;">
-                        <div class="card_body d-flex">
-                            <div>
-                                <i class="fa-solid fa-wallet icon"></i>
-                            </div>
-                            <div>
-                                <div class="d-flex">
-                                    <h3 class="card_font_h3" id="c">3,743 </h3>
-                                    <h3 class="card_font_h3" style="margin-left: 2px;">Bills</h3>
-                                </div>
-
-                                <p style="color:black;">Pharmacy Bills</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg" style="margin-left:5px;margin-right:5px;margin-top:5px;">
-                        <div class="card_body d-flex">
-                            <div>
-                                <i class="fa-solid fa-truck-medical icon"></i>
-                            </div>
-                            <div>
-                                <div class="d-flex">
-                                    <h3 class="card_font_h3" id="d">36 </h3>
-                                    <h3 class="card_font_h3" style="margin-left: 2px;">Car</h3>
-                                    <button style="background: none; border: none;" type="button" class="mx-2"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="fa-solid fa-square-pen card_edit_i" style="color: blue;"></i>
-                                    </button>
-                                </div>
-                                <p style="color:black;">Ambulance Cars</p>
-                            </div>
-                        </div>
-                    </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid align-item-center">
+          <ul class="navbar-nav">
+            <li class="navbar-item">
+              <a class="nav-link text-white" href="index.html">Deshbord</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="px-3 py-2" style="background-color: #f8f9fa">
+        <div class="bg-white p-3 mx-3 mt-2" style="border-radius: 15px">
+          <h2>Dashboard</h2>
+        </div>
+        <div class="container-fluid">
+          <div class="row my-4">
+            <div
+              class="col-lg"
+              style="margin-left: 5px; margin-right: 5px; margin-top: 5px"
+            >
+              <div class="card_body d-flex">
+                <div>
+                  <i class="fa-solid fa-bed icon"></i>
                 </div>
-                <div class="row rounded">
-                    <!-- chart strat hear  -->
-                    <div class="col-lg patient_list_card rounded"
-                        style="margin-left : 0.5%; margin-right : 0.5%; margin-top: 2%; box-shadow: 10px 10px 20px 1px rgb(218, 218, 218);">
-                        <div class="position-relative ">
-                            <div class="bg-primary text-light text-center rounded" style="height:200px;">
-                                <h4 class="pt-4">PATIENTS LIST</h4>
-                                <p class="pl-4 pr-4">CLICK ON PATIENT PROFILE TO VIEW PATIENT DETAIlS</p>
-                            </div>
-                            <div style="position: absolute; width: 80%; top: 100px; left: 10%;" id="patient-list">
-                            </div>
-                            <br>
-                            <button onclick="window.location='./All_patient.html'"
-                                class="doctor_menu_button shadow">VIEW ALL PATIENT</button>
-                        </div>
-                    </div>
-                    <!-- <div class="col-lg">
+                <div>
+                  <div class="d-flex">
+                    <h3 class="card_font_h3" id="a">20</h3>
+                    <h3 class="card_font_h3">Beds</h3>
+                    <button
+                      style="background: none; border: none"
+                      type="button"
+                      class="btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      style="font-size: 100px"
+                    >
+                      <i
+                        class="fa-solid fa-square-pen card_edit_i"
+                        style="color: blue"
+                      ></i>
+                    </button>
+                  </div>
+                  <p style="color: black">Hospital Beds</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="chanegefeild"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div
+                  class="modal-content text-white"
+                  style="background-color: #0d6efd"
+                >
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="chanegefeild">
+                      Edit hospital Detils
+                    </h5>
+                    <button
+                      class="btn text-white"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <div class="modal-body" style="padding: 40px 0px 40px 20px">
+                    <form action="" method="">
+                      <table>
+                        <tr>
+                          <td>
+                            <h6 id="successMessage"></h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Number of Bed :</td>
+                          <td><input type="number" id="beds" /></td>
+                        </tr>
+                        <tr>
+                          <td>Number of Ambulunce :</td>
+                          <td><input type="number" id="ambulunce" /></td>
+                        </tr>
+                      </table>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-bs-dismiss="modal"
+                      style="background-color: white"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn"
+                      id="saveChangesButton"
+                      style="background-color: white"
+                    >
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg"
+              style="margin-left: 5px; margin-right: 5px; margin-top: 5px"
+            >
+              <div class="d-flex card_body">
+                <div>
+                  <i class="fa-solid fa-user-doctor icon"></i>
+                </div>
+                <div>
+                  <div class="d-flex">
+                    <h3 class="card_font_h3" id="b">126</h3>
+                    <h3 class="card_font_h3" style="margin-left: 2px">
+                      Total Staf
+                    </h3>
+                  </div>
+                  <p style="color: black">Available Doctors</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg"
+              style="margin-left: 5px; margin-right: 5px; margin-top: 5px"
+            >
+              <div class="card_body d-flex">
+                <div>
+                  <i class="fa-solid fa-wallet icon"></i>
+                </div>
+                <div>
+                  <div class="d-flex">
+                    <h3 class="card_font_h3" id="c">3,743</h3>
+                    <h3 class="card_font_h3" style="margin-left: 2px">Bills</h3>
+                  </div>
+
+                  <p style="color: black">Pharmacy Bills</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg"
+              style="margin-left: 5px; margin-right: 5px; margin-top: 5px"
+            >
+              <div class="card_body d-flex">
+                <div>
+                  <i class="fa-solid fa-truck-medical icon"></i>
+                </div>
+                <div>
+                  <div class="d-flex">
+                    <h3 class="card_font_h3" id="d">36</h3>
+                    <h3 class="card_font_h3" style="margin-left: 2px">Car</h3>
+                    <button
+                      style="background: none; border: none"
+                      type="button"
+                      class="mx-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      <i
+                        class="fa-solid fa-square-pen card_edit_i"
+                        style="color: blue"
+                      ></i>
+                    </button>
+                  </div>
+                  <p style="color: black">Ambulance Cars</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row rounded">
+            <div
+              class="col-lg patient_list_card rounded"
+              style="
+                margin-left: 0.5%;
+                margin-right: 0.5%;
+                margin-top: 2%;
+                box-shadow: 10px 10px 20px 1px rgb(218, 218, 218);
+              "
+            >
+              <div class="position-relative">
+                <div
+                  class="bg-primary text-light text-center rounded"
+                  style="height: 200px"
+                >
+                  <h4 class="pt-4">PATIENTS LIST</h4>
+                  <p class="pl-4 pr-4">
+                    CLICK ON PATIENT PROFILE TO VIEW PATIENT DETAIlS
+                  </p>
+                </div>
+                <div
+                  style="position: absolute; width: 80%; top: 100px; left: 10%"
+                  id="patient-list"
+                ></div>
+                <br />
+                <button
+                  onclick="window.location='./All_patient.html'"
+                  class="doctor_menu_button shadow"
+                >
+                  VIEW ALL PATIENT
+                </button>
+              </div>
+            </div>
+            <!-- <div class="col-lg">
                         <div id="donutchart" style="height:500px;"></div>
                     </div> -->
-                    <!-- Dr Detaile List Code Strat  -->
-                    <div class="col-lg patient_list_card rounded"
-                        style="margin-left : 0.5%; margin-right : 0.5%; margin-top: 2%; box-shadow: 10px 10px 20px 1px rgb(218, 218, 218);">
-                        <div class=" position-relative rounded">
-                            <div class="bg-primary text-light text-center rounded" style="height:200px;">
-                                <h4 class="pt-4">DOCOTRS LIST</h4>
-                                <p class="pl-4 pr-4">CLICK ON DOCOTR PROFILE TO VIEW DOCTOR DETAILS</p>
-                            </div>
-                            <div style="position: absolute; width: 80%; top: 100px; left: 10%;" id="doctorList">
-                            </div>
-                            <br>
-                            <button onclick="window.location='./All_Doctor.html'" class="doctor_menu_button shadow">
-                                VIEW ALL DOCOTRS</button>
-                        </div>
-                    </div>
+            <!-- Dr Detaile List Code Strat  -->
+            <div
+              class="col-lg patient_list_card rounded"
+              style="
+                margin-left: 0.5%;
+                margin-right: 0.5%;
+                margin-top: 2%;
+                box-shadow: 10px 10px 20px 1px rgb(218, 218, 218);
+              "
+            >
+              <div class="position-relative rounded">
+                <div
+                  class="bg-primary text-light text-center rounded"
+                  style="height: 200px"
+                >
+                  <h4 class="pt-4">DOCOTRS LIST</h4>
+                  <p class="pl-4 pr-4">
+                    CLICK ON DOCOTR PROFILE TO VIEW DOCTOR DETAILS
+                  </p>
                 </div>
-                <!-- <div class="row">
+                <div
+                  style="position: absolute; width: 80%; top: 100px; left: 10%"
+                  id="doctorList"
+                ></div>
+                <br />
+                <button
+                  onclick="window.location='./All_Doctor.html'"
+                  class="doctor_menu_button shadow"
+                >
+                  VIEW ALL DOCOTRS
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row">
                     <div class="col-lg col-sm bg-white m-2 p-2 ">
                         <h3 class="mx-4"> Recent Visits</h3>
                         <div
@@ -378,79 +490,77 @@
                         <P class="mx-3 mt-1"> Patient nagative review card code complete </P>
                     </div>
                 </div> -->
-            </div>
         </div>
+      </div>
     </section>
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
     <script>
-        $(document).ready(function () {
-            const aid = getCookie("admin_id");
-            $('#searchInput').on('input', function () {
-                const searchValue = $(this).val().toLowerCase();
+      $(document).ready(function () {
+        // admin session mangment code
+        const aid = getCookie("admin_id");
+        if (aid != null && aid.length > 0) {
+          console.log("Login succuss full");
+        } else {
+          window.location.replace("login.html");
+        }
 
-                // Always show the search input
-                $('#searchInput').show();
+        // drawar Serch code
+        $("#searchInput").on("input", function () {
+          const searchValue = $(this).val().toLowerCase();
 
-                // Loop through each list item and show based on search input
-                $('#nav_search_item li').each(function () {
-                    const listItemText = $(this).text().toLowerCase();
-                    $(this).toggle(listItemText.includes(searchValue));
-                });
-            });
-            if (aid != null && aid.length > 0) {
-                console.log("Login succuss full");
-            } else {
-                window.location.replace("login.html");
-            }
-            // Replace these with the actual doctor IDs you want to fetch
-            const doctorIds = [41, 42]; // For example, fetching data for doctors with IDs 1 and 2
+          // Always show the search input
+          $("#searchInput").show();
 
-            // Loop through the doctor IDs and fetch data for each doctor
-            doctorIds.forEach(function (doctorId) {
+          // Loop through each list item and show based on search input
+          $("#nav_search_item li").each(function () {
+            const listItemText = $(this).text().toLowerCase();
+            $(this).toggle(listItemText.includes(searchValue));
+          });
+        });
 
-                // Make an API request to get data for the doctor with the given ID
-                $.ajax({
-                    url: `${doctors}/${doctorId}`, // Replace with your API endpoint
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function (response) {
-                        const doctorData = response.data[0]; // Assuming the response contains doctor data
-                        const img_url = `${host}/${doctorData.image_url}`;
-                        // Create the HTML for the doctor card
-                        const doctorCard = `
+        // fatch doctor data
+        const doctorIds = [87, 86];
+        doctorIds.forEach(function (doctorId) {
+          $.ajax({
+            url: `${doctors}/${doctorId}`,
+            method: "GET",
+            dataType: "json",
+            success: function (response) {
+              const doctorData = response.data[0];
+              // console.log(doctorData);
+              const img_url = `${host}/${doctorData.image_url}`;
+              const doctorCard = `
                         <div class="bg-white p-4 d-flex shadow bg-white rounded">
                             <div style="margin-right:20px;">
                                 <img src="${img_url}" alt="" height="100px" width="100px" style="border-radius:4px; class = "image_degine img-fluid"">
                              </div>
                              <div>
-                                <h4 class="">${doctorData.doctor_name}</h4>
-                                <p>${doctorData.speciality}</p>
+                                <h4>${doctorData.doctor_name}</h4>
+                                <p style="padding: 0px!impotent;">${doctorData.speciality}</p>
                                 </div>
                          </div><br>
                     `;
-                        // Append the doctor card to the "doctorList" div
-                        $('#doctorList').append(doctorCard);
-                    },
-                    error: function (error) {
-                        console.log('Error:', error);
-                    }
-                });
-            });
-            const patientIds = [24, 25];
-            patientIds.forEach(function (patientId) {
-                // Make an API request to get data for the doctor with the given ID
-                $.ajax({
-                    url: `${patients}/${patientId}`, // Replace with your API endpoint
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function (response) {
-                        const list = response.data;
-                        list.s
-                        const patientData = response.data[0]; // Assuming the response contains doctor data
-                        const img_url = `${host}/${patientData.image_url}`;
-                        // Create the HTML for the doctor card
-                        // $('#drname').text(doctorData.doctor_name); 
-                        const patientCrad = `
+              $("#doctorList").append(doctorCard);
+            },
+            error: function (error) {
+              console.log("Error:", error);
+            },
+          });
+        });
+ 
+        // fatch patient data
+        const patientIds = [37, 38];
+        patientIds.forEach(function (patientId) {
+          $.ajax({
+            url: `${patients}/${patientId}`,
+            method: "GET",
+            dataType: "json",
+            success: function (response) {
+              const list = response.data;
+              list.s;
+              const patientData = response.data[0];
+              const img_url = `${host}/${patientData.image_url}`;
+              const patientCrad = `
                  <div class="bg-white p-4  d-flex shadow bg-white rounded">
                  <div style="margin-right:20px;">
                      <img src="${img_url}" alt="" height="100px" width="100px" style="border-radius:4px;" class="my_image">
@@ -461,88 +571,82 @@
                 </div>
                 </div><br>
                 `;
-                        // Append the doctor card to the "doctorList" div
-                        $('#patient-list').append(patientCrad);
-                    },
-                    error: function (error) {
-                        console.log('Error:', error);
-                    }
-                });
-            });
-
-            console.log(getCookie("admin_id"));
-
-            const adminApi = `${admin}/${aid}`;
-            // const adminApi = `${admin}/7`;
-            $.ajax({
-                type: 'GET',
-                data: 'json',
-                url: adminApi,
-                success: function (response) {
-
-                    console.log("response")
-                    $('#a').text(response.data[0].no_of_beds); // Update the navbar brand text
-                    $('#b').text(response.data[0].no_of_doctors); // Update the navbar brand text
-                    $('#c').text(response.data[0].no_of_bills); // Update the navbar brand text
-                    $('#d').text(response.data[0].no_of_ambules);
-                    $('#beds').val(response.data[0].no_of_beds);// Update the navbar brand text
-                    $('#ambulunce').val(response.data[0].no_of_ambules);// Update the navbar brand text
-                    $('#D_admin_name').text(response.data[0].admin_name); // Update the navbar brand text
-                    $('#D_admin_image').attr('src', `${host}/${response.data[0].image_url}`);// Update the navbar brand text
-                },
-                error: function (error) {
-                    console.logx("Error fetching doctor data:", error);
-                }
-            });
-            $("#log_out").click(function () {
-                console.log("log_out");
-                setCookie("admin_id", "", 1);
-                setCookie('employee_id', "", 1);
-                window.location.replace("login.html");
-            });
-            $("#saveChangesButton").click(function () {
-                // Get the updated values from input fields
-                const updatedBeds = $("#beds").val();
-                const updatedAmbulances = $("#ambulunce").val();
-                const adminApi1 = admin;
-
-                // Create an object with the updated data
-                const updateData = {
-                    admin_id: getCookie('admin_id'),
-                    no_of_beds: updatedBeds,
-                    no_of_ambules: updatedAmbulances
-                };
-
-                // Send a POST request to update the data
-                $.ajax({
-                    type: 'patch',
-                    url: adminApi1, // Replace with your server endpoint
-                    data: JSON.stringify(updateData),
-                    contentType: 'application/json',
-                    success: function (response) {
-                        // console.log(response);
-                        // Handle success, you can display a success message or perform other actions
-                        console.log('Data updated successfully', response);
-                        $("#successMessage").text("Update successful");
-
-                        // Close the modal after 2 seconds
-                        setTimeout(function () {
-                            $('#exampleModal').modal('hide');
-                        },);
-
-                        // Reload the page after 2 seconds
-                        setTimeout(function () {
-                            location.reload();
-                        }, 300);
-                    },
-                    error: function (error) {
-                        // Handle error, display an error message or log the error
-                        console.log('Error updating data:', error);
-                    }
-                });
-            });
+              $("#patient-list").append(patientCrad);
+            },
+            error: function (error) {
+              console.log("Error:", error);
+            },
+          });
         });
-    </script>
-</body>
 
+        console.log(getCookie("admin_id"));
+        const adminApi = `${admin}/${aid}`;
+        // fetch Hosiptal Details data
+        $.ajax({
+          type: "GET",
+          data: "json",
+          url: adminApi,
+          success: function (response) {
+            console.log("response");
+            $("#a").text(response.data[0].no_of_beds);
+            $("#b").text(response.data[0].no_of_doctors);
+            $("#c").text(response.data[0].no_of_bills);
+            $("#d").text(response.data[0].no_of_ambules);
+            $("#beds").val(response.data[0].no_of_beds);
+            $("#ambulunce").val(response.data[0].no_of_ambules);
+            $("#D_admin_name").text(response.data[0].admin_name);
+            $("#D_admin_image").attr(
+              "src",
+              `${host}/${response.data[0].image_url}`
+            );
+          },
+          error: function (error) {
+            console.logx("Error fetching doctor data:", error);
+          },
+        });
+        // logout code
+        $("#log_out").click(function () {
+          console.log("log_out");
+          setCookie("admin_id", "", 1);
+          setCookie("employee_id", "", 1);
+          window.location.replace("login.html");
+        });
+        // update hospital details data
+        $("#saveChangesButton").click(function () {
+          const updatedBeds = $("#beds").val();
+          const updatedAmbulances = $("#ambulunce").val();
+          const adminApi1 = admin;
+
+          const updateData = {
+            admin_id: getCookie("admin_id"),
+            no_of_beds: updatedBeds,
+            no_of_ambules: updatedAmbulances,
+          };
+
+          $.ajax({
+            type: "patch",
+            url: adminApi1,
+            data: JSON.stringify(updateData),
+            contentType: "application/json",
+            success: function (response) {
+              console.log("Data updated successfully", response);
+              $("#successMessage").text("Update successful");
+
+              // Close the modal after 2 seconds
+              setTimeout(function () {
+                $("#exampleModal").modal("hide");
+              });
+
+              setTimeout(function () {
+                location.reload();
+              }, 300);
+            },
+            error: function (error) {
+              console.log("Error updating data:", error);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
